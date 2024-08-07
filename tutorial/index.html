@@ -8,6 +8,8 @@
       
       
       
+        <link rel="canonical" href="https://whyhow-ai.github.io/whyhow-sdk-docs/tutorial/">
+      
       
         <link rel="prev" href="../installation/">
       
@@ -45,6 +47,10 @@
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
+    
+      <link rel="stylesheet" href="../assets/_markdown_exec_pyodide.css">
+    
+      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
     
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -131,7 +137,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
     
       <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
@@ -141,9 +147,9 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="lime"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
     
-      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
       </label>
     
@@ -195,6 +201,18 @@
   </div>
 </div>
     
+    
+      <div class="md-header__source">
+        <a href="https://github.com/whyhow-ai/whyhow-sdk-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
     
   </nav>
   
@@ -310,6 +328,18 @@
     </a>
     WhyHow SDK
   </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/whyhow-ai/whyhow-sdk-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
     
@@ -433,9 +463,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#option-1-create-the-knowledge-graph-from-a-schema" class="md-nav__link">
+  <a href="#create-the-knowledge-graph-from-a-schema" class="md-nav__link">
     <span class="md-ellipsis">
-      Option 1 - Create the Knowledge Graph from a schema
+      Create the Knowledge Graph from a schema
     </span>
   </a>
   
@@ -454,6 +484,24 @@
   <a href="#querying-the-knowledge-graph" class="md-nav__link">
     <span class="md-ellipsis">
       Querying the Knowledge Graph
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#after-querying-the-graph-lets-retrieve-all-triples" class="md-nav__link">
+    <span class="md-ellipsis">
+      After querying the graph, let's retrieve all triples
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-graph-from-triples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create Graph from Triples
     </span>
   </a>
   
@@ -550,9 +598,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#option-1-create-the-knowledge-graph-from-a-schema" class="md-nav__link">
+  <a href="#create-the-knowledge-graph-from-a-schema" class="md-nav__link">
     <span class="md-ellipsis">
-      Option 1 - Create the Knowledge Graph from a schema
+      Create the Knowledge Graph from a schema
     </span>
   </a>
   
@@ -571,6 +619,24 @@
   <a href="#querying-the-knowledge-graph" class="md-nav__link">
     <span class="md-ellipsis">
       Querying the Knowledge Graph
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#after-querying-the-graph-lets-retrieve-all-triples" class="md-nav__link">
+    <span class="md-ellipsis">
+      After querying the graph, let's retrieve all triples
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-graph-from-triples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create Graph from Triples
     </span>
   </a>
   
@@ -599,176 +665,226 @@
                 
                   
 
+  
+    <a href="https://github.com/whyhow-ai/whyhow-sdk-docs/edit/master/docs/tutorial.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/whyhow-ai/whyhow-sdk-docs/raw/master/docs/tutorial.md" title="View source of this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z"/></svg>
+    </a>
+  
 
-<h1 id="tutorial">Tutorial</h1>
-<p>This is a straightforward tutorial on how to build and query a knowledge graph using PDF texts of Harry Potter books using WhyHow SDK. This example will guide you through importing documents from the Harry Potter series into the knowledge graph, then querying it for insights related to the series.</p>
-<h2 id="environment-setup">Environment Setup</h2>
+
+<h1 id="tutorial">Tutorial<a class="headerlink" href="#tutorial" title="Permanent link">&para;</a></h1>
+<p>This tutorial will guide you through building and querying a knowledge graph using Amazon.com Inc.'s 2024 10-K filing and the provided schema. We'll use the WhyHow SDK to import relevant information from the 10-K document into a knowledge graph and then query it for insights related to Amazon's business.</p>
+<h2 id="environment-setup">Environment Setup<a class="headerlink" href="#environment-setup" title="Permanent link">&para;</a></h2>
 <p>Ensure you have Python 3.10 or higher installed on your machine.</p>
-<p>To keep your API key secure, set it as environment variable. Open your terminal and run the following command, substituting the placeholder with your actual data:</p>
-<pre><code class="language-shell">export WHYHOW_API_KEY=&lt;YOUR_WHYHOW_API_KEY&gt;
-</code></pre>
-<h2 id="install-whyhow-sdk">Install WhyHow SDK</h2>
+<p>To get started, you'll need to sign up for a WhyHow API key. You can do so by <a href="https://calendly.com/whyhowai/intro-call-whyhow-ai">scheduling a call with us</a>.</p>
+<p>If you already have access to our Platform Beta, you can retrieve your API keys in the Settings page of <a href="https://app.whyhow.ai/">https://app.whyhow.ai/</a> or from email communication when you registered. </p>
+<p>After signing up, to get your API key, you can find it in the WhyHow settings page. To keep your API key secure, set it as an environment variable. Open your terminal and run the following command, substituting the placeholder with your actual data:</p>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">WHYHOW_API_KEY</span><span class="o">=</span>&lt;YOUR_WHYHOW_API_KEY&gt;
+</span></code></pre></div>
+<h2 id="install-whyhow-sdk">Install WhyHow SDK<a class="headerlink" href="#install-whyhow-sdk" title="Permanent link">&para;</a></h2>
 <p>If you haven't already, install the <code>WhyHow SDK</code> using pip:</p>
-<pre><code class="language-shell">pip install whyhow
-</code></pre>
-<h2 id="configure-the-whyhow-client">Configure the WhyHow Client</h2>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>pip<span class="w"> </span>install<span class="w"> </span>whyhow
+</span></code></pre></div>
+<h2 id="configure-the-whyhow-client">Configure the WhyHow Client<a class="headerlink" href="#configure-the-whyhow-client" title="Permanent link">&para;</a></h2>
 <p>With your environment variable set, you can now configure the <code>WhyHow</code> client in your Python script. The client will automatically read in your environment variable, or you can override this value by specifying it in the client constructor.</p>
-<pre><code class="language-shell">from whyhow import WhyHow
-
-client = WhyHow(api_key=&lt;your WhyHow API key&gt;)
-</code></pre>
-<h2 id="option-1-create-the-knowledge-graph-from-a-schema">Option 1 - Create the Knowledge Graph from a schema</h2>
-<p>First, you need to define the workpsace for your project and specify the paths to your Harry Potter book documents. Your workspace is a logical grouping of the raw data you upload, the schema you define, and the graphs you create. Workspace are meant to be tightly scoped to your use case. You can create as many workspaces as you want.</p>
-<pre><code class="language-shell">workspace = client.workspaces.create(name=&quot;Harry Potter&quot;)
-documents = [
-    &quot;path/to/harry_potter_and_the_philosophers_stone.pdf&quot;,
-    &quot;path/to/harry_potter_and_the_chamber_of_secrets.pdf&quot;
-    # Add paths to the rest of the Harry Potter series documents
-]
-
-# Add documents to your workspace
-documents_uploaded = []
-for document_path in documents:
-    document = client.documents.upload(
-        document_path,
-        workspace_id=workspace.workspace_id
-    )
-    documents_uploaded.append(document)
-print(&quot;Documents Added:&quot;, documents_uploaded)
-</code></pre>
-<p>WhyHow also supports creating a graph from structured data in the form of a CSV file.</p>
-<p>Next, you must create a schema which defines the entities, relationships, and patterns you'd like to use to construct the graph.</p>
-<pre><code class="language-shell"># Create schema
-from whyhow.schemas import SchemaEntity, SchemaRelation, SchemaTriplePattern
-
-entity_1 = SchemaEntity(
-    name=&quot;character&quot;,
-    description=&quot;A person appearing in the book, e.g., Harry Potter, Ron Weasley, Hermione Granger, Albus Dumbledore.&quot;
-)
-entity_2 = SchemaEntity(
-    name=&quot;object&quot;,
-    description=&quot;Inanimate items that characters use or interact with, e.g., wand, Philosopher's Stone, Invisibility Cloak, broomstick.&quot;
-)
-
-relation_1 = SchemaRelation(
-    name=&quot;friends with&quot;,
-    description=&quot;Denotes a friendly relationship between characters.&quot;
-)
-relation_2 = SchemaRelation(
-    name=&quot;interacts with&quot;,
-    description=&quot;Describes a scenario in which a character engages with another character, creature, or object.&quot;
-)
-
-entities = [entity_1, entity_2]
-relations = [relation_1, relation_2]
-patterns = [
-    SchemaTriplePattern(
-        head=entity_1,
-        relation=relation_1,
-        tail=entity_1,
-        description=&quot;One character is friends with another, e.g., Harry Potter is friends with Ron Weasley.&quot;
-    ),
-    SchemaTriplePattern(
-        head=entity_1,
-        relation=relation_2,
-        tail=entity_2,
-        description=&quot;A character interacting with an object, e.g., Harry Potter interacts with the Invisibility Cloak.&quot;
-    ),
-]
-
-schema = client.schemas.create(
-    workspace_id=workspace.workspace_id,
-    name=&quot;Harrpy Potter Schema&quot;,
-    entities=entities,
-    relations=relations,
-    patterns=patterns,
-)
-</code></pre>
-<p>Then, create the graph using the schema and the uploaded documents in the workspace:</p>
-<pre><code class="language-shell"># Create graph from schema and documents
-graph = client.graphs.create(
-    workspace_id=workspace.workspace_id,
-    schema_id=schema.schema_id,
-    name=&quot;Harry Potter Graph&quot;,
-)
-# Creating your graph
-</code></pre>
-<h2 id="option-2-create-the-knowledge-graph-from-seed-questions">Option 2 - Create the Knowledge Graph from seed questions</h2>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">from</span> <span class="nn">whyhow</span> <span class="kn">import</span> <span class="n">WhyHow</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">client</span> <span class="o">=</span> <span class="n">WhyHow</span><span class="p">(</span><span class="n">api_key</span><span class="o">=&lt;</span><span class="n">your</span> <span class="n">WhyHow</span> <span class="n">API</span> <span class="n">key</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">base_url</span><span class="o">=</span><span class="s2">&quot;https://api.whyhow.ai&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<h2 id="create-the-knowledge-graph-from-a-schema">Create the Knowledge Graph from a schema<a class="headerlink" href="#create-the-knowledge-graph-from-a-schema" title="Permanent link">&para;</a></h2>
+<p>First, let's define the workspace for our project and specify the path to Amazon's 10-K document. Your workspace is a logical grouping of the raw data you upload, the schema you define, and the graphs you create.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">workspace</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">workspaces</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Amazon 10-K Analysis&quot;</span><span class="p">)</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">document_path</span> <span class="o">=</span> <span class="s2">&quot;path/to/amazon_10k_2024.pdf&quot;</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="c1"># Add document to your workspace</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="n">document</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">documents</span><span class="o">.</span><span class="n">upload</span><span class="p">(</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>    <span class="n">document_path</span><span class="p">,</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>    <span class="n">workspace_id</span><span class="o">=</span><span class="n">workspace</span><span class="o">.</span><span class="n">workspace_id</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="p">)</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Document Added:&quot;</span><span class="p">,</span> <span class="n">document</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Next, we'll create a schema based on the provided JSON file. This schema defines the entities, relationships, and patterns we'll use to construct the graph.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kn">import</span> <span class="nn">json</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="c1"># Load the schema from the JSON file</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;amazon_10k_schema.json&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">schema_file</span><span class="p">:</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>    <span class="n">schema_data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">schema_file</span><span class="p">)</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="c1"># Create schema entities, relations, and patterns</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="n">entities</span> <span class="o">=</span> <span class="p">[</span><span class="n">SchemaEntity</span><span class="p">(</span><span class="o">**</span><span class="n">entity</span><span class="p">)</span> <span class="k">for</span> <span class="n">entity</span> <span class="ow">in</span> <span class="n">schema_data</span><span class="p">[</span><span class="s1">&#39;entities&#39;</span><span class="p">]]</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="n">relations</span> <span class="o">=</span> <span class="p">[</span><span class="n">SchemaRelation</span><span class="p">(</span><span class="o">**</span><span class="n">relation</span><span class="p">)</span> <span class="k">for</span> <span class="n">relation</span> <span class="ow">in</span> <span class="n">schema_data</span><span class="p">[</span><span class="s1">&#39;relations&#39;</span><span class="p">]]</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="n">patterns</span> <span class="o">=</span> <span class="p">[</span><span class="n">SchemaTriplePattern</span><span class="p">(</span><span class="o">**</span><span class="n">pattern</span><span class="p">)</span> <span class="k">for</span> <span class="n">pattern</span> <span class="ow">in</span> <span class="n">schema_data</span><span class="p">[</span><span class="s1">&#39;patterns&#39;</span><span class="p">]]</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="n">schema</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">schemas</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>    <span class="n">workspace_id</span><span class="o">=</span><span class="n">workspace</span><span class="o">.</span><span class="n">workspace_id</span><span class="p">,</span>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Amazon 10-K Schema&quot;</span><span class="p">,</span>
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>    <span class="n">entities</span><span class="o">=</span><span class="n">entities</span><span class="p">,</span>
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>    <span class="n">relations</span><span class="o">=</span><span class="n">relations</span><span class="p">,</span>
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>    <span class="n">patterns</span><span class="o">=</span><span class="n">patterns</span><span class="p">,</span>
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="p">)</span>
+</span></code></pre></div>
+<p>Now, let's create the graph using the schema and the uploaded 10-K document:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># Create graph from schema and document</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="n">graph</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">graphs</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    <span class="n">workspace_id</span><span class="o">=</span><span class="n">workspace</span><span class="o">.</span><span class="n">workspace_id</span><span class="p">,</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>    <span class="n">schema_id</span><span class="o">=</span><span class="n">schema</span><span class="o">.</span><span class="n">schema_id</span><span class="p">,</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Amazon 10-K Graph&quot;</span><span class="p">,</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="p">)</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="c1"># Creating your graph</span>
+</span></code></pre></div>
+<h2 id="option-2-create-the-knowledge-graph-from-seed-questions">Option 2 - Create the Knowledge Graph from seed questions<a class="headerlink" href="#option-2-create-the-knowledge-graph-from-seed-questions" title="Permanent link">&para;</a></h2>
 <p>Alternatively, you can create a graph using seed concepts in the form of questions written in natural language. We'll create a new workspace and upload the same data.</p>
-<pre><code class="language-shell">workspace = client.workspaces.create(name=&quot;Harry Potter&quot;)
-documents = [
-    &quot;path/to/harry_potter_and_the_philosophers_stone.pdf&quot;,
-    &quot;path/to/harry_potter_and_the_chamber_of_secrets.pdf&quot;
-    # Add paths to the rest of the Harry Potter series documents
-]
-
-# Add documents to your workspace
-documents_uploaded = []
-for document_path in documents:
-    document = client.documents.upload(
-        document_path,
-        workspace_id=workspace.workspace_id
-    )
-    documents_uploaded.append(document)
-print(&quot;Documents Added:&quot;, documents_uploaded)
-</code></pre>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">workspace</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">workspaces</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Amazon 10-K Analysis (Auto-Generated)&quot;</span><span class="p">)</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="n">document_path</span> <span class="o">=</span> <span class="s2">&quot;path/to/amazon_10k_2024.pdf&quot;</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="c1"># Add document to your workspace</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="n">document</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">documents</span><span class="o">.</span><span class="n">upload</span><span class="p">(</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>    <span class="n">document_path</span><span class="p">,</span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>    <span class="n">workspace_id</span><span class="o">=</span><span class="n">workspace</span><span class="o">.</span><span class="n">workspace_id</span>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="p">)</span>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Document Added:&quot;</span><span class="p">,</span> <span class="n">document</span><span class="p">)</span>
+</span></code></pre></div>
 <p>Create the schema from the seed questions:</p>
-<pre><code class="language-shell">questions = [&quot;What does Harry look like?&quot;,&quot;What does Hermione look like?&quot;,&quot;What does Ron look like?&quot;]
-entities, relations, patterns = client.schemas.generate(
-    questions=questions,
-)
-print(&quot;Entities:&quot;, entities)
-print(&quot;Relations:&quot;, relations)
-print(&quot;Patterns:&quot;, patterns)
-
-schema = client.schemas.create(
-    workspace_id=workspace.workspace_id,
-    name=&quot;Harrpy Potter Auto-Generated Schema&quot;,
-    entities=entities,
-    relations=relations,
-    patterns=patterns,
-)
-
-# Create graph from schema and documents
-graph_auto = client.graphs.create(
-    workspace_id=workspace.workspace_id,
-    schema_id=schema.schema_id,
-    name=&quot;Harry Potter Auto-Generated Graph&quot;,
-)
-# Creating your graph
-</code></pre>
-<h2 id="querying-the-knowledge-graph">Querying the Knowledge Graph</h2>
-<p>With the graphs created, you can now query them to find specific information:</p>
-<pre><code class="language-shell"># Query graph created from schema
-question = &quot;Who is Harry friends with?&quot;
-query = client.graphs.query_unstructured(
-    graph_id=graph.graph_id,
-    query=question,
-)
-print(&quot;Query Response:&quot;, query.answer)
-
-# Query graph created from seed questions
-question = &quot;Who has a flamming hair?&quot;
-query = client.graphs.query_unstructured(
-    graph_id=graph_auto.graph_id,
-    query=question,
-)
-print(&quot;Query Response:&quot;, query.answer)
-
-# Include the chunks in the query
-question = &quot;Who is Harry friends with?&quot;
-query = client.graphs.query_unstructured(
-    graph_id=graph.graph_id,
-    query=question,
-    include_chunks=True,
-)
-print(&quot;Query Response:&quot;, query.answer)
-</code></pre>
-<h2 id="exporting-the-knowledge-graph">Exporting the Knowledge Graph</h2>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">questions</span> <span class="o">=</span> <span class="p">[</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>    <span class="s2">&quot;What are Amazon&#39;s primary business segments?&quot;</span><span class="p">,</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>    <span class="s2">&quot;How does Amazon generate revenue?&quot;</span><span class="p">,</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>    <span class="s2">&quot;What are the key risk factors for Amazon&#39;s business?&quot;</span><span class="p">,</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>    <span class="s2">&quot;Who are Amazon&#39;s main competitors?&quot;</span><span class="p">,</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>    <span class="s2">&quot;What is Amazon&#39;s strategy for future growth?&quot;</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="p">]</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="n">entities</span><span class="p">,</span> <span class="n">relations</span><span class="p">,</span> <span class="n">patterns</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">schemas</span><span class="o">.</span><span class="n">generate</span><span class="p">(</span>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>    <span class="n">questions</span><span class="o">=</span><span class="n">questions</span><span class="p">,</span>
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="p">)</span>
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Entities:&quot;</span><span class="p">,</span> <span class="n">entities</span><span class="p">)</span>
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Relations:&quot;</span><span class="p">,</span> <span class="n">relations</span><span class="p">)</span>
+</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Patterns:&quot;</span><span class="p">,</span> <span class="n">patterns</span><span class="p">)</span>
+</span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>
+</span><span id="__span-7-16"><a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a><span class="n">schema</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">schemas</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+</span><span id="__span-7-17"><a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a>    <span class="n">workspace_id</span><span class="o">=</span><span class="n">workspace</span><span class="o">.</span><span class="n">workspace_id</span><span class="p">,</span>
+</span><span id="__span-7-18"><a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a>    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Amazon 10-K Auto-Generated Schema&quot;</span><span class="p">,</span>
+</span><span id="__span-7-19"><a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a>    <span class="n">entities</span><span class="o">=</span><span class="n">entities</span><span class="p">,</span>
+</span><span id="__span-7-20"><a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a>    <span class="n">relations</span><span class="o">=</span><span class="n">relations</span><span class="p">,</span>
+</span><span id="__span-7-21"><a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a>    <span class="n">patterns</span><span class="o">=</span><span class="n">patterns</span><span class="p">,</span>
+</span><span id="__span-7-22"><a id="__codelineno-7-22" name="__codelineno-7-22" href="#__codelineno-7-22"></a><span class="p">)</span>
+</span><span id="__span-7-23"><a id="__codelineno-7-23" name="__codelineno-7-23" href="#__codelineno-7-23"></a>
+</span><span id="__span-7-24"><a id="__codelineno-7-24" name="__codelineno-7-24" href="#__codelineno-7-24"></a><span class="c1"># Create graph from schema and document</span>
+</span><span id="__span-7-25"><a id="__codelineno-7-25" name="__codelineno-7-25" href="#__codelineno-7-25"></a><span class="n">graph_auto</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">graphs</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+</span><span id="__span-7-26"><a id="__codelineno-7-26" name="__codelineno-7-26" href="#__codelineno-7-26"></a>    <span class="n">workspace_id</span><span class="o">=</span><span class="n">workspace</span><span class="o">.</span><span class="n">workspace_id</span><span class="p">,</span>
+</span><span id="__span-7-27"><a id="__codelineno-7-27" name="__codelineno-7-27" href="#__codelineno-7-27"></a>    <span class="n">schema_id</span><span class="o">=</span><span class="n">schema</span><span class="o">.</span><span class="n">schema_id</span><span class="p">,</span>
+</span><span id="__span-7-28"><a id="__codelineno-7-28" name="__codelineno-7-28" href="#__codelineno-7-28"></a>    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Amazon 10-K Auto-Generated Graph&quot;</span><span class="p">,</span>
+</span><span id="__span-7-29"><a id="__codelineno-7-29" name="__codelineno-7-29" href="#__codelineno-7-29"></a><span class="p">)</span>
+</span><span id="__span-7-30"><a id="__codelineno-7-30" name="__codelineno-7-30" href="#__codelineno-7-30"></a><span class="c1"># Creating your graph</span>
+</span></code></pre></div>
+<p>Now you can query the auto-generated graph:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1"># Query the auto-generated graph</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="n">question</span> <span class="o">=</span> <span class="s2">&quot;What are Amazon&#39;s main revenue streams?&quot;</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="n">query</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">graphs</span><span class="o">.</span><span class="n">query_unstructured</span><span class="p">(</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>    <span class="n">graph_id</span><span class="o">=</span><span class="n">graph_auto</span><span class="o">.</span><span class="n">graph_id</span><span class="p">,</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>    <span class="n">query</span><span class="o">=</span><span class="n">question</span><span class="p">,</span>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="p">)</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Query Response:&quot;</span><span class="p">,</span> <span class="n">query</span><span class="o">.</span><span class="n">answer</span><span class="p">)</span>
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="c1"># Query for specific competitive advantages</span>
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="n">question</span> <span class="o">=</span> <span class="s2">&quot;What are Amazon&#39;s key competitive advantages?&quot;</span>
+</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="n">query</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">graphs</span><span class="o">.</span><span class="n">query_unstructured</span><span class="p">(</span>
+</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>    <span class="n">graph_id</span><span class="o">=</span><span class="n">graph_auto</span><span class="o">.</span><span class="n">graph_id</span><span class="p">,</span>
+</span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>    <span class="n">query</span><span class="o">=</span><span class="n">question</span><span class="p">,</span>
+</span><span id="__span-8-14"><a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a><span class="p">)</span>
+</span><span id="__span-8-15"><a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Query Response:&quot;</span><span class="p">,</span> <span class="n">query</span><span class="o">.</span><span class="n">answer</span><span class="p">)</span>
+</span></code></pre></div>
+<p>This approach allows you to create a knowledge graph based on specific questions you're interested in exploring from the Amazon 10-K document. The auto-generated schema will focus on entities and relationships relevant to these questions, potentially providing a more targeted analysis of the document.</p>
+<h2 id="querying-the-knowledge-graph">Querying the Knowledge Graph<a class="headerlink" href="#querying-the-knowledge-graph" title="Permanent link">&para;</a></h2>
+<p>With the graph created, we can now query it to find specific information about Amazon's business:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c1"># Query graph for Amazon&#39;s business segments</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="n">question</span> <span class="o">=</span> <span class="s2">&quot;What are Amazon&#39;s main business segments?&quot;</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="n">query</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">graphs</span><span class="o">.</span><span class="n">query_unstructured</span><span class="p">(</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>    <span class="n">graph_id</span><span class="o">=</span><span class="n">graph</span><span class="o">.</span><span class="n">graph_id</span><span class="p">,</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>    <span class="n">query</span><span class="o">=</span><span class="n">question</span><span class="p">,</span>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="p">)</span>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Query Response:&quot;</span><span class="p">,</span> <span class="n">query</span><span class="o">.</span><span class="n">answer</span><span class="p">)</span>
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="c1"># Query graph for Amazon&#39;s revenue streams</span>
+</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="n">question</span> <span class="o">=</span> <span class="s2">&quot;What are Amazon&#39;s primary revenue streams?&quot;</span>
+</span><span id="__span-9-11"><a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="n">query</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">graphs</span><span class="o">.</span><span class="n">query_unstructured</span><span class="p">(</span>
+</span><span id="__span-9-12"><a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>    <span class="n">graph_id</span><span class="o">=</span><span class="n">graph</span><span class="o">.</span><span class="n">graph_id</span><span class="p">,</span>
+</span><span id="__span-9-13"><a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a>    <span class="n">query</span><span class="o">=</span><span class="n">question</span><span class="p">,</span>
+</span><span id="__span-9-14"><a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a><span class="p">)</span>
+</span><span id="__span-9-15"><a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Query Response:&quot;</span><span class="p">,</span> <span class="n">query</span><span class="o">.</span><span class="n">answer</span><span class="p">)</span>
+</span><span id="__span-9-16"><a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a>
+</span><span id="__span-9-17"><a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a><span class="c1"># Include the chunks in the query</span>
+</span><span id="__span-9-18"><a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a><span class="n">question</span> <span class="o">=</span> <span class="s2">&quot;What are the key risk factors for Amazon&#39;s business?&quot;</span>
+</span><span id="__span-9-19"><a id="__codelineno-9-19" name="__codelineno-9-19" href="#__codelineno-9-19"></a><span class="n">query</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">graphs</span><span class="o">.</span><span class="n">query_unstructured</span><span class="p">(</span>
+</span><span id="__span-9-20"><a id="__codelineno-9-20" name="__codelineno-9-20" href="#__codelineno-9-20"></a>    <span class="n">graph_id</span><span class="o">=</span><span class="n">graph</span><span class="o">.</span><span class="n">graph_id</span><span class="p">,</span>
+</span><span id="__span-9-21"><a id="__codelineno-9-21" name="__codelineno-9-21" href="#__codelineno-9-21"></a>    <span class="n">query</span><span class="o">=</span><span class="n">question</span><span class="p">,</span>
+</span><span id="__span-9-22"><a id="__codelineno-9-22" name="__codelineno-9-22" href="#__codelineno-9-22"></a>    <span class="n">include_chunks</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+</span><span id="__span-9-23"><a id="__codelineno-9-23" name="__codelineno-9-23" href="#__codelineno-9-23"></a><span class="p">)</span>
+</span><span id="__span-9-24"><a id="__codelineno-9-24" name="__codelineno-9-24" href="#__codelineno-9-24"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Query Response:&quot;</span><span class="p">,</span> <span class="n">query</span><span class="o">.</span><span class="n">answer</span><span class="p">)</span>
+</span><span id="__span-9-25"><a id="__codelineno-9-25" name="__codelineno-9-25" href="#__codelineno-9-25"></a>
+</span><span id="__span-9-26"><a id="__codelineno-9-26" name="__codelineno-9-26" href="#__codelineno-9-26"></a><span class="c1"># Query the graph for specific relations</span>
+</span><span id="__span-9-27"><a id="__codelineno-9-27" name="__codelineno-9-27" href="#__codelineno-9-27"></a><span class="n">relations</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;comprises&quot;</span><span class="p">,</span> <span class="s2">&quot;contributes_to&quot;</span><span class="p">]</span>
+</span><span id="__span-9-28"><a id="__codelineno-9-28" name="__codelineno-9-28" href="#__codelineno-9-28"></a>
+</span><span id="__span-9-29"><a id="__codelineno-9-29" name="__codelineno-9-29" href="#__codelineno-9-29"></a><span class="n">query</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">graphs</span><span class="o">.</span><span class="n">query_structured</span><span class="p">(</span>
+</span><span id="__span-9-30"><a id="__codelineno-9-30" name="__codelineno-9-30" href="#__codelineno-9-30"></a>    <span class="n">graph_id</span><span class="o">=</span><span class="n">graph</span><span class="o">.</span><span class="n">graph_id</span><span class="p">,</span>
+</span><span id="__span-9-31"><a id="__codelineno-9-31" name="__codelineno-9-31" href="#__codelineno-9-31"></a>    <span class="n">relations</span><span class="o">=</span><span class="n">relations</span><span class="p">,</span>
+</span><span id="__span-9-32"><a id="__codelineno-9-32" name="__codelineno-9-32" href="#__codelineno-9-32"></a><span class="p">)</span>
+</span><span id="__span-9-33"><a id="__codelineno-9-33" name="__codelineno-9-33" href="#__codelineno-9-33"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Query Response:&quot;</span><span class="p">,</span> <span class="n">query</span><span class="o">.</span><span class="n">triples</span><span class="p">)</span>
+</span></code></pre></div>
+<h2 id="after-querying-the-graph-lets-retrieve-all-triples">After querying the graph, let's retrieve all triples<a class="headerlink" href="#after-querying-the-graph-lets-retrieve-all-triples" title="Permanent link">&para;</a></h2>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Retrieving all triples from the graph:&quot;</span><span class="p">)</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="n">all_triples</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">graphs</span><span class="o">.</span><span class="n">get_all_triples</span><span class="p">(</span><span class="n">graph_id</span><span class="o">=</span><span class="n">graph</span><span class="o">.</span><span class="n">graph_id</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="k">for</span> <span class="n">triple</span> <span class="ow">in</span> <span class="n">all_triples</span><span class="p">:</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Subject: </span><span class="si">{</span><span class="n">triple</span><span class="o">.</span><span class="n">head</span><span class="si">}</span><span class="s2">, Relation: </span><span class="si">{</span><span class="n">triple</span><span class="o">.</span><span class="n">relation</span><span class="si">}</span><span class="s2">, Object: </span><span class="si">{</span><span class="n">triple</span><span class="o">.</span><span class="n">tail</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span> 
+</span></code></pre></div>
+<h2 id="create-graph-from-triples">Create Graph from Triples<a class="headerlink" href="#create-graph-from-triples" title="Permanent link">&para;</a></h2>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="c1"># Let&#39;s say we want to create a new graph focusing on Amazon&#39;s revenue streams</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="n">revenue_triples</span> <span class="o">=</span> <span class="p">[</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>    <span class="n">triple</span> <span class="k">for</span> <span class="n">triple</span> <span class="ow">in</span> <span class="n">all_triples</span> 
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>    <span class="k">if</span> <span class="s2">&quot;revenue&quot;</span> <span class="ow">in</span> <span class="n">triple</span><span class="o">.</span><span class="n">head</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">or</span> <span class="s2">&quot;revenue&quot;</span> <span class="ow">in</span> <span class="n">triple</span><span class="o">.</span><span class="n">tail</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="p">]</span>
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="c1"># Create a new graph from these revenue-related triples</span>
+</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="n">revenue_graph</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">graphs</span><span class="o">.</span><span class="n">create_graph_from_triples</span><span class="p">(</span>
+</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>    <span class="n">workspace_id</span><span class="o">=</span><span class="n">workspace</span><span class="o">.</span><span class="n">workspace_id</span><span class="p">,</span>
+</span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>    <span class="n">triples</span><span class="o">=</span><span class="n">revenue_triples</span><span class="p">,</span>
+</span><span id="__span-11-11"><a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Amazon Revenue Streams Graph&quot;</span><span class="p">,</span>
+</span><span id="__span-11-12"><a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a>    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;A focused graph on Amazon&#39;s various revenue streams extracted from the 10-K&quot;</span>
+</span><span id="__span-11-13"><a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a><span class="p">)</span>
+</span><span id="__span-11-14"><a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a>
+</span><span id="__span-11-15"><a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Created new graph: </span><span class="si">{</span><span class="n">revenue_graph</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-11-16"><a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a>
+</span><span id="__span-11-17"><a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a><span class="c1"># Now we can query this new, more focused graph</span>
+</span><span id="__span-11-18"><a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a><span class="n">question</span> <span class="o">=</span> <span class="s2">&quot;What are Amazon&#39;s main sources of revenue?&quot;</span>
+</span><span id="__span-11-19"><a id="__codelineno-11-19" name="__codelineno-11-19" href="#__codelineno-11-19"></a><span class="n">query</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">graphs</span><span class="o">.</span><span class="n">query_unstructured</span><span class="p">(</span>
+</span><span id="__span-11-20"><a id="__codelineno-11-20" name="__codelineno-11-20" href="#__codelineno-11-20"></a>    <span class="n">graph_id</span><span class="o">=</span><span class="n">revenue_graph</span><span class="o">.</span><span class="n">graph_id</span><span class="p">,</span>
+</span><span id="__span-11-21"><a id="__codelineno-11-21" name="__codelineno-11-21" href="#__codelineno-11-21"></a>    <span class="n">query</span><span class="o">=</span><span class="n">question</span><span class="p">,</span>
+</span><span id="__span-11-22"><a id="__codelineno-11-22" name="__codelineno-11-22" href="#__codelineno-11-22"></a><span class="p">)</span>
+</span><span id="__span-11-23"><a id="__codelineno-11-23" name="__codelineno-11-23" href="#__codelineno-11-23"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Query Response:&quot;</span><span class="p">,</span> <span class="n">query</span><span class="o">.</span><span class="n">answer</span><span class="p">)</span>
+</span><span id="__span-11-24"><a id="__codelineno-11-24" name="__codelineno-11-24" href="#__codelineno-11-24"></a>
+</span><span id="__span-11-25"><a id="__codelineno-11-25" name="__codelineno-11-25" href="#__codelineno-11-25"></a><span class="c1"># We can also get all triples from this new graph</span>
+</span><span id="__span-11-26"><a id="__codelineno-11-26" name="__codelineno-11-26" href="#__codelineno-11-26"></a><span class="n">revenue_graph_triples</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">graphs</span><span class="o">.</span><span class="n">get_all_triples</span><span class="p">(</span><span class="n">graph_id</span><span class="o">=</span><span class="n">revenue_graph</span><span class="o">.</span><span class="n">graph_id</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
+</span><span id="__span-11-27"><a id="__codelineno-11-27" name="__codelineno-11-27" href="#__codelineno-11-27"></a>
+</span><span id="__span-11-28"><a id="__codelineno-11-28" name="__codelineno-11-28" href="#__codelineno-11-28"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Triples in the Revenue Streams Graph:&quot;</span><span class="p">)</span>
+</span><span id="__span-11-29"><a id="__codelineno-11-29" name="__codelineno-11-29" href="#__codelineno-11-29"></a><span class="k">for</span> <span class="n">triple</span> <span class="ow">in</span> <span class="n">revenue_graph_triples</span><span class="p">:</span>
+</span><span id="__span-11-30"><a id="__codelineno-11-30" name="__codelineno-11-30" href="#__codelineno-11-30"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Subject: </span><span class="si">{</span><span class="n">triple</span><span class="o">.</span><span class="n">head</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">, Relation: </span><span class="si">{</span><span class="n">triple</span><span class="o">.</span><span class="n">relation</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">, Object: </span><span class="si">{</span><span class="n">triple</span><span class="o">.</span><span class="n">tail</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<h2 id="exporting-the-knowledge-graph">Exporting the Knowledge Graph<a class="headerlink" href="#exporting-the-knowledge-graph" title="Permanent link">&para;</a></h2>
 <p>You can export the graph as a Cypher query to use in Neo4j or other graph databases:</p>
-<pre><code class="language-shell">cypher = client.graphs.export_cypher(graph_id=graph.graph_id)
-print(cypher)
-</code></pre>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">cypher</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">graphs</span><span class="o">.</span><span class="n">export_cypher</span><span class="p">(</span><span class="n">graph_id</span><span class="o">=</span><span class="n">graph</span><span class="o">.</span><span class="n">graph_id</span><span class="p">)</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">cypher</span><span class="p">)</span>
+</span></code></pre></div>
+<p>This tutorial demonstrates how to create a knowledge graph from Amazon's 10-K filing using the provided schema, and how to query the graph for insights into Amazon's business structure, revenue streams, and risk factors. You can expand on this by adding more specific queries or by analyzing different aspects of the 10-K document as needed for your analysis.</p>
 
 
 
@@ -865,6 +981,8 @@ print(cypher)
     
     
       <script src="../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      
+        <script src="../assets/_markdown_exec_pyodide.js"></script>
       
     
   </body>
