@@ -2867,6 +2867,68 @@ uploaded/processed.</p>
 
 </div>
 
+<div class="doc doc-object doc-function">
+
+
+<h4 id="whyhow.resources.AsyncSchemasResource.load_json" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">load_json</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-staticmethod"><code>staticmethod</code></small>
+  </span>
+
+<a href="#whyhow.resources.AsyncSchemasResource.load_json" class="headerlink" title="Permanent link">&para;</a></h4>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">load_json</span><span class="p">(</span><span class="n">file_path</span><span class="p">:</span> <span class="n">str</span> <span class="o">|</span> <span class="n"><span title="pathlib.Path">Path</span></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">tuple</span><span class="p">[</span><span class="n">list</span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="whyhow.schemas.SchemaEntity" href="#whyhow.schemas.SchemaEntity">SchemaEntity</a></span><span class="p">],</span> <span class="n">list</span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="whyhow.schemas.SchemaRelation" href="#whyhow.schemas.SchemaRelation">SchemaRelation</a></span><span class="p">],</span> <span class="n">list</span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="whyhow.schemas.SchemaTriplePattern" href="#whyhow.schemas.SchemaTriplePattern">SchemaTriplePattern</a></span><span class="p">]]</span>
+</span></code></pre></div>
+
+    <div class="doc doc-contents ">
+
+      <p>Load a JSON file containing a schema.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+          <b><code>file_path</code></b>
+              (<code>str | <span title="pathlib.Path">Path</span></code>)
+          –
+          <div class="doc-md-description">
+            <p>The file path.</p>
+          </div>
+        </li>
+    </ul>
+
+
+<p><span class="doc-section-title">Returns:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+              <code>list[<a class="autorefs autorefs-internal" title="whyhow.schemas.SchemaEntity" href="#whyhow.schemas.SchemaEntity">SchemaEntity</a>]</code>
+          –
+          <div class="doc-md-description">
+            <p>The schema entities.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+              <code>list[<a class="autorefs autorefs-internal" title="whyhow.schemas.SchemaRelation" href="#whyhow.schemas.SchemaRelation">SchemaRelation</a>]</code>
+          –
+          <div class="doc-md-description">
+            <p>The schema relations.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+              <code>list[<a class="autorefs autorefs-internal" title="whyhow.schemas.SchemaTriplePattern" href="#whyhow.schemas.SchemaTriplePattern">SchemaTriplePattern</a>]</code>
+          –
+          <div class="doc-md-description">
+            <p>The schema patterns.</p>
+          </div>
+        </li>
+    </ul>
+
+    </div>
+
+</div>
+
 
 
   </div>
@@ -4553,6 +4615,68 @@ uploaded/processed.</p>
           –
           <div class="doc-md-description">
             <p>A schema.</p>
+          </div>
+        </li>
+    </ul>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="whyhow.resources.SchemasResource.load_json" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">load_json</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-staticmethod"><code>staticmethod</code></small>
+  </span>
+
+<a href="#whyhow.resources.SchemasResource.load_json" class="headerlink" title="Permanent link">&para;</a></h4>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">load_json</span><span class="p">(</span><span class="n">file_path</span><span class="p">:</span> <span class="n">str</span> <span class="o">|</span> <span class="n"><span title="pathlib.Path">Path</span></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">tuple</span><span class="p">[</span><span class="n">list</span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="whyhow.schemas.SchemaEntity" href="#whyhow.schemas.SchemaEntity">SchemaEntity</a></span><span class="p">],</span> <span class="n">list</span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="whyhow.schemas.SchemaRelation" href="#whyhow.schemas.SchemaRelation">SchemaRelation</a></span><span class="p">],</span> <span class="n">list</span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="whyhow.schemas.SchemaTriplePattern" href="#whyhow.schemas.SchemaTriplePattern">SchemaTriplePattern</a></span><span class="p">]]</span>
+</span></code></pre></div>
+
+    <div class="doc doc-contents ">
+
+      <p>Load a JSON file containing a schema.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+          <b><code>file_path</code></b>
+              (<code>str | <span title="pathlib.Path">Path</span></code>)
+          –
+          <div class="doc-md-description">
+            <p>The file path.</p>
+          </div>
+        </li>
+    </ul>
+
+
+<p><span class="doc-section-title">Returns:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+              <code>list[<a class="autorefs autorefs-internal" title="whyhow.schemas.SchemaEntity" href="#whyhow.schemas.SchemaEntity">SchemaEntity</a>]</code>
+          –
+          <div class="doc-md-description">
+            <p>The schema entities.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+              <code>list[<a class="autorefs autorefs-internal" title="whyhow.schemas.SchemaRelation" href="#whyhow.schemas.SchemaRelation">SchemaRelation</a>]</code>
+          –
+          <div class="doc-md-description">
+            <p>The schema relations.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+              <code>list[<a class="autorefs autorefs-internal" title="whyhow.schemas.SchemaTriplePattern" href="#whyhow.schemas.SchemaTriplePattern">SchemaTriplePattern</a>]</code>
+          –
+          <div class="doc-md-description">
+            <p>The schema patterns.</p>
           </div>
         </li>
     </ul>
