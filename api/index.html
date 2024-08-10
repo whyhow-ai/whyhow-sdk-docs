@@ -4901,7 +4901,7 @@ uploaded/processed.</p>
         </li>
         <li class="doc-section-item field-body">
           <b><code><span title="whyhow.schemas.Chunk.created_at">created_at</span></code></b>
-              (<code>(<span title="datetime.datetime">datetime</span>, optional)</code>)
+              (<code><span title="datetime.datetime">datetime</span> | None</code>)
           –
           <div class="doc-md-description">
             <p>The creation datetime.</p>
@@ -4909,7 +4909,7 @@ uploaded/processed.</p>
         </li>
         <li class="doc-section-item field-body">
           <b><code><span title="whyhow.schemas.Chunk.updated_at">updated_at</span></code></b>
-              (<code>(<span title="datetime.datetime">datetime</span>, optional)</code>)
+              (<code><span title="datetime.datetime">datetime</span> | None</code>)
           –
           <div class="doc-md-description">
             <p>The update datetime.</p>
@@ -4917,7 +4917,7 @@ uploaded/processed.</p>
         </li>
         <li class="doc-section-item field-body">
           <b><code><span title="whyhow.schemas.Chunk.document_id">document_id</span></code></b>
-              (<code>(str, optional)</code>)
+              (<code>str | None</code>)
           –
           <div class="doc-md-description">
             <p>The document ID.</p>
@@ -4941,7 +4941,7 @@ uploaded/processed.</p>
         </li>
         <li class="doc-section-item field-body">
           <b><code><span title="whyhow.schemas.Chunk.content">content</span></code></b>
-              (<code>str</code>)
+              (<code>str | dict[str, <span title="typing.Any">Any</span>]</code>)
           –
           <div class="doc-md-description">
             <p>The chunk content.</p>
@@ -4949,7 +4949,7 @@ uploaded/processed.</p>
         </li>
         <li class="doc-section-item field-body">
           <b><code><span title="whyhow.schemas.Chunk.embedding">embedding</span></code></b>
-              (<code>(list[float], optional)</code>)
+              (<code>list[float] | None</code>)
           –
           <div class="doc-md-description">
             <p>The chunk embedding.</p>
@@ -4957,7 +4957,7 @@ uploaded/processed.</p>
         </li>
         <li class="doc-section-item field-body">
           <b><code><span title="whyhow.schemas.Chunk.tags">tags</span></code></b>
-              (<code>(dict[str, <span title="typing.Any">Any</span>], optional)</code>)
+              (<code>dict[str, <span title="typing.Any">Any</span>] | list[<span title="typing.Any">Any</span>]</code>)
           –
           <div class="doc-md-description">
             <p>The chunk tags.</p>
@@ -4965,7 +4965,7 @@ uploaded/processed.</p>
         </li>
         <li class="doc-section-item field-body">
           <b><code><span title="whyhow.schemas.Chunk.user_metadata">user_metadata</span></code></b>
-              (<code>(dict[str, <span title="typing.Any">Any</span>], optional)</code>)
+              (<code>dict[str, <span title="typing.Any">Any</span>]</code>)
           –
           <div class="doc-md-description">
             <p>The chunk user metadata.</p>
@@ -5017,7 +5017,7 @@ uploaded/processed.</p>
     <ul>
         <li class="doc-section-item field-body">
           <b><code><span title="whyhow.schemas.ChunkMetadata.language">language</span></code></b>
-              (<code>str</code>)
+              (<code>(str, optional)</code>)
           –
           <div class="doc-md-description">
             <p>The chunk language.</p>
