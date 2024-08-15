@@ -2054,6 +2054,80 @@ uploaded/processed.</p>
 <div class="doc doc-object doc-function">
 
 
+<h4 id="whyhow.resources.AsyncGraphsResource.create_graph_from_triples" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">create_graph_from_triples</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-async"><code>async</code></small>
+  </span>
+
+<a href="#whyhow.resources.AsyncGraphsResource.create_graph_from_triples" class="headerlink" title="Permanent link">&para;</a></h4>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">create_graph_from_triples</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="n">str</span><span class="p">,</span> <span class="n">workspace_id</span><span class="p">:</span> <span class="n">str</span><span class="p">,</span> <span class="n">triples</span><span class="p">:</span> <span class="n">list</span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="whyhow.schemas.Triple" href="#whyhow.schemas.Triple">Triple</a></span><span class="p">],</span> <span class="n">schema_id</span><span class="p">:</span> <span class="n">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-internal" title="whyhow.schemas.Graph" href="#whyhow.schemas.Graph">Graph</a></span>
+</span></code></pre></div>
+
+    <div class="doc doc-contents ">
+
+      <p>Create a graph from triples.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+          <b><code>name</code></b>
+              (<code>str</code>)
+          –
+          <div class="doc-md-description">
+            <p>The name of the graph.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>workspace_id</code></b>
+              (<code>str</code>)
+          –
+          <div class="doc-md-description">
+            <p>The ID of the workspace.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>triples</code></b>
+              (<code>list[<a class="autorefs autorefs-internal" title="whyhow.schemas.Triple" href="#whyhow.schemas.Triple">Triple</a>]</code>)
+          –
+          <div class="doc-md-description">
+            <p>The triples.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>schema_id</code></b>
+              (<code>str</code>, default:
+                  <code>None</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>The ID of the schema. If not provided, the schema will be inferred.</p>
+          </div>
+        </li>
+    </ul>
+
+
+<p><span class="doc-section-title">Returns:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+              <code><a class="autorefs autorefs-internal" title="whyhow.schemas.Graph" href="#whyhow.schemas.Graph">Graph</a></code>
+          –
+          <div class="doc-md-description">
+            <p>The graph.</p>
+          </div>
+        </li>
+    </ul>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
 <h4 id="whyhow.resources.AsyncGraphsResource.export_cypher" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">export_cypher</span>
 
@@ -3858,6 +3932,76 @@ uploaded/processed.</p>
 <div class="doc doc-object doc-function">
 
 
+<h4 id="whyhow.resources.GraphsResource.create_graph_from_triples" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">create_graph_from_triples</span>
+
+
+<a href="#whyhow.resources.GraphsResource.create_graph_from_triples" class="headerlink" title="Permanent link">&para;</a></h4>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">create_graph_from_triples</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="n">str</span><span class="p">,</span> <span class="n">workspace_id</span><span class="p">:</span> <span class="n">str</span><span class="p">,</span> <span class="n">triples</span><span class="p">:</span> <span class="n">list</span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="whyhow.schemas.Triple" href="#whyhow.schemas.Triple">Triple</a></span><span class="p">],</span> <span class="n">schema_id</span><span class="p">:</span> <span class="n">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-internal" title="whyhow.schemas.Graph" href="#whyhow.schemas.Graph">Graph</a></span>
+</span></code></pre></div>
+
+    <div class="doc doc-contents ">
+
+      <p>Create a graph from triples.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+          <b><code>name</code></b>
+              (<code>str</code>)
+          –
+          <div class="doc-md-description">
+            <p>The name of the graph.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>workspace_id</code></b>
+              (<code>str</code>)
+          –
+          <div class="doc-md-description">
+            <p>The ID of the workspace.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>triples</code></b>
+              (<code>list[<a class="autorefs autorefs-internal" title="whyhow.schemas.Triple" href="#whyhow.schemas.Triple">Triple</a>]</code>)
+          –
+          <div class="doc-md-description">
+            <p>The triples.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>schema_id</code></b>
+              (<code>str</code>, default:
+                  <code>None</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>The ID of the schema. If not provided, the schema will be inferred.</p>
+          </div>
+        </li>
+    </ul>
+
+
+<p><span class="doc-section-title">Returns:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+              <code><a class="autorefs autorefs-internal" title="whyhow.schemas.Graph" href="#whyhow.schemas.Graph">Graph</a></code>
+          –
+          <div class="doc-md-description">
+            <p>The graph.</p>
+          </div>
+        </li>
+    </ul>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
 <h4 id="whyhow.resources.GraphsResource.export_cypher" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">export_cypher</span>
 
@@ -5612,7 +5756,9 @@ uploaded/processed.</p>
               (<code>str</code>)
           –
           <div class="doc-md-description">
-            <p>The node ID.</p>
+            <p>The node ID. It can be None since we allow for the user to also
+create nodes and only then send them to the server (that will
+generate the node ID).</p>
           </div>
         </li>
         <li class="doc-section-item field-body">
@@ -5633,7 +5779,7 @@ uploaded/processed.</p>
         </li>
         <li class="doc-section-item field-body">
           <b><code><span title="whyhow.schemas.Node.chunk_ids">chunk_ids</span></code></b>
-              (<code>list[str]</code>)
+              (<code>(list[str], optional)</code>)
           –
           <div class="doc-md-description">
             <p>The chunk IDs.</p>
@@ -6249,10 +6395,12 @@ uploaded/processed.</p>
     <ul>
         <li class="doc-section-item field-body">
           <b><code><span title="whyhow.schemas.Triple.triple_id">triple_id</span></code></b>
-              (<code>str</code>)
+              (<code>(str, optional)</code>)
           –
           <div class="doc-md-description">
-            <p>The triple ID.</p>
+            <p>The triple ID. It can be None since we allow for the user to also
+create triples and only then send them to the server (that will
+generate the triple ID).</p>
           </div>
         </li>
         <li class="doc-section-item field-body">
