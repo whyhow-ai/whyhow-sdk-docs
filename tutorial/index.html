@@ -481,6 +481,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#option-3-create-knowledge-graph-from-importedexisting-triples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Option 3 - Create Knowledge Graph from Imported/Existing Triples
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#querying-the-knowledge-graph" class="md-nav__link">
     <span class="md-ellipsis">
       Querying the Knowledge Graph
@@ -493,15 +502,6 @@
   <a href="#after-querying-the-graph-lets-retrieve-all-triples" class="md-nav__link">
     <span class="md-ellipsis">
       After querying the graph, let's retrieve all triples
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#create-graph-from-triples" class="md-nav__link">
-    <span class="md-ellipsis">
-      Create Graph from Triples
     </span>
   </a>
   
@@ -616,6 +616,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#option-3-create-knowledge-graph-from-importedexisting-triples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Option 3 - Create Knowledge Graph from Imported/Existing Triples
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#querying-the-knowledge-graph" class="md-nav__link">
     <span class="md-ellipsis">
       Querying the Knowledge Graph
@@ -628,15 +637,6 @@
   <a href="#after-querying-the-graph-lets-retrieve-all-triples" class="md-nav__link">
     <span class="md-ellipsis">
       After querying the graph, let's retrieve all triples
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#create-graph-from-triples" class="md-nav__link">
-    <span class="md-ellipsis">
-      Create Graph from Triples
     </span>
   </a>
   
@@ -801,80 +801,80 @@
 </span><span id="__span-8-15"><a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Query Response:&quot;</span><span class="p">,</span> <span class="n">query</span><span class="o">.</span><span class="n">answer</span><span class="p">)</span>
 </span></code></pre></div>
 <p>This approach allows you to create a knowledge graph based on specific questions you're interested in exploring from the Amazon 10-K document. The auto-generated schema will focus on entities and relationships relevant to these questions, potentially providing a more targeted analysis of the document.</p>
+<h2 id="option-3-create-knowledge-graph-from-importedexisting-triples">Option 3 - Create Knowledge Graph from Imported/Existing Triples<a class="headerlink" href="#option-3-create-knowledge-graph-from-importedexisting-triples" title="Permanent link">&para;</a></h2>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c1"># Let&#39;s say we want to create a new graph focusing on Amazon&#39;s revenue streams</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="n">revenue_triples</span> <span class="o">=</span> <span class="p">[</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>    <span class="n">triple</span> <span class="k">for</span> <span class="n">triple</span> <span class="ow">in</span> <span class="n">all_triples</span> 
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>    <span class="k">if</span> <span class="s2">&quot;revenue&quot;</span> <span class="ow">in</span> <span class="n">triple</span><span class="o">.</span><span class="n">head</span><span class="o">.</span><span class="n">label</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">or</span> <span class="s2">&quot;revenue&quot;</span> <span class="ow">in</span> <span class="n">triple</span><span class="o">.</span><span class="n">tail</span><span class="o">.</span><span class="n">label</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="p">]</span>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="c1"># Create a new graph from these revenue-related triples</span>
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="n">revenue_graph</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">graphs</span><span class="o">.</span><span class="n">create_graph_from_triples</span><span class="p">(</span>
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>    <span class="n">workspace_id</span><span class="o">=</span><span class="n">workspace</span><span class="o">.</span><span class="n">workspace_id</span><span class="p">,</span>
+</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>    <span class="n">triples</span><span class="o">=</span><span class="n">revenue_triples</span><span class="p">,</span>
+</span><span id="__span-9-11"><a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Amazon Revenue Streams Graph&quot;</span><span class="p">,</span>
+</span><span id="__span-9-12"><a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>    <span class="n">schema_id</span><span class="o">=</span><span class="n">schema</span><span class="o">.</span><span class="n">schema_id</span><span class="p">,</span>
+</span><span id="__span-9-13"><a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a><span class="p">)</span>
+</span><span id="__span-9-14"><a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a>
+</span><span id="__span-9-15"><a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Created new graph: </span><span class="si">{</span><span class="n">revenue_graph</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-9-16"><a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a>
+</span><span id="__span-9-17"><a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a><span class="c1"># Now we can query this new, more focused graph</span>
+</span><span id="__span-9-18"><a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a><span class="n">question</span> <span class="o">=</span> <span class="s2">&quot;What are Amazon&#39;s main sources of revenue?&quot;</span>
+</span><span id="__span-9-19"><a id="__codelineno-9-19" name="__codelineno-9-19" href="#__codelineno-9-19"></a><span class="n">query</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">graphs</span><span class="o">.</span><span class="n">query_unstructured</span><span class="p">(</span>
+</span><span id="__span-9-20"><a id="__codelineno-9-20" name="__codelineno-9-20" href="#__codelineno-9-20"></a>    <span class="n">graph_id</span><span class="o">=</span><span class="n">revenue_graph</span><span class="o">.</span><span class="n">graph_id</span><span class="p">,</span>
+</span><span id="__span-9-21"><a id="__codelineno-9-21" name="__codelineno-9-21" href="#__codelineno-9-21"></a>    <span class="n">query</span><span class="o">=</span><span class="n">question</span><span class="p">,</span>
+</span><span id="__span-9-22"><a id="__codelineno-9-22" name="__codelineno-9-22" href="#__codelineno-9-22"></a><span class="p">)</span>
+</span><span id="__span-9-23"><a id="__codelineno-9-23" name="__codelineno-9-23" href="#__codelineno-9-23"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Query Response:&quot;</span><span class="p">,</span> <span class="n">query</span><span class="o">.</span><span class="n">answer</span><span class="p">)</span>
+</span><span id="__span-9-24"><a id="__codelineno-9-24" name="__codelineno-9-24" href="#__codelineno-9-24"></a>
+</span><span id="__span-9-25"><a id="__codelineno-9-25" name="__codelineno-9-25" href="#__codelineno-9-25"></a><span class="c1"># We can also get all triples from this new graph</span>
+</span><span id="__span-9-26"><a id="__codelineno-9-26" name="__codelineno-9-26" href="#__codelineno-9-26"></a><span class="n">revenue_graph_triples</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">client</span><span class="o">.</span><span class="n">graphs</span><span class="o">.</span><span class="n">get_all_triples</span><span class="p">(</span><span class="n">graph_id</span><span class="o">=</span><span class="n">revenue_graph</span><span class="o">.</span><span class="n">graph_id</span><span class="p">))</span>
+</span><span id="__span-9-27"><a id="__codelineno-9-27" name="__codelineno-9-27" href="#__codelineno-9-27"></a>
+</span><span id="__span-9-28"><a id="__codelineno-9-28" name="__codelineno-9-28" href="#__codelineno-9-28"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Triples in the Revenue Streams Graph:&quot;</span><span class="p">)</span>
+</span><span id="__span-9-29"><a id="__codelineno-9-29" name="__codelineno-9-29" href="#__codelineno-9-29"></a><span class="k">for</span> <span class="n">triple</span> <span class="ow">in</span> <span class="n">revenue_graph_triples</span><span class="p">:</span>
+</span><span id="__span-9-30"><a id="__codelineno-9-30" name="__codelineno-9-30" href="#__codelineno-9-30"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Subject: </span><span class="si">{</span><span class="n">triple</span><span class="o">.</span><span class="n">head</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">, Relation: </span><span class="si">{</span><span class="n">triple</span><span class="o">.</span><span class="n">relation</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">, Object: </span><span class="si">{</span><span class="n">triple</span><span class="o">.</span><span class="n">tail</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span></code></pre></div>
 <h2 id="querying-the-knowledge-graph">Querying the Knowledge Graph<a class="headerlink" href="#querying-the-knowledge-graph" title="Permanent link">&para;</a></h2>
 <p>With the graph created, we can now query it to find specific information about Amazon's business:</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c1"># Query graph for Amazon&#39;s business segments</span>
-</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="n">question</span> <span class="o">=</span> <span class="s2">&quot;What are Amazon&#39;s main business segments?&quot;</span>
-</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="n">query</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">graphs</span><span class="o">.</span><span class="n">query_unstructured</span><span class="p">(</span>
-</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>    <span class="n">graph_id</span><span class="o">=</span><span class="n">graph</span><span class="o">.</span><span class="n">graph_id</span><span class="p">,</span>
-</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>    <span class="n">query</span><span class="o">=</span><span class="n">question</span><span class="p">,</span>
-</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="p">)</span>
-</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Query Response:&quot;</span><span class="p">,</span> <span class="n">query</span><span class="o">.</span><span class="n">answer</span><span class="p">)</span>
-</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>
-</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="c1"># Query graph for Amazon&#39;s revenue streams</span>
-</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="n">question</span> <span class="o">=</span> <span class="s2">&quot;What are Amazon&#39;s primary revenue streams?&quot;</span>
-</span><span id="__span-9-11"><a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="n">query</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">graphs</span><span class="o">.</span><span class="n">query_unstructured</span><span class="p">(</span>
-</span><span id="__span-9-12"><a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>    <span class="n">graph_id</span><span class="o">=</span><span class="n">graph</span><span class="o">.</span><span class="n">graph_id</span><span class="p">,</span>
-</span><span id="__span-9-13"><a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a>    <span class="n">query</span><span class="o">=</span><span class="n">question</span><span class="p">,</span>
-</span><span id="__span-9-14"><a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a><span class="p">)</span>
-</span><span id="__span-9-15"><a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Query Response:&quot;</span><span class="p">,</span> <span class="n">query</span><span class="o">.</span><span class="n">answer</span><span class="p">)</span>
-</span><span id="__span-9-16"><a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a>
-</span><span id="__span-9-17"><a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a><span class="c1"># Include the chunks in the query</span>
-</span><span id="__span-9-18"><a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a><span class="n">question</span> <span class="o">=</span> <span class="s2">&quot;What are the key risk factors for Amazon&#39;s business?&quot;</span>
-</span><span id="__span-9-19"><a id="__codelineno-9-19" name="__codelineno-9-19" href="#__codelineno-9-19"></a><span class="n">query</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">graphs</span><span class="o">.</span><span class="n">query_unstructured</span><span class="p">(</span>
-</span><span id="__span-9-20"><a id="__codelineno-9-20" name="__codelineno-9-20" href="#__codelineno-9-20"></a>    <span class="n">graph_id</span><span class="o">=</span><span class="n">graph</span><span class="o">.</span><span class="n">graph_id</span><span class="p">,</span>
-</span><span id="__span-9-21"><a id="__codelineno-9-21" name="__codelineno-9-21" href="#__codelineno-9-21"></a>    <span class="n">query</span><span class="o">=</span><span class="n">question</span><span class="p">,</span>
-</span><span id="__span-9-22"><a id="__codelineno-9-22" name="__codelineno-9-22" href="#__codelineno-9-22"></a>    <span class="n">include_chunks</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-</span><span id="__span-9-23"><a id="__codelineno-9-23" name="__codelineno-9-23" href="#__codelineno-9-23"></a><span class="p">)</span>
-</span><span id="__span-9-24"><a id="__codelineno-9-24" name="__codelineno-9-24" href="#__codelineno-9-24"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Query Response:&quot;</span><span class="p">,</span> <span class="n">query</span><span class="o">.</span><span class="n">answer</span><span class="p">)</span>
-</span><span id="__span-9-25"><a id="__codelineno-9-25" name="__codelineno-9-25" href="#__codelineno-9-25"></a>
-</span><span id="__span-9-26"><a id="__codelineno-9-26" name="__codelineno-9-26" href="#__codelineno-9-26"></a><span class="c1"># Query the graph for specific relations</span>
-</span><span id="__span-9-27"><a id="__codelineno-9-27" name="__codelineno-9-27" href="#__codelineno-9-27"></a><span class="n">relations</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;comprises&quot;</span><span class="p">,</span> <span class="s2">&quot;contributes_to&quot;</span><span class="p">]</span>
-</span><span id="__span-9-28"><a id="__codelineno-9-28" name="__codelineno-9-28" href="#__codelineno-9-28"></a>
-</span><span id="__span-9-29"><a id="__codelineno-9-29" name="__codelineno-9-29" href="#__codelineno-9-29"></a><span class="n">query</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">graphs</span><span class="o">.</span><span class="n">query_structured</span><span class="p">(</span>
-</span><span id="__span-9-30"><a id="__codelineno-9-30" name="__codelineno-9-30" href="#__codelineno-9-30"></a>    <span class="n">graph_id</span><span class="o">=</span><span class="n">graph</span><span class="o">.</span><span class="n">graph_id</span><span class="p">,</span>
-</span><span id="__span-9-31"><a id="__codelineno-9-31" name="__codelineno-9-31" href="#__codelineno-9-31"></a>    <span class="n">relations</span><span class="o">=</span><span class="n">relations</span><span class="p">,</span>
-</span><span id="__span-9-32"><a id="__codelineno-9-32" name="__codelineno-9-32" href="#__codelineno-9-32"></a><span class="p">)</span>
-</span><span id="__span-9-33"><a id="__codelineno-9-33" name="__codelineno-9-33" href="#__codelineno-9-33"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Query Response:&quot;</span><span class="p">,</span> <span class="n">query</span><span class="o">.</span><span class="n">triples</span><span class="p">)</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="c1"># Query graph for Amazon&#39;s business segments</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="n">question</span> <span class="o">=</span> <span class="s2">&quot;What are Amazon&#39;s main business segments?&quot;</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="n">query</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">graphs</span><span class="o">.</span><span class="n">query_unstructured</span><span class="p">(</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>    <span class="n">graph_id</span><span class="o">=</span><span class="n">graph</span><span class="o">.</span><span class="n">graph_id</span><span class="p">,</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>    <span class="n">query</span><span class="o">=</span><span class="n">question</span><span class="p">,</span>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="p">)</span>
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Query Response:&quot;</span><span class="p">,</span> <span class="n">query</span><span class="o">.</span><span class="n">answer</span><span class="p">)</span>
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>
+</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="c1"># Query graph for Amazon&#39;s revenue streams</span>
+</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="n">question</span> <span class="o">=</span> <span class="s2">&quot;What are Amazon&#39;s primary revenue streams?&quot;</span>
+</span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="n">query</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">graphs</span><span class="o">.</span><span class="n">query_unstructured</span><span class="p">(</span>
+</span><span id="__span-10-12"><a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a>    <span class="n">graph_id</span><span class="o">=</span><span class="n">graph</span><span class="o">.</span><span class="n">graph_id</span><span class="p">,</span>
+</span><span id="__span-10-13"><a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a>    <span class="n">query</span><span class="o">=</span><span class="n">question</span><span class="p">,</span>
+</span><span id="__span-10-14"><a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a><span class="p">)</span>
+</span><span id="__span-10-15"><a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Query Response:&quot;</span><span class="p">,</span> <span class="n">query</span><span class="o">.</span><span class="n">answer</span><span class="p">)</span>
+</span><span id="__span-10-16"><a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a>
+</span><span id="__span-10-17"><a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a><span class="c1"># Include the chunks in the query</span>
+</span><span id="__span-10-18"><a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a><span class="n">question</span> <span class="o">=</span> <span class="s2">&quot;What are the key risk factors for Amazon&#39;s business?&quot;</span>
+</span><span id="__span-10-19"><a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a><span class="n">query</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">graphs</span><span class="o">.</span><span class="n">query_unstructured</span><span class="p">(</span>
+</span><span id="__span-10-20"><a id="__codelineno-10-20" name="__codelineno-10-20" href="#__codelineno-10-20"></a>    <span class="n">graph_id</span><span class="o">=</span><span class="n">graph</span><span class="o">.</span><span class="n">graph_id</span><span class="p">,</span>
+</span><span id="__span-10-21"><a id="__codelineno-10-21" name="__codelineno-10-21" href="#__codelineno-10-21"></a>    <span class="n">query</span><span class="o">=</span><span class="n">question</span><span class="p">,</span>
+</span><span id="__span-10-22"><a id="__codelineno-10-22" name="__codelineno-10-22" href="#__codelineno-10-22"></a>    <span class="n">include_chunks</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+</span><span id="__span-10-23"><a id="__codelineno-10-23" name="__codelineno-10-23" href="#__codelineno-10-23"></a><span class="p">)</span>
+</span><span id="__span-10-24"><a id="__codelineno-10-24" name="__codelineno-10-24" href="#__codelineno-10-24"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Query Response:&quot;</span><span class="p">,</span> <span class="n">query</span><span class="o">.</span><span class="n">answer</span><span class="p">)</span>
+</span><span id="__span-10-25"><a id="__codelineno-10-25" name="__codelineno-10-25" href="#__codelineno-10-25"></a>
+</span><span id="__span-10-26"><a id="__codelineno-10-26" name="__codelineno-10-26" href="#__codelineno-10-26"></a><span class="c1"># Query the graph for specific relations</span>
+</span><span id="__span-10-27"><a id="__codelineno-10-27" name="__codelineno-10-27" href="#__codelineno-10-27"></a><span class="n">relations</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;comprises&quot;</span><span class="p">,</span> <span class="s2">&quot;contributes_to&quot;</span><span class="p">]</span>
+</span><span id="__span-10-28"><a id="__codelineno-10-28" name="__codelineno-10-28" href="#__codelineno-10-28"></a>
+</span><span id="__span-10-29"><a id="__codelineno-10-29" name="__codelineno-10-29" href="#__codelineno-10-29"></a><span class="n">query</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">graphs</span><span class="o">.</span><span class="n">query_structured</span><span class="p">(</span>
+</span><span id="__span-10-30"><a id="__codelineno-10-30" name="__codelineno-10-30" href="#__codelineno-10-30"></a>    <span class="n">graph_id</span><span class="o">=</span><span class="n">graph</span><span class="o">.</span><span class="n">graph_id</span><span class="p">,</span>
+</span><span id="__span-10-31"><a id="__codelineno-10-31" name="__codelineno-10-31" href="#__codelineno-10-31"></a>    <span class="n">relations</span><span class="o">=</span><span class="n">relations</span><span class="p">,</span>
+</span><span id="__span-10-32"><a id="__codelineno-10-32" name="__codelineno-10-32" href="#__codelineno-10-32"></a><span class="p">)</span>
+</span><span id="__span-10-33"><a id="__codelineno-10-33" name="__codelineno-10-33" href="#__codelineno-10-33"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Query Response:&quot;</span><span class="p">,</span> <span class="n">query</span><span class="o">.</span><span class="n">triples</span><span class="p">)</span>
 </span></code></pre></div>
 <h2 id="after-querying-the-graph-lets-retrieve-all-triples">After querying the graph, let's retrieve all triples<a class="headerlink" href="#after-querying-the-graph-lets-retrieve-all-triples" title="Permanent link">&para;</a></h2>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Retrieving all triples from the graph:&quot;</span><span class="p">)</span>
-</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="n">all_triples</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">client</span><span class="o">.</span><span class="n">graphs</span><span class="o">.</span><span class="n">get_all_triples</span><span class="p">(</span><span class="n">graph_id</span><span class="o">=</span><span class="n">graph</span><span class="o">.</span><span class="n">graph_id</span><span class="p">))</span>
-</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>
-</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="k">for</span> <span class="n">triple</span> <span class="ow">in</span> <span class="n">all_triples</span><span class="p">:</span>
-</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Subject: </span><span class="si">{</span><span class="n">triple</span><span class="o">.</span><span class="n">head</span><span class="si">}</span><span class="s2">, Relation: </span><span class="si">{</span><span class="n">triple</span><span class="o">.</span><span class="n">relation</span><span class="si">}</span><span class="s2">, Object: </span><span class="si">{</span><span class="n">triple</span><span class="o">.</span><span class="n">tail</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span> 
-</span></code></pre></div>
-<h2 id="create-graph-from-triples">Create Graph from Triples<a class="headerlink" href="#create-graph-from-triples" title="Permanent link">&para;</a></h2>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="c1"># Let&#39;s say we want to create a new graph focusing on Amazon&#39;s revenue streams</span>
-</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="n">revenue_triples</span> <span class="o">=</span> <span class="p">[</span>
-</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>    <span class="n">triple</span> <span class="k">for</span> <span class="n">triple</span> <span class="ow">in</span> <span class="n">all_triples</span> 
-</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>    <span class="k">if</span> <span class="s2">&quot;revenue&quot;</span> <span class="ow">in</span> <span class="n">triple</span><span class="o">.</span><span class="n">head</span><span class="o">.</span><span class="n">label</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">or</span> <span class="s2">&quot;revenue&quot;</span> <span class="ow">in</span> <span class="n">triple</span><span class="o">.</span><span class="n">tail</span><span class="o">.</span><span class="n">label</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
-</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="p">]</span>
-</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>
-</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="c1"># Create a new graph from these revenue-related triples</span>
-</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="n">revenue_graph</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">graphs</span><span class="o">.</span><span class="n">create_graph_from_triples</span><span class="p">(</span>
-</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>    <span class="n">workspace_id</span><span class="o">=</span><span class="n">workspace</span><span class="o">.</span><span class="n">workspace_id</span><span class="p">,</span>
-</span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>    <span class="n">triples</span><span class="o">=</span><span class="n">revenue_triples</span><span class="p">,</span>
-</span><span id="__span-11-11"><a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Amazon Revenue Streams Graph&quot;</span><span class="p">,</span>
-</span><span id="__span-11-12"><a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a>    <span class="n">schema_id</span><span class="o">=</span><span class="n">schema</span><span class="o">.</span><span class="n">schema_id</span><span class="p">,</span>
-</span><span id="__span-11-13"><a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a><span class="p">)</span>
-</span><span id="__span-11-14"><a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a>
-</span><span id="__span-11-15"><a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Created new graph: </span><span class="si">{</span><span class="n">revenue_graph</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</span><span id="__span-11-16"><a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a>
-</span><span id="__span-11-17"><a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a><span class="c1"># Now we can query this new, more focused graph</span>
-</span><span id="__span-11-18"><a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a><span class="n">question</span> <span class="o">=</span> <span class="s2">&quot;What are Amazon&#39;s main sources of revenue?&quot;</span>
-</span><span id="__span-11-19"><a id="__codelineno-11-19" name="__codelineno-11-19" href="#__codelineno-11-19"></a><span class="n">query</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">graphs</span><span class="o">.</span><span class="n">query_unstructured</span><span class="p">(</span>
-</span><span id="__span-11-20"><a id="__codelineno-11-20" name="__codelineno-11-20" href="#__codelineno-11-20"></a>    <span class="n">graph_id</span><span class="o">=</span><span class="n">revenue_graph</span><span class="o">.</span><span class="n">graph_id</span><span class="p">,</span>
-</span><span id="__span-11-21"><a id="__codelineno-11-21" name="__codelineno-11-21" href="#__codelineno-11-21"></a>    <span class="n">query</span><span class="o">=</span><span class="n">question</span><span class="p">,</span>
-</span><span id="__span-11-22"><a id="__codelineno-11-22" name="__codelineno-11-22" href="#__codelineno-11-22"></a><span class="p">)</span>
-</span><span id="__span-11-23"><a id="__codelineno-11-23" name="__codelineno-11-23" href="#__codelineno-11-23"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Query Response:&quot;</span><span class="p">,</span> <span class="n">query</span><span class="o">.</span><span class="n">answer</span><span class="p">)</span>
-</span><span id="__span-11-24"><a id="__codelineno-11-24" name="__codelineno-11-24" href="#__codelineno-11-24"></a>
-</span><span id="__span-11-25"><a id="__codelineno-11-25" name="__codelineno-11-25" href="#__codelineno-11-25"></a><span class="c1"># We can also get all triples from this new graph</span>
-</span><span id="__span-11-26"><a id="__codelineno-11-26" name="__codelineno-11-26" href="#__codelineno-11-26"></a><span class="n">revenue_graph_triples</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">client</span><span class="o">.</span><span class="n">graphs</span><span class="o">.</span><span class="n">get_all_triples</span><span class="p">(</span><span class="n">graph_id</span><span class="o">=</span><span class="n">revenue_graph</span><span class="o">.</span><span class="n">graph_id</span><span class="p">))</span>
-</span><span id="__span-11-27"><a id="__codelineno-11-27" name="__codelineno-11-27" href="#__codelineno-11-27"></a>
-</span><span id="__span-11-28"><a id="__codelineno-11-28" name="__codelineno-11-28" href="#__codelineno-11-28"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Triples in the Revenue Streams Graph:&quot;</span><span class="p">)</span>
-</span><span id="__span-11-29"><a id="__codelineno-11-29" name="__codelineno-11-29" href="#__codelineno-11-29"></a><span class="k">for</span> <span class="n">triple</span> <span class="ow">in</span> <span class="n">revenue_graph_triples</span><span class="p">:</span>
-</span><span id="__span-11-30"><a id="__codelineno-11-30" name="__codelineno-11-30" href="#__codelineno-11-30"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Subject: </span><span class="si">{</span><span class="n">triple</span><span class="o">.</span><span class="n">head</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">, Relation: </span><span class="si">{</span><span class="n">triple</span><span class="o">.</span><span class="n">relation</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">, Object: </span><span class="si">{</span><span class="n">triple</span><span class="o">.</span><span class="n">tail</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Retrieving all triples from the graph:&quot;</span><span class="p">)</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="n">all_triples</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">client</span><span class="o">.</span><span class="n">graphs</span><span class="o">.</span><span class="n">get_all_triples</span><span class="p">(</span><span class="n">graph_id</span><span class="o">=</span><span class="n">graph</span><span class="o">.</span><span class="n">graph_id</span><span class="p">))</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="k">for</span> <span class="n">triple</span> <span class="ow">in</span> <span class="n">all_triples</span><span class="p">:</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Subject: </span><span class="si">{</span><span class="n">triple</span><span class="o">.</span><span class="n">head</span><span class="si">}</span><span class="s2">, Relation: </span><span class="si">{</span><span class="n">triple</span><span class="o">.</span><span class="n">relation</span><span class="si">}</span><span class="s2">, Object: </span><span class="si">{</span><span class="n">triple</span><span class="o">.</span><span class="n">tail</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span> 
 </span></code></pre></div>
 <h2 id="exporting-the-knowledge-graph">Exporting the Knowledge Graph<a class="headerlink" href="#exporting-the-knowledge-graph" title="Permanent link">&para;</a></h2>
 <p>You can export the graph as a Cypher query to use in Neo4j or other graph databases:</p>
