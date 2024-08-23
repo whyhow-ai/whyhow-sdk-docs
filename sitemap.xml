@@ -20,4 +20,14 @@
          <lastmod>2024-08-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
+    <url>
+         <loc>https://whyhow-ai.github.io/whyhow-sdk-docs/examples/create_graph_from_triples/</loc>
+         <lastmod>2024-08-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://whyhow-ai.github.io/whyhow-sdk-docs/examples/overview/</loc>
+         <lastmod>2024-08-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
 </urlset>
