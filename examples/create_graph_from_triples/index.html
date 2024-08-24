@@ -1583,9 +1583,9 @@ allowed_relationships=["AFFECTS", "INVOLVED_IN", "WORKED_AT", "POSES_RISK"]</div
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">graph_documents_props</span> <span class="o">=</span> <span class="n">llm_transformer_props</span><span class="o">.</span><span class="n">aconvert_to_graph_documents</span><span class="p">(</span><span class="n">split_docs</span><span class="p">)</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">graph_documents_props</span> <span class="o">=</span> <span class="k">await</span> <span class="n">llm_transformer_props</span><span class="o">.</span><span class="n">aconvert_to_graph_documents</span><span class="p">(</span><span class="n">split_docs</span><span class="p">)</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-9">graph_documents_props = llm_transformer_props.aconvert_to_graph_documents(split_docs)</div>
+<div class="clipboard-copy-txt" id="cell-9">graph_documents_props = await llm_transformer_props.aconvert_to_graph_documents(split_docs)</div>
 </div>
 </div>
 </div>
