@@ -1541,6 +1541,62 @@ WHYHOW_API_KEY environment variable will be used.</p>
 <div class="doc doc-object doc-function">
 
 
+<h4 id="whyhow.resources.AsyncChunksResource.create" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">create</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-async"><code>async</code></small>
+  </span>
+
+<a href="#whyhow.resources.AsyncChunksResource.create" class="headerlink" title="Permanent link">&para;</a></h4>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">create</span><span class="p">(</span><span class="n">workspace_id</span><span class="p">:</span> <span class="n">str</span><span class="p">,</span> <span class="n">chunks</span><span class="p">:</span> <span class="n">list</span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="whyhow.schemas.Chunk" href="#whyhow.schemas.Chunk">Chunk</a></span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">list</span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="whyhow.schemas.Chunk" href="#whyhow.schemas.Chunk">Chunk</a></span><span class="p">]</span>
+</span></code></pre></div>
+
+    <div class="doc doc-contents ">
+
+      <p>Add chunks to a workspace.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+          <b><code>workspace_id</code></b>
+              (<code>str</code>)
+          –
+          <div class="doc-md-description">
+            <p>The ID of the workspace.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>chunks</code></b>
+              (<code>list[<a class="autorefs autorefs-internal" title="whyhow.schemas.Chunk" href="#whyhow.schemas.Chunk">Chunk</a>]</code>)
+          –
+          <div class="doc-md-description">
+            <p>The chunks to add.</p>
+          </div>
+        </li>
+    </ul>
+
+
+<p><span class="doc-section-title">Returns:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+              <code>list[<a class="autorefs autorefs-internal" title="whyhow.schemas.Chunk" href="#whyhow.schemas.Chunk">Chunk</a>]</code>
+          –
+          <div class="doc-md-description">
+            <p>The updated chunks.</p>
+          </div>
+        </li>
+    </ul>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
 <h4 id="whyhow.resources.AsyncChunksResource.get" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">get</span>
 
@@ -2081,6 +2137,160 @@ uploaded/processed.</p>
 
 
 
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="whyhow.resources.AsyncGraphsResource.add_chunks" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">add_chunks</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-async"><code>async</code></small>
+  </span>
+
+<a href="#whyhow.resources.AsyncGraphsResource.add_chunks" class="headerlink" title="Permanent link">&para;</a></h4>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">add_chunks</span><span class="p">(</span><span class="n">graph_id</span><span class="p">:</span> <span class="n">str</span><span class="p">,</span> <span class="n">document_ids</span><span class="p">:</span> <span class="n">list</span><span class="p">[</span><span class="n">str</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">data_types</span><span class="p">:</span> <span class="n">list</span><span class="p">[</span><span class="n"><span title="whyhow.resources.graphs.VALID_DATA_TYPE">VALID_DATA_TYPE</span></span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">tags</span><span class="p">:</span> <span class="n">list</span><span class="p">[</span><span class="n">str</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">user_metadata</span><span class="p">:</span> <span class="n">dict</span><span class="p">[</span><span class="n">str</span><span class="p">,</span> <span class="n"><span title="typing.Any">Any</span></span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">ids</span><span class="p">:</span> <span class="n">list</span><span class="p">[</span><span class="n">str</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-internal" title="whyhow.schemas.Graph" href="#whyhow.schemas.Graph">Graph</a></span>
+</span></code></pre></div>
+
+    <div class="doc doc-contents ">
+
+      <p>Add chunks to a graph.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+          <b><code>graph_id</code></b>
+              (<code>str</code>)
+          –
+          <div class="doc-md-description">
+            <p>The ID of the graph.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>document_ids</code></b>
+              (<code>list[str]</code>, default:
+                  <code>None</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>The IDs of the documents.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>data_types</code></b>
+              (<code>list[str]</code>, default:
+                  <code>None</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>The data types. Possible values are "string" and "object".</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>tags</code></b>
+              (<code>list[str]</code>, default:
+                  <code>None</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>The tags.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>user_metadata</code></b>
+              (<code>dict[str, <span title="typing.Any">Any</span>]</code>, default:
+                  <code>None</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>The user metadata.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>ids</code></b>
+              (<code>list[str]</code>, default:
+                  <code>None</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>The IDs of the chunks.</p>
+          </div>
+        </li>
+    </ul>
+
+
+<p><span class="doc-section-title">Returns:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+              <code><a class="autorefs autorefs-internal" title="whyhow.schemas.Graph" href="#whyhow.schemas.Graph">Graph</a></code>
+          –
+          <div class="doc-md-description">
+            <p>The graph.</p>
+          </div>
+        </li>
+    </ul>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="whyhow.resources.AsyncGraphsResource.add_triples" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">add_triples</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-async"><code>async</code></small>
+  </span>
+
+<a href="#whyhow.resources.AsyncGraphsResource.add_triples" class="headerlink" title="Permanent link">&para;</a></h4>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">add_triples</span><span class="p">(</span><span class="n">graph_id</span><span class="p">:</span> <span class="n">str</span><span class="p">,</span> <span class="n">triples</span><span class="p">:</span> <span class="n">list</span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="whyhow.schemas.Triple" href="#whyhow.schemas.Triple">Triple</a></span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-internal" title="whyhow.schemas.Graph" href="#whyhow.schemas.Graph">Graph</a></span>
+</span></code></pre></div>
+
+    <div class="doc doc-contents ">
+
+      <p>Add triples to a graph.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+          <b><code>graph_id</code></b>
+              (<code>str</code>)
+          –
+          <div class="doc-md-description">
+            <p>The ID of the graph.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>triples</code></b>
+              (<code>list[<a class="autorefs autorefs-internal" title="whyhow.schemas.Triple" href="#whyhow.schemas.Triple">Triple</a>]</code>)
+          –
+          <div class="doc-md-description">
+            <p>The triples.</p>
+          </div>
+        </li>
+    </ul>
+
+
+<p><span class="doc-section-title">Returns:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+              <code><a class="autorefs autorefs-internal" title="whyhow.schemas.Graph" href="#whyhow.schemas.Graph">Graph</a></code>
+          –
+          <div class="doc-md-description">
+            <p>The graph.</p>
+          </div>
+        </li>
+    </ul>
+
+    </div>
+
+</div>
 
 <div class="doc doc-object doc-function">
 
@@ -3447,6 +3657,58 @@ uploaded/processed.</p>
 <div class="doc doc-object doc-function">
 
 
+<h4 id="whyhow.resources.ChunksResource.create" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">create</span>
+
+
+<a href="#whyhow.resources.ChunksResource.create" class="headerlink" title="Permanent link">&para;</a></h4>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">create</span><span class="p">(</span><span class="n">workspace_id</span><span class="p">:</span> <span class="n">str</span><span class="p">,</span> <span class="n">chunks</span><span class="p">:</span> <span class="n">list</span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="whyhow.schemas.Chunk" href="#whyhow.schemas.Chunk">Chunk</a></span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">list</span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="whyhow.schemas.Chunk" href="#whyhow.schemas.Chunk">Chunk</a></span><span class="p">]</span>
+</span></code></pre></div>
+
+    <div class="doc doc-contents ">
+
+      <p>Add chunks to a workspace.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+          <b><code>workspace_id</code></b>
+              (<code>str</code>)
+          –
+          <div class="doc-md-description">
+            <p>The ID of the workspace.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>chunks</code></b>
+              (<code>list[<a class="autorefs autorefs-internal" title="whyhow.schemas.Chunk" href="#whyhow.schemas.Chunk">Chunk</a>]</code>)
+          –
+          <div class="doc-md-description">
+            <p>The chunks to add.</p>
+          </div>
+        </li>
+    </ul>
+
+
+<p><span class="doc-section-title">Returns:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+              <code>list[<a class="autorefs autorefs-internal" title="whyhow.schemas.Chunk" href="#whyhow.schemas.Chunk">Chunk</a>]</code>
+          –
+          <div class="doc-md-description">
+            <p>The updated chunks.</p>
+          </div>
+        </li>
+    </ul>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
 <h4 id="whyhow.resources.ChunksResource.get" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">get</span>
 
@@ -3963,6 +4225,152 @@ uploaded/processed.</p>
 
 
 
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="whyhow.resources.GraphsResource.add_chunks" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">add_chunks</span>
+
+
+<a href="#whyhow.resources.GraphsResource.add_chunks" class="headerlink" title="Permanent link">&para;</a></h4>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">add_chunks</span><span class="p">(</span><span class="n">graph_id</span><span class="p">:</span> <span class="n">str</span><span class="p">,</span> <span class="n">document_ids</span><span class="p">:</span> <span class="n">list</span><span class="p">[</span><span class="n">str</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">data_types</span><span class="p">:</span> <span class="n">list</span><span class="p">[</span><span class="n"><span title="whyhow.resources.graphs.VALID_DATA_TYPE">VALID_DATA_TYPE</span></span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">tags</span><span class="p">:</span> <span class="n">list</span><span class="p">[</span><span class="n">str</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">user_metadata</span><span class="p">:</span> <span class="n">dict</span><span class="p">[</span><span class="n">str</span><span class="p">,</span> <span class="n"><span title="typing.Any">Any</span></span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">ids</span><span class="p">:</span> <span class="n">list</span><span class="p">[</span><span class="n">str</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-internal" title="whyhow.schemas.Graph" href="#whyhow.schemas.Graph">Graph</a></span>
+</span></code></pre></div>
+
+    <div class="doc doc-contents ">
+
+      <p>Add chunks to a graph.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+          <b><code>graph_id</code></b>
+              (<code>str</code>)
+          –
+          <div class="doc-md-description">
+            <p>The ID of the graph.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>document_ids</code></b>
+              (<code>list[str]</code>, default:
+                  <code>None</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>The IDs of the documents.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>data_types</code></b>
+              (<code>list[str]</code>, default:
+                  <code>None</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>The data types. Possible values are "string" and "object".</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>tags</code></b>
+              (<code>list[str]</code>, default:
+                  <code>None</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>The tags.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>user_metadata</code></b>
+              (<code>dict[str, <span title="typing.Any">Any</span>]</code>, default:
+                  <code>None</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>The user metadata.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>ids</code></b>
+              (<code>list[str]</code>, default:
+                  <code>None</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>The IDs of the chunks.</p>
+          </div>
+        </li>
+    </ul>
+
+
+<p><span class="doc-section-title">Returns:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+              <code><a class="autorefs autorefs-internal" title="whyhow.schemas.Graph" href="#whyhow.schemas.Graph">Graph</a></code>
+          –
+          <div class="doc-md-description">
+            <p>The graph.</p>
+          </div>
+        </li>
+    </ul>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="whyhow.resources.GraphsResource.add_triples" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">add_triples</span>
+
+
+<a href="#whyhow.resources.GraphsResource.add_triples" class="headerlink" title="Permanent link">&para;</a></h4>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">add_triples</span><span class="p">(</span><span class="n">graph_id</span><span class="p">:</span> <span class="n">str</span><span class="p">,</span> <span class="n">triples</span><span class="p">:</span> <span class="n">list</span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="whyhow.schemas.Triple" href="#whyhow.schemas.Triple">Triple</a></span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-internal" title="whyhow.schemas.Graph" href="#whyhow.schemas.Graph">Graph</a></span>
+</span></code></pre></div>
+
+    <div class="doc doc-contents ">
+
+      <p>Add triples to a graph.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+          <b><code>graph_id</code></b>
+              (<code>str</code>)
+          –
+          <div class="doc-md-description">
+            <p>The ID of the graph.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>triples</code></b>
+              (<code>list[<a class="autorefs autorefs-internal" title="whyhow.schemas.Triple" href="#whyhow.schemas.Triple">Triple</a>]</code>)
+          –
+          <div class="doc-md-description">
+            <p>The triples.</p>
+          </div>
+        </li>
+    </ul>
+
+
+<p><span class="doc-section-title">Returns:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+              <code><a class="autorefs autorefs-internal" title="whyhow.schemas.Graph" href="#whyhow.schemas.Graph">Graph</a></code>
+          –
+          <div class="doc-md-description">
+            <p>The graph.</p>
+          </div>
+        </li>
+    </ul>
+
+    </div>
+
+</div>
 
 <div class="doc doc-object doc-function">
 
@@ -5276,7 +5684,7 @@ uploaded/processed.</p>
     <ul>
         <li class="doc-section-item field-body">
           <b><code><span title="whyhow.schemas.Chunk.chunk_id">chunk_id</span></code></b>
-              (<code>str</code>)
+              (<code>str | None</code>)
           –
           <div class="doc-md-description">
             <p>The chunk ID.</p>
@@ -5308,7 +5716,7 @@ uploaded/processed.</p>
         </li>
         <li class="doc-section-item field-body">
           <b><code><span title="whyhow.schemas.Chunk.workspace_ids">workspace_ids</span></code></b>
-              (<code>list[str]</code>)
+              (<code>list[str] | None</code>)
           –
           <div class="doc-md-description">
             <p>The workspace IDs.</p>
@@ -5316,7 +5724,7 @@ uploaded/processed.</p>
         </li>
         <li class="doc-section-item field-body">
           <b><code><span title="whyhow.schemas.Chunk.metadata">metadata</span></code></b>
-              (<code><a class="autorefs autorefs-internal" title="whyhow.schemas.ChunkMetadata" href="#whyhow.schemas.ChunkMetadata">ChunkMetadata</a></code>)
+              (<code><a class="autorefs autorefs-internal" title="whyhow.schemas.ChunkMetadata" href="#whyhow.schemas.ChunkMetadata">ChunkMetadata</a> | None</code>)
           –
           <div class="doc-md-description">
             <p>The chunk metadata.</p>
@@ -5340,7 +5748,7 @@ uploaded/processed.</p>
         </li>
         <li class="doc-section-item field-body">
           <b><code><span title="whyhow.schemas.Chunk.tags">tags</span></code></b>
-              (<code>dict[str, <span title="typing.Any">Any</span>] | list[<span title="typing.Any">Any</span>]</code>)
+              (<code>dict[str, list[str]] | list[str]</code>)
           –
           <div class="doc-md-description">
             <p>The chunk tags.</p>
