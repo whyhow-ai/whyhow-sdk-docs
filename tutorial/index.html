@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.33">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.33">
     
     
       
@@ -528,6 +528,24 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#add-chunks-to-the-graph" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add Chunks to the Graph
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-triples-to-the-graph" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add Triples to the Graph
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#exporting-the-knowledge-graph" class="md-nav__link">
     <span class="md-ellipsis">
       Exporting the Knowledge Graph
@@ -752,6 +770,24 @@
   <a href="#after-querying-the-graph-lets-retrieve-all-triples" class="md-nav__link">
     <span class="md-ellipsis">
       After querying the graph, let's retrieve all triples
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-chunks-to-the-graph" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add Chunks to the Graph
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-triples-to-the-graph" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add Triples to the Graph
     </span>
   </a>
   
@@ -991,10 +1027,62 @@
 </span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="k">for</span> <span class="n">triple</span> <span class="ow">in</span> <span class="n">all_triples</span><span class="p">:</span>
 </span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Subject: </span><span class="si">{</span><span class="n">triple</span><span class="o">.</span><span class="n">head</span><span class="si">}</span><span class="s2">, Relation: </span><span class="si">{</span><span class="n">triple</span><span class="o">.</span><span class="n">relation</span><span class="si">}</span><span class="s2">, Object: </span><span class="si">{</span><span class="n">triple</span><span class="o">.</span><span class="n">tail</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span> 
 </span></code></pre></div>
+<h2 id="add-chunks-to-the-graph">Add Chunks to the Graph<a class="headerlink" href="#add-chunks-to-the-graph" title="Permanent link">&para;</a></h2>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">document_path</span> <span class="o">=</span> <span class="s2">&quot;path/to/amazon_10k_2023.pdf&quot;</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">tqdm</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">text</span><span class="p">),</span> <span class="mi">1024</span><span class="p">)):</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>    <span class="n">chunk</span> <span class="o">=</span> <span class="n">text</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1024</span><span class="p">]</span>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>    <span class="n">chunks</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">chunks</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>        <span class="n">workspace_id</span><span class="o">=</span><span class="n">workspace</span><span class="o">.</span><span class="n">workspace_id</span><span class="p">,</span>
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>        <span class="n">chunks</span><span class="o">=</span><span class="p">[</span>
+</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>            <span class="n">Chunk</span><span class="p">(</span>
+</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>                <span class="n">content</span><span class="o">=</span><span class="n">chunk</span>
+</span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>            <span class="p">)</span>
+</span><span id="__span-12-11"><a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a>        <span class="p">]</span>
+</span><span id="__span-12-12"><a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a>    <span class="p">)</span>
+</span><span id="__span-12-13"><a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a>    <span class="n">client</span><span class="o">.</span><span class="n">graphs</span><span class="o">.</span><span class="n">add_chunks</span><span class="p">(</span>
+</span><span id="__span-12-14"><a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a>        <span class="n">graph_id</span><span class="o">=</span><span class="n">graph</span><span class="o">.</span><span class="n">graph_id</span><span class="p">,</span>
+</span><span id="__span-12-15"><a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a>        <span class="n">ids</span><span class="o">=</span><span class="p">[</span><span class="n">chunks</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">chunk_id</span><span class="p">]</span>
+</span><span id="__span-12-16"><a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a>    <span class="p">)</span>
+</span></code></pre></div>
+<h2 id="add-triples-to-the-graph">Add Triples to the Graph<a class="headerlink" href="#add-triples-to-the-graph" title="Permanent link">&para;</a></h2>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>    <span class="n">triples</span> <span class="o">=</span> <span class="p">[</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>        <span class="n">Triple</span><span class="p">(</span>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>            <span class="n">head</span><span class="o">=</span><span class="n">Node</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Amazon&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Company&quot;</span><span class="p">),</span>
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>            <span class="n">relation</span><span class="o">=</span><span class="n">Relation</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Has business segment&quot;</span><span class="p">),</span>
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>            <span class="n">tail</span><span class="o">=</span><span class="n">Node</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;North America&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Business Segment&quot;</span><span class="p">),</span>
+</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>        <span class="p">),</span>
+</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>        <span class="n">Triple</span><span class="p">(</span>
+</span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>            <span class="n">head</span><span class="o">=</span><span class="n">Node</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Amazon&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Company&quot;</span><span class="p">),</span>
+</span><span id="__span-13-9"><a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>            <span class="n">relation</span><span class="o">=</span><span class="n">Relation</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Has business segment&quot;</span><span class="p">),</span>
+</span><span id="__span-13-10"><a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a>            <span class="n">tail</span><span class="o">=</span><span class="n">Node</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;International&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Business Segment&quot;</span><span class="p">),</span>
+</span><span id="__span-13-11"><a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a>        <span class="p">),</span>
+</span><span id="__span-13-12"><a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a>        <span class="n">Triple</span><span class="p">(</span>
+</span><span id="__span-13-13"><a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a>            <span class="n">head</span><span class="o">=</span><span class="n">Node</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Amazon&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Company&quot;</span><span class="p">),</span>
+</span><span id="__span-13-14"><a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a>            <span class="n">relation</span><span class="o">=</span><span class="n">Relation</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Has business segment&quot;</span><span class="p">),</span>
+</span><span id="__span-13-15"><a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a>            <span class="n">tail</span><span class="o">=</span><span class="n">Node</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;AWS&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Business Segment&quot;</span><span class="p">),</span>
+</span><span id="__span-13-16"><a id="__codelineno-13-16" name="__codelineno-13-16" href="#__codelineno-13-16"></a>        <span class="p">),</span>
+</span><span id="__span-13-17"><a id="__codelineno-13-17" name="__codelineno-13-17" href="#__codelineno-13-17"></a>        <span class="n">Triple</span><span class="p">(</span>
+</span><span id="__span-13-18"><a id="__codelineno-13-18" name="__codelineno-13-18" href="#__codelineno-13-18"></a>            <span class="n">head</span><span class="o">=</span><span class="n">Node</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;E-commerce&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Revenue Stream&quot;</span><span class="p">),</span>
+</span><span id="__span-13-19"><a id="__codelineno-13-19" name="__codelineno-13-19" href="#__codelineno-13-19"></a>            <span class="n">relation</span><span class="o">=</span><span class="n">Relation</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Contributes to&quot;</span><span class="p">),</span>
+</span><span id="__span-13-20"><a id="__codelineno-13-20" name="__codelineno-13-20" href="#__codelineno-13-20"></a>            <span class="n">tail</span><span class="o">=</span><span class="n">Node</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Amazon&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Company&quot;</span><span class="p">),</span>
+</span><span id="__span-13-21"><a id="__codelineno-13-21" name="__codelineno-13-21" href="#__codelineno-13-21"></a>        <span class="p">),</span>
+</span><span id="__span-13-22"><a id="__codelineno-13-22" name="__codelineno-13-22" href="#__codelineno-13-22"></a>        <span class="n">Triple</span><span class="p">(</span>
+</span><span id="__span-13-23"><a id="__codelineno-13-23" name="__codelineno-13-23" href="#__codelineno-13-23"></a>            <span class="n">head</span><span class="o">=</span><span class="n">Node</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Cloud computing services&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Revenue Stream&quot;</span><span class="p">),</span>
+</span><span id="__span-13-24"><a id="__codelineno-13-24" name="__codelineno-13-24" href="#__codelineno-13-24"></a>            <span class="n">relation</span><span class="o">=</span><span class="n">Relation</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Contributes to&quot;</span><span class="p">),</span>
+</span><span id="__span-13-25"><a id="__codelineno-13-25" name="__codelineno-13-25" href="#__codelineno-13-25"></a>            <span class="n">tail</span><span class="o">=</span><span class="n">Node</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;AWS&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Business Segment&quot;</span><span class="p">),</span>
+</span><span id="__span-13-26"><a id="__codelineno-13-26" name="__codelineno-13-26" href="#__codelineno-13-26"></a>        <span class="p">),</span>
+</span><span id="__span-13-27"><a id="__codelineno-13-27" name="__codelineno-13-27" href="#__codelineno-13-27"></a>    <span class="p">]</span>
+</span><span id="__span-13-28"><a id="__codelineno-13-28" name="__codelineno-13-28" href="#__codelineno-13-28"></a>
+</span><span id="__span-13-29"><a id="__codelineno-13-29" name="__codelineno-13-29" href="#__codelineno-13-29"></a>    <span class="n">graph</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">graphs</span><span class="o">.</span><span class="n">add</span><span class="p">(</span>
+</span><span id="__span-13-30"><a id="__codelineno-13-30" name="__codelineno-13-30" href="#__codelineno-13-30"></a>        <span class="n">graph_id</span><span class="o">=</span><span class="n">graph</span><span class="o">.</span><span class="n">graph_id</span><span class="p">,</span>
+</span><span id="__span-13-31"><a id="__codelineno-13-31" name="__codelineno-13-31" href="#__codelineno-13-31"></a>        <span class="n">triples</span><span class="o">=</span><span class="n">triples</span>
+</span><span id="__span-13-32"><a id="__codelineno-13-32" name="__codelineno-13-32" href="#__codelineno-13-32"></a>    <span class="p">)</span>
+</span></code></pre></div>
 <h2 id="exporting-the-knowledge-graph">Exporting the Knowledge Graph<a class="headerlink" href="#exporting-the-knowledge-graph" title="Permanent link">&para;</a></h2>
 <p>You can export the graph as a Cypher query to use in Neo4j or other graph databases:</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">cypher</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">graphs</span><span class="o">.</span><span class="n">export_cypher</span><span class="p">(</span><span class="n">graph_id</span><span class="o">=</span><span class="n">graph</span><span class="o">.</span><span class="n">graph_id</span><span class="p">)</span>
-</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">cypher</span><span class="p">)</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="n">cypher</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">graphs</span><span class="o">.</span><span class="n">export_cypher</span><span class="p">(</span><span class="n">graph_id</span><span class="o">=</span><span class="n">graph</span><span class="o">.</span><span class="n">graph_id</span><span class="p">)</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">cypher</span><span class="p">)</span>
 </span></code></pre></div>
 <p>This tutorial demonstrates how to create a knowledge graph from Amazon's 10-K filing using the provided schema, and how to query the graph for insights into Amazon's business structure, revenue streams, and risk factors. You can expand on this by adding more specific queries or by analyzing different aspects of the 10-K document as needed for your analysis.</p>
 
