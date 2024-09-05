@@ -8,13 +8,9 @@
       
       
       
-        <link rel="canonical" href="https://whyhow-ai.github.io/whyhow-sdk-docs/examples/create_graph_from_triples/">
+        <link rel="canonical" href="https://whyhow-ai.github.io/whyhow-sdk-docs/examples/query_completeness/">
       
       
-        <link rel="prev" href="../overview/">
-      
-      
-        <link rel="next" href="../../api/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +18,7 @@
     
     
       
-        <title>Create WhyHow Graph from Triples using LangChain - WhyHow SDK</title>
+        <title>Query completeness - WhyHow SDK</title>
       
     
     
@@ -78,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#create-whyhow-graph-from-triples-using-langchain" class="md-skip">
+        <a href="#import-configure-dependencies" class="md-skip">
           Skip to content
         </a>
       
@@ -114,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Create WhyHow Graph from Triples using LangChain
+              Query completeness
             
           </span>
         </div>
@@ -276,12 +272,10 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
+      <li class="md-tabs__item">
         <a href="../overview/" class="md-tabs__link">
           
   
@@ -427,10 +421,8 @@
       
   
   
-    
   
   
-  
     
     
       
@@ -441,22 +433,19 @@
     
     
       
-        
-        
-      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -467,7 +456,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Examples
@@ -499,30 +488,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Create WhyHow Graph from Triples using LangChain
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../create_graph_from_triples/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -531,122 +500,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#load-text-from-selected-file" class="md-nav__link">
-    <span class="md-ellipsis">
-      Load Text from Selected File
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#process-document" class="md-nav__link">
-    <span class="md-ellipsis">
-      Process Document
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#convert-processed-text-to-triples" class="md-nav__link">
-    <span class="md-ellipsis">
-      Convert Processed Text to Triples
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#optional-store-the-triples" class="md-nav__link">
-    <span class="md-ellipsis">
-      [Optional] Store the Triples
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#whyhow-integration" class="md-nav__link">
-    <span class="md-ellipsis">
-      WhyHow Integration
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="WhyHow Integration">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#initialise-the-workspace" class="md-nav__link">
-    <span class="md-ellipsis">
-      Initialise the Workspace
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#optional-load-the-triples" class="md-nav__link">
-    <span class="md-ellipsis">
-      [Optional] Load the Triples
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#preprocess-the-triples" class="md-nav__link">
-    <span class="md-ellipsis">
-      Preprocess the Triples
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#create-the-graph" class="md-nav__link">
-    <span class="md-ellipsis">
-      Create the graph
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#query-the-graph" class="md-nav__link">
-    <span class="md-ellipsis">
-      Query the graph
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -696,8 +549,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -706,91 +557,115 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#load-text-from-selected-file" class="md-nav__link">
+  <a href="#import-configure-dependencies" class="md-nav__link">
     <span class="md-ellipsis">
-      Load Text from Selected File
+      Import &amp; configure dependencies
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#process-document" class="md-nav__link">
+  <a href="#10k-documents" class="md-nav__link">
     <span class="md-ellipsis">
-      Process Document
+      10k Documents
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#convert-processed-text-to-triples" class="md-nav__link">
+  <a href="#vector-database-retrieval" class="md-nav__link">
     <span class="md-ellipsis">
-      Convert Processed Text to Triples
+      Vector database retrieval
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#optional-store-the-triples" class="md-nav__link">
-    <span class="md-ellipsis">
-      [Optional] Store the Triples
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#whyhow-integration" class="md-nav__link">
-    <span class="md-ellipsis">
-      WhyHow Integration
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="WhyHow Integration">
+    <nav class="md-nav" aria-label="Vector database retrieval">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#initialise-the-workspace" class="md-nav__link">
+  <a href="#upsert-to-pinecone" class="md-nav__link">
     <span class="md-ellipsis">
-      Initialise the Workspace
+      Upsert to Pinecone
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#optional-load-the-triples" class="md-nav__link">
+  <a href="#query-pinecone" class="md-nav__link">
     <span class="md-ellipsis">
-      [Optional] Load the Triples
+      Query Pinecone
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#preprocess-the-triples" class="md-nav__link">
+  <a href="#generate-response-from-retrieved-chunks" class="md-nav__link">
     <span class="md-ellipsis">
-      Preprocess the Triples
+      Generate response from retrieved chunks
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#graph-retrieval" class="md-nav__link">
+    <span class="md-ellipsis">
+      Graph Retrieval
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Graph Retrieval">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extract-triples-using-custom-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extract triples using custom prompt
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#create-the-graph" class="md-nav__link">
+  <a href="#parse-10k-documents" class="md-nav__link">
     <span class="md-ellipsis">
-      Create the graph
+      Parse 10k Documents
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#query-the-graph" class="md-nav__link">
+  <a href="#format-triples" class="md-nav__link">
     <span class="md-ellipsis">
-      Query the graph
+      Format triples
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build-graph" class="md-nav__link">
+    <span class="md-ellipsis">
+      Build Graph
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#query-graph" class="md-nav__link">
+    <span class="md-ellipsis">
+      Query graph
     </span>
   </a>
   
@@ -816,7 +691,7 @@
                   
 
   
-    <a href="https://github.com/whyhow-ai/whyhow-sdk-docs/edit/master/docs/examples/create_graph_from_triples.ipynb" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/whyhow-ai/whyhow-sdk-docs/edit/master/docs/examples/query_completeness.ipynb" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -825,12 +700,14 @@
     
       
     
-    <a href="https://github.com/whyhow-ai/whyhow-sdk-docs/raw/master/docs/examples/create_graph_from_triples.ipynb" title="View source of this page" class="md-content__button md-icon">
+    <a href="https://github.com/whyhow-ai/whyhow-sdk-docs/raw/master/docs/examples/query_completeness.ipynb" title="View source of this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
     </a>
   
 
+
+  <h1>Query completeness</h1>
 
 <script>
 (function (global, factory) {
@@ -1267,23 +1144,23 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </style>
 <!-- End of mermaid configuration --><div class="jupyter-wrapper">
 <div class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=1b460fcf">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="create-whyhow-graph-from-triples-using-langchain">Create WhyHow Graph from Triples using LangChain<a class="anchor-link" href="#create-whyhow-graph-from-triples-using-langchain">¶</a></h1>
+<h3 id="import-configure-dependencies">Import &amp; configure dependencies<a class="anchor-link" href="#import-configure-dependencies">¶</a></h3>
 </div>
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=fe9a5f3b-1ef8-42ae-aacf-ffa69c71aa3c">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [42]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
 <clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-1">
@@ -1296,39 +1173,86 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">itertools</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">from</span> <span class="nn">llmsherpa.readers</span> <span class="kn">import</span> <span class="n">LayoutPDFReader</span>
+<span class="kn">import</span> <span class="nn">llmsherpa</span>
 <span class="kn">import</span> <span class="nn">os</span>
-<span class="kn">import</span> <span class="nn">pickle</span>
+<span class="kn">import</span> <span class="nn">json</span>
 
-<span class="kn">from</span> <span class="nn">langchain.text_splitter</span> <span class="kn">import</span> <span class="n">RecursiveCharacterTextSplitter</span>
-<span class="kn">from</span> <span class="nn">langchain_community.document_loaders</span> <span class="kn">import</span> <span class="n">PyPDFLoader</span>
+
 <span class="kn">from</span> <span class="nn">langchain_experimental.graph_transformers</span> <span class="kn">import</span> <span class="n">LLMGraphTransformer</span>
 <span class="kn">from</span> <span class="nn">langchain_openai</span> <span class="kn">import</span> <span class="n">ChatOpenAI</span>
+<span class="kn">from</span> <span class="nn">langchain.text_splitter</span> <span class="kn">import</span> <span class="n">RecursiveCharacterTextSplitter</span>
+<span class="kn">from</span> <span class="nn">langchain.embeddings.openai</span> <span class="kn">import</span> <span class="n">OpenAIEmbeddings</span>
 
-<span class="kn">from</span> <span class="nn">whyhow</span> <span class="kn">import</span> <span class="n">WhyHow</span><span class="p">,</span> <span class="n">Node</span><span class="p">,</span> <span class="n">Relation</span><span class="p">,</span> <span class="n">Triple</span>
+<span class="kn">from</span> <span class="nn">openai</span> <span class="kn">import</span> <span class="n">OpenAI</span>
+<span class="kn">from</span> <span class="nn">whyhow</span> <span class="kn">import</span> <span class="n">Triple</span><span class="p">,</span> <span class="n">Node</span><span class="p">,</span> <span class="n">Relation</span><span class="p">,</span> <span class="n">WhyHow</span>
+
+<span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">'PINECONE_API_KEY'</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"&lt;pinecone api key&gt;"</span>
+<span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">'OPENAI_API_KEY'</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"&lt;openai api key&gt;"</span>
+
+<span class="n">whyhow_client</span> <span class="o">=</span> <span class="n">WhyHow</span><span class="p">(</span><span class="n">api_key</span><span class="o">=</span><span class="s2">"&lt;whyhow api key&gt;"</span><span class="p">,</span> <span class="n">base_url</span><span class="o">=</span><span class="s2">"https://api.whyhow.ai"</span><span class="p">)</span>
+
+<span class="c1"># Requires that nlm-ingester is running - https://github.com/nlmatics/nlm-ingestor</span>
+<span class="n">pdf_reader</span> <span class="o">=</span> <span class="n">LayoutPDFReader</span><span class="p">(</span><span class="s2">"http://localhost:5010/api/parseDocument?renderFormat=all"</span><span class="p">)</span>
+<span class="n">text_splitter</span> <span class="o">=</span> <span class="n">RecursiveCharacterTextSplitter</span><span class="p">(</span><span class="n">chunk_size</span><span class="o">=</span><span class="mi">2000</span><span class="p">,</span> <span class="n">chunk_overlap</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="n">llm</span> <span class="o">=</span> <span class="n">ChatOpenAI</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="s2">"gpt-4o"</span><span class="p">)</span>
+<span class="n">llm_transformer</span> <span class="o">=</span> <span class="n">LLMGraphTransformer</span><span class="p">(</span><span class="n">llm</span><span class="o">=</span><span class="n">llm</span><span class="p">)</span>
+
+
+<span class="n">openai_client</span> <span class="o">=</span> <span class="n">OpenAI</span><span class="p">()</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-1">import itertools
+<div class="clipboard-copy-txt" id="cell-1">from llmsherpa.readers import LayoutPDFReader
+import llmsherpa
 import os
-import pickle
+import json
 
-from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain_community.document_loaders import PyPDFLoader
+
 from langchain_experimental.graph_transformers import LLMGraphTransformer
 from langchain_openai import ChatOpenAI
+from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain.embeddings.openai import OpenAIEmbeddings
 
-from whyhow import WhyHow, Node, Relation, Triple</div>
+from openai import OpenAI
+from whyhow import Triple, Node, Relation, WhyHow
+
+os.environ['PINECONE_API_KEY'] = "<pinecone api="" key="">"
+os.environ['OPENAI_API_KEY'] = "<openai api="" key="">"
+
+whyhow_client = WhyHow(api_key="<whyhow api="" key="">", base_url="https://api.whyhow.ai")
+
+# Requires that nlm-ingester is running - https://github.com/nlmatics/nlm-ingestor
+pdf_reader = LayoutPDFReader("http://localhost:5010/api/parseDocument?renderFormat=all")
+text_splitter = RecursiveCharacterTextSplitter(chunk_size=2000, chunk_overlap=0)
+
+llm = ChatOpenAI(model="gpt-4o")
+llm_transformer = LLMGraphTransformer(llm=llm)
+
+
+openai_client = OpenAI()</whyhow></openai></pinecone></div>
 </div>
 </div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="10k-documents">10k Documents<a class="anchor-link" href="#10k-documents">¶</a></h3><p>In this example, we're going to leverage 10k documents from Amazon and Walmart for the past 5 years. Specifically, we're going to use the legal proceedings reported by each of these companies. You can find these documents on the SEC website or on the Investor Relations page of each company.</p>
 </div>
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=118b0620">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [47]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
 <clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-2">
@@ -1341,18 +1265,142 @@ from whyhow import WhyHow, Node, Relation, Triple</div>
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">from</span> <span class="nn">dotenv</span> <span class="kn">import</span> <span class="n">find_dotenv</span><span class="p">,</span> <span class="n">load_dotenv</span>
-<span class="n">load_dotenv</span><span class="p">(</span><span class="n">find_dotenv</span><span class="p">())</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># Specify docs to process</span>
+<span class="n">sec_10k_docs</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span>
+        <span class="s2">"company"</span><span class="p">:</span> <span class="s2">"Walmart"</span><span class="p">,</span>
+        <span class="s2">"year"</span><span class="p">:</span> <span class="mi">2024</span><span class="p">,</span>
+        <span class="s2">"url"</span><span class="p">:</span> <span class="s2">"https://d18rn0p25nwr6d.cloudfront.net/CIK-0000104169/b9745621-712b-43d0-b8e9-5cf33db255e3.pdf"</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="s2">"company"</span><span class="p">:</span> <span class="s2">"Walmart"</span><span class="p">,</span>
+        <span class="s2">"year"</span><span class="p">:</span> <span class="mi">2023</span><span class="p">,</span>
+        <span class="s2">"url"</span><span class="p">:</span> <span class="s2">"https://d18rn0p25nwr6d.cloudfront.net/CIK-0000104169/dfe6ee99-8fe6-4333-80ac-829d9e7595fa.pdf"</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="s2">"company"</span><span class="p">:</span> <span class="s2">"Walmart"</span><span class="p">,</span>
+        <span class="s2">"year"</span><span class="p">:</span> <span class="mi">2022</span><span class="p">,</span>
+        <span class="s2">"url"</span><span class="p">:</span> <span class="s2">"https://d18rn0p25nwr6d.cloudfront.net/CIK-0000104169/c68fb8be-2602-4f2a-aee0-261b4f04b970.pdf"</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="s2">"company"</span><span class="p">:</span> <span class="s2">"Walmart"</span><span class="p">,</span>
+        <span class="s2">"year"</span><span class="p">:</span> <span class="mi">2021</span><span class="p">,</span>
+        <span class="s2">"url"</span><span class="p">:</span> <span class="s2">"https://d18rn0p25nwr6d.cloudfront.net/CIK-0000104169/598c8825-536a-4371-ab8a-98b9ee761c43.pdf"</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="s2">"company"</span><span class="p">:</span> <span class="s2">"Walmart"</span><span class="p">,</span>
+        <span class="s2">"year"</span><span class="p">:</span> <span class="mi">2020</span><span class="p">,</span>
+        <span class="s2">"url"</span><span class="p">:</span> <span class="s2">"https://d18rn0p25nwr6d.cloudfront.net/CIK-0000104169/af5415d9-0e07-4ba1-a6cc-bb3058a7f4e8.pdf"</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="s2">"company"</span><span class="p">:</span> <span class="s2">"Amazon"</span><span class="p">,</span>
+        <span class="s2">"year"</span><span class="p">:</span> <span class="mi">2024</span><span class="p">,</span>
+        <span class="s2">"url"</span><span class="p">:</span> <span class="s2">"https://d18rn0p25nwr6d.cloudfront.net/CIK-0001018724/c7c14359-36fa-40c3-b3ca-5bf7f3fa0b96.pdf"</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="s2">"company"</span><span class="p">:</span> <span class="s2">"Amazon"</span><span class="p">,</span>
+        <span class="s2">"year"</span><span class="p">:</span> <span class="mi">2023</span><span class="p">,</span>
+        <span class="s2">"url"</span><span class="p">:</span> <span class="s2">"https://d18rn0p25nwr6d.cloudfront.net/CIK-0001018724/d2fde7ee-05f7-419d-9ce8-186de4c96e25.pdf"</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="s2">"company"</span><span class="p">:</span> <span class="s2">"Amazon"</span><span class="p">,</span>
+        <span class="s2">"year"</span><span class="p">:</span> <span class="mi">2022</span><span class="p">,</span>
+        <span class="s2">"url"</span><span class="p">:</span> <span class="s2">"https://d18rn0p25nwr6d.cloudfront.net/CIK-0001018724/f965e5c3-fded-45d3-bbdb-f750f156dcc9.pdf"</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="s2">"company"</span><span class="p">:</span> <span class="s2">"Amazon"</span><span class="p">,</span>
+        <span class="s2">"year"</span><span class="p">:</span> <span class="mi">2021</span><span class="p">,</span>
+        <span class="s2">"url"</span><span class="p">:</span> <span class="s2">"https://d18rn0p25nwr6d.cloudfront.net/CIK-0001018724/336d8745-ea82-40a5-9acc-1a89df23d0f3.pdf"</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="s2">"company"</span><span class="p">:</span> <span class="s2">"Amazon"</span><span class="p">,</span>
+        <span class="s2">"year"</span><span class="p">:</span> <span class="mi">2020</span><span class="p">,</span>
+        <span class="s2">"url"</span><span class="p">:</span> <span class="s2">"https://d18rn0p25nwr6d.cloudfront.net/CIK-0001018724/4d39f579-19d8-4119-b087-ee618abf82d6.pdf"</span>
+    <span class="p">}</span>
+<span class="p">]</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-2">from dotenv import find_dotenv, load_dotenv
-load_dotenv(find_dotenv())</div>
+<div class="clipboard-copy-txt" id="cell-2"># Specify docs to process
+sec_10k_docs = [
+    {
+        "company": "Walmart",
+        "year": 2024,
+        "url": "https://d18rn0p25nwr6d.cloudfront.net/CIK-0000104169/b9745621-712b-43d0-b8e9-5cf33db255e3.pdf"
+    },
+    {
+        "company": "Walmart",
+        "year": 2023,
+        "url": "https://d18rn0p25nwr6d.cloudfront.net/CIK-0000104169/dfe6ee99-8fe6-4333-80ac-829d9e7595fa.pdf"
+    },
+    {
+        "company": "Walmart",
+        "year": 2022,
+        "url": "https://d18rn0p25nwr6d.cloudfront.net/CIK-0000104169/c68fb8be-2602-4f2a-aee0-261b4f04b970.pdf"
+    },
+    {
+        "company": "Walmart",
+        "year": 2021,
+        "url": "https://d18rn0p25nwr6d.cloudfront.net/CIK-0000104169/598c8825-536a-4371-ab8a-98b9ee761c43.pdf"
+    },
+    {
+        "company": "Walmart",
+        "year": 2020,
+        "url": "https://d18rn0p25nwr6d.cloudfront.net/CIK-0000104169/af5415d9-0e07-4ba1-a6cc-bb3058a7f4e8.pdf"
+    },
+    {
+        "company": "Amazon",
+        "year": 2024,
+        "url": "https://d18rn0p25nwr6d.cloudfront.net/CIK-0001018724/c7c14359-36fa-40c3-b3ca-5bf7f3fa0b96.pdf"
+    },
+    {
+        "company": "Amazon",
+        "year": 2023,
+        "url": "https://d18rn0p25nwr6d.cloudfront.net/CIK-0001018724/d2fde7ee-05f7-419d-9ce8-186de4c96e25.pdf"
+    },
+    {
+        "company": "Amazon",
+        "year": 2022,
+        "url": "https://d18rn0p25nwr6d.cloudfront.net/CIK-0001018724/f965e5c3-fded-45d3-bbdb-f750f156dcc9.pdf"
+    },
+    {
+        "company": "Amazon",
+        "year": 2021,
+        "url": "https://d18rn0p25nwr6d.cloudfront.net/CIK-0001018724/336d8745-ea82-40a5-9acc-1a89df23d0f3.pdf"
+    },
+    {
+        "company": "Amazon",
+        "year": 2020,
+        "url": "https://d18rn0p25nwr6d.cloudfront.net/CIK-0001018724/4d39f579-19d8-4119-b087-ee618abf82d6.pdf"
+    }
+]</div>
 </div>
 </div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="vector-database-retrieval">Vector database retrieval<a class="anchor-link" href="#vector-database-retrieval">¶</a></h2>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="upsert-to-pinecone">Upsert to Pinecone<a class="anchor-link" href="#upsert-to-pinecone">¶</a></h3><p>Prepare and upsert documents to Pinecone so we can test vector search.</p>
 </div>
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=ae6caed5-0556-4287-b133-f4fd87b5ef8e">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -1370,29 +1418,347 @@ load_dotenv(find_dotenv())</div>
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">llm</span> <span class="o">=</span> <span class="n">ChatOpenAI</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="s2">"gpt-4o"</span><span class="p">)</span>
-<span class="n">llm_transformer</span> <span class="o">=</span> <span class="n">LLMGraphTransformer</span><span class="p">(</span><span class="n">llm</span><span class="o">=</span><span class="n">llm</span><span class="p">)</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">re</span> 
+<span class="kn">import</span> <span class="nn">uuid</span>
+<span class="kn">import</span> <span class="nn">datetime</span>
+<span class="kn">import</span> <span class="nn">itertools</span>
+
+<span class="kn">from</span> <span class="nn">langchain.document_loaders</span> <span class="kn">import</span> <span class="n">PyPDFLoader</span>
+<span class="kn">from</span> <span class="nn">pinecone</span> <span class="kn">import</span> <span class="n">Pinecone</span><span class="p">,</span> <span class="n">Index</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span><span class="p">,</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">Union</span>
+
+<span class="n">pinecone_key</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">"PINECONE_API_KEY"</span><span class="p">)</span>
+<span class="n">pc</span> <span class="o">=</span> <span class="n">Pinecone</span><span class="p">(</span><span class="n">api_key</span><span class="o">=</span><span class="n">pinecone_key</span><span class="p">)</span>
+<span class="n">index</span> <span class="o">=</span> <span class="n">pc</span><span class="o">.</span><span class="n">Index</span><span class="p">(</span><span class="s2">"&lt;index name&gt;"</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">generate_namespace</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""</span>
+<span class="sd">    Generate a unique namespace.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    str: The generated namespace.</span>
+<span class="sd">    """</span>
+    <span class="n">unique_id</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">uuid</span><span class="o">.</span><span class="n">uuid4</span><span class="p">())</span>
+    <span class="n">date</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">()</span>
+    <span class="n">date</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s1">'[^0-9a-zA-Z ]+'</span><span class="p">,</span> <span class="s1">'_'</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">date</span><span class="p">))</span>
+    <span class="n">namespace</span> <span class="o">=</span> <span class="s1">'_'</span><span class="o">.</span><span class="n">join</span><span class="p">((</span><span class="n">date</span><span class="p">,</span> <span class="n">unique_id</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">namespace</span>
+
+<span class="k">def</span> <span class="nf">split_document</span><span class="p">(</span><span class="n">doc</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">"""</span>
+<span class="sd">    Split a document into chunks.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    doc (str): The document to split.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    List[str]: The list of chunks.</span>
+<span class="sd">    """</span>
+    <span class="n">loader</span> <span class="o">=</span> <span class="n">PyPDFLoader</span><span class="p">(</span><span class="n">doc</span><span class="p">)</span>
+    <span class="n">docs</span> <span class="o">=</span> <span class="n">loader</span><span class="o">.</span><span class="n">load</span><span class="p">()</span>
+    <span class="n">splitter</span> <span class="o">=</span> <span class="n">RecursiveCharacterTextSplitter</span><span class="p">(</span><span class="n">chunk_size</span><span class="o">=</span><span class="mi">2000</span><span class="p">)</span>
+    <span class="n">chunks</span> <span class="o">=</span> <span class="n">splitter</span><span class="o">.</span><span class="n">split_documents</span><span class="p">(</span><span class="n">docs</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">chunks</span>
+
+<span class="k">def</span> <span class="nf">clean_chunks</span><span class="p">(</span><span class="n">chunks</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">"""</span>
+<span class="sd">    Clean a list of chunks.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    chunks (List[str]): The list of chunks to clean.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    List[str]: The list of cleaned chunks.</span>
+<span class="sd">    """</span>
+    <span class="n">clean_chunks</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">chunk</span> <span class="ow">in</span> <span class="n">chunks</span><span class="p">:</span>
+      <span class="n">clean_chunks</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s1">'/(</span><span class="se">\r\n</span><span class="s1">|</span><span class="se">\n</span><span class="s1">|</span><span class="se">\r</span><span class="s1">)/gm'</span><span class="p">,</span> <span class="s1">''</span><span class="p">,</span><span class="n">chunk</span><span class="o">.</span><span class="n">page_content</span><span class="p">))</span>
+      <span class="nb">print</span><span class="p">(</span><span class="n">chunk</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">clean_chunks</span>
+
+<span class="k">def</span> <span class="nf">generate_vectors</span><span class="p">(</span><span class="n">chunks</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">document_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">],</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]]]:</span>
+<span class="w">    </span><span class="sd">"""</span>
+<span class="sd">    Generate vectors for a list of chunks.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    chunks (List[str]): The list of chunks to generate vectors for.</span>
+<span class="sd">    document_id (str): The id of the document the chunks belong to.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    List[Dict[str, Union[str, List[float], Dict[str, str]]]]: The list of generated vectors.</span>
+<span class="sd">    """</span>
+
+    <span class="n">clean_chunk_array</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">for</span> <span class="n">chunk</span> <span class="ow">in</span> <span class="n">chunks</span><span class="p">:</span>
+
+      <span class="c1"># Clean up the chunk and remove unnecessary text</span>
+      <span class="n">clean_chunk</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s1">'/(</span><span class="se">\r\n</span><span class="s1">|</span><span class="se">\n</span><span class="s1">|</span><span class="se">\r</span><span class="s1">)/gm'</span><span class="p">,</span> <span class="s1">''</span><span class="p">,</span><span class="n">chunk</span><span class="o">.</span><span class="n">page_content</span><span class="p">)</span>
+      <span class="n">clean_chunk_array</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">clean_chunk</span><span class="p">)</span>
+
+
+    <span class="n">embeddings</span> <span class="o">=</span> <span class="n">OpenAIEmbeddings</span><span class="p">()</span>
+    <span class="n">embeddings_array</span> <span class="o">=</span> <span class="n">embeddings</span><span class="o">.</span><span class="n">embed_documents</span><span class="p">(</span><span class="n">clean_chunk_array</span><span class="p">)</span>
+
+    <span class="n">vectors</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">chunk</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">chunks</span><span class="p">):</span>
+      <span class="n">page_chunk_count</span> <span class="o">=</span> <span class="mi">0</span>
+      <span class="n">page</span> <span class="o">=</span> <span class="n">chunk</span><span class="o">.</span><span class="n">metadata</span><span class="p">[</span><span class="s1">'page'</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span>
+      <span class="n">vectors</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+        <span class="s1">'id'</span><span class="p">:</span> <span class="n">chunk</span><span class="o">.</span><span class="n">metadata</span><span class="p">[</span><span class="s1">'source'</span><span class="p">]</span><span class="o">+</span><span class="s1">'_'</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">page</span><span class="p">)</span><span class="o">+</span><span class="s1">'_'</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">),</span>
+        <span class="s1">'values'</span><span class="p">:</span> <span class="n">embeddings_array</span><span class="p">[</span><span class="n">i</span><span class="p">],</span>
+        <span class="s1">'metadata'</span><span class="p">:</span> <span class="p">{</span>
+          <span class="s1">'page'</span><span class="p">:</span> <span class="n">page</span><span class="p">,</span>
+          <span class="s1">'pageContent'</span><span class="p">:</span> <span class="n">chunk</span><span class="o">.</span><span class="n">page_content</span><span class="p">,</span>
+          <span class="s1">'filename'</span><span class="p">:</span> <span class="n">chunk</span><span class="o">.</span><span class="n">metadata</span><span class="p">[</span><span class="s1">'source'</span><span class="p">],</span>
+          <span class="s1">'documentId'</span><span class="p">:</span> <span class="n">document_id</span>
+        <span class="p">},</span>
+      <span class="p">})</span>
+
+    <span class="k">return</span> <span class="n">vectors</span>
+
+<span class="k">def</span> <span class="nf">upload_vectors</span><span class="p">(</span><span class="n">index</span><span class="p">:</span> <span class="n">Index</span><span class="p">,</span> <span class="n">vectors</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">],</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]]],</span> <span class="n">namespace</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""</span>
+<span class="sd">    Upload a list of vectors to an index.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    index (pc.Index): The index to upload to.</span>
+<span class="sd">    vectors (List[Dict[str, Union[str, List[float], Dict[str, str]]]]): The list of vectors to upload.</span>
+<span class="sd">    namespace (str): The namespace to upload to.</span>
+<span class="sd">    """</span>
+    <span class="k">def</span> <span class="nf">chunks</span><span class="p">(</span><span class="n">iterable</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">100</span><span class="p">):</span>
+        <span class="n">it</span> <span class="o">=</span> <span class="nb">iter</span><span class="p">(</span><span class="n">iterable</span><span class="p">)</span>
+        <span class="n">chunk</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">itertools</span><span class="o">.</span><span class="n">islice</span><span class="p">(</span><span class="n">it</span><span class="p">,</span> <span class="n">batch_size</span><span class="p">))</span>
+        <span class="k">while</span> <span class="n">chunk</span><span class="p">:</span>
+            <span class="k">yield</span> <span class="n">chunk</span>
+            <span class="n">chunk</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">itertools</span><span class="o">.</span><span class="n">islice</span><span class="p">(</span><span class="n">it</span><span class="p">,</span> <span class="n">batch_size</span><span class="p">))</span>
+
+    <span class="k">for</span> <span class="n">vectors_chunk</span> <span class="ow">in</span> <span class="n">chunks</span><span class="p">(</span><span class="n">vectors</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">100</span><span class="p">):</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">index</span><span class="o">.</span><span class="n">upsert</span><span class="p">(</span><span class="n">vectors</span><span class="o">=</span><span class="n">vectors_chunk</span><span class="p">,</span> <span class="n">namespace</span><span class="o">=</span><span class="n">namespace</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">upload_docs</span><span class="p">(</span><span class="n">index_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">documents</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]]]:</span>
+<span class="w">    </span><span class="sd">"""</span>
+<span class="sd">    Upload documents to an index.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    index_name (str): The name of the index to upload to.</span>
+<span class="sd">    documents (List[str]): The documents to upload.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    dict: A dictionary containing the namespace and the names of the uploaded documents.</span>
+<span class="sd">    """</span>
+    <span class="n">document_names</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">namespace</span> <span class="o">=</span> <span class="n">generate_namespace</span><span class="p">()</span>
+    <span class="n">index</span> <span class="o">=</span> <span class="n">pc</span><span class="o">.</span><span class="n">Index</span><span class="p">(</span><span class="n">index_name</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">doc</span> <span class="ow">in</span> <span class="n">documents</span><span class="p">:</span>
+        <span class="n">document_id</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">uuid</span><span class="o">.</span><span class="n">uuid4</span><span class="p">())</span>
+        <span class="n">chunks</span> <span class="o">=</span> <span class="n">split_document</span><span class="p">(</span><span class="n">doc</span><span class="p">)</span>
+        <span class="n">document_names</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s1">'source'</span><span class="p">:</span> <span class="n">chunks</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">metadata</span><span class="p">[</span><span class="s1">'source'</span><span class="p">],</span> <span class="s1">'documentId'</span><span class="p">:</span> <span class="n">document_id</span><span class="p">})</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">document_names</span><span class="p">)</span>
+        <span class="n">vectors</span> <span class="o">=</span> <span class="n">generate_vectors</span><span class="p">(</span><span class="n">chunks</span><span class="p">,</span> <span class="n">document_id</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">vectors</span><span class="p">),</span> <span class="s1">' vectors uploaded'</span><span class="p">)</span>
+        <span class="n">upload_vectors</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">vectors</span><span class="p">,</span> <span class="n">namespace</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="p">{</span><span class="s1">'namespace'</span><span class="p">:</span> <span class="n">namespace</span><span class="p">,</span> <span class="s1">'documents'</span><span class="p">:</span> <span class="n">document_names</span><span class="p">}</span>
+
+<span class="n">docs</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">"../10k_docs/amzn_10k_2020.pdf"</span><span class="p">,</span>
+    <span class="s2">"../10k_docs/amzn_10k_2021.pdf"</span><span class="p">,</span>
+    <span class="s2">"../10k_docs/amzn_10k_2022.pdf"</span><span class="p">,</span>
+    <span class="s2">"../10k_docs/amzn_10k_2023.pdf"</span><span class="p">,</span>
+    <span class="s2">"../10k_docs/amzn_10k_2024.pdf"</span><span class="p">,</span>
+    <span class="s2">"../10k_docs/wmt_10k_2020.pdf"</span><span class="p">,</span>
+    <span class="s2">"../10k_docs/wmt_10k_2021.pdf"</span><span class="p">,</span>
+    <span class="s2">"../10k_docs/wmt_10k_2022.pdf"</span><span class="p">,</span>
+    <span class="s2">"../10k_docs/wmt_10k_2023.pdf"</span><span class="p">,</span>
+    <span class="s2">"../10k_docs/wmt_10k_2024.pdf"</span><span class="p">,</span>
+<span class="p">]</span>
+
+<span class="n">upload_docs</span><span class="p">(</span><span class="s2">"&lt;index name&gt;"</span><span class="p">,</span><span class="n">docs</span><span class="p">)</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-3">llm = ChatOpenAI(model="gpt-4o")
-llm_transformer = LLMGraphTransformer(llm=llm)</div>
+<div class="clipboard-copy-txt" id="cell-3">import re 
+import uuid
+import datetime
+import itertools
+
+from langchain.document_loaders import PyPDFLoader
+from pinecone import Pinecone, Index
+from typing import List, Dict, Union
+
+pinecone_key = os.getenv("PINECONE_API_KEY")
+pc = Pinecone(api_key=pinecone_key)
+index = pc.Index("<index name="">")
+
+def generate_namespace() -&gt; str:
+    """
+    Generate a unique namespace.
+
+    Returns:
+    str: The generated namespace.
+    """
+    unique_id = str(uuid.uuid4())
+    date = datetime.date.today()
+    date = re.sub('[^0-9a-zA-Z ]+', '_', str(date))
+    namespace = '_'.join((date, unique_id))
+    return namespace
+
+def split_document(doc: str) -&gt; List[str]:
+    """
+    Split a document into chunks.
+
+    Parameters:
+    doc (str): The document to split.
+
+    Returns:
+    List[str]: The list of chunks.
+    """
+    loader = PyPDFLoader(doc)
+    docs = loader.load()
+    splitter = RecursiveCharacterTextSplitter(chunk_size=2000)
+    chunks = splitter.split_documents(docs)
+    return chunks
+
+def clean_chunks(chunks: List[str]) -&gt; List[str]:
+    """
+    Clean a list of chunks.
+
+    Parameters:
+    chunks (List[str]): The list of chunks to clean.
+
+    Returns:
+    List[str]: The list of cleaned chunks.
+    """
+    clean_chunks = []
+    for chunk in chunks:
+      clean_chunks.append(re.sub('/(\r\n|\n|\r)/gm', '',chunk.page_content))
+      print(chunk)
+
+    return clean_chunks
+
+def generate_vectors(chunks: List[str], document_id: str) -&gt; List[Dict[str, Union[str, List[float], Dict[str, str]]]]:
+    """
+    Generate vectors for a list of chunks.
+
+    Parameters:
+    chunks (List[str]): The list of chunks to generate vectors for.
+    document_id (str): The id of the document the chunks belong to.
+
+    Returns:
+    List[Dict[str, Union[str, List[float], Dict[str, str]]]]: The list of generated vectors.
+    """
+
+    clean_chunk_array = []
+
+    for chunk in chunks:
+
+      # Clean up the chunk and remove unnecessary text
+      clean_chunk = re.sub('/(\r\n|\n|\r)/gm', '',chunk.page_content)
+      clean_chunk_array.append(clean_chunk)
+
+
+    embeddings = OpenAIEmbeddings()
+    embeddings_array = embeddings.embed_documents(clean_chunk_array)
+
+    vectors = []
+
+    for i, chunk in enumerate(chunks):
+      page_chunk_count = 0
+      page = chunk.metadata['page'] + 1
+      vectors.append({
+        'id': chunk.metadata['source']+'_'+str(page)+'_'+str(i),
+        'values': embeddings_array[i],
+        'metadata': {
+          'page': page,
+          'pageContent': chunk.page_content,
+          'filename': chunk.metadata['source'],
+          'documentId': document_id
+        },
+      })
+
+    return vectors
+
+def upload_vectors(index: Index, vectors: List[Dict[str, Union[str, List[float], Dict[str, str]]]], namespace: str):
+    """
+    Upload a list of vectors to an index.
+
+    Parameters:
+    index (pc.Index): The index to upload to.
+    vectors (List[Dict[str, Union[str, List[float], Dict[str, str]]]]): The list of vectors to upload.
+    namespace (str): The namespace to upload to.
+    """
+    def chunks(iterable, batch_size=100):
+        it = iter(iterable)
+        chunk = tuple(itertools.islice(it, batch_size))
+        while chunk:
+            yield chunk
+            chunk = tuple(itertools.islice(it, batch_size))
+
+    for vectors_chunk in chunks(vectors, batch_size=100):
+        result = index.upsert(vectors=vectors_chunk, namespace=namespace)
+        print(result)
+
+def upload_docs(index_name: str, documents: List[str]) -&gt; Dict[str, Union[str, List[Dict[str, str]]]]:
+    """
+    Upload documents to an index.
+
+    Parameters:
+    index_name (str): The name of the index to upload to.
+    documents (List[str]): The documents to upload.
+
+    Returns:
+    dict: A dictionary containing the namespace and the names of the uploaded documents.
+    """
+    document_names = []
+    namespace = generate_namespace()
+    index = pc.Index(index_name)
+
+    for doc in documents:
+        document_id = str(uuid.uuid4())
+        chunks = split_document(doc)
+        document_names.append({'source': chunks[0].metadata['source'], 'documentId': document_id})
+        print(document_names)
+        vectors = generate_vectors(chunks, document_id)
+        print(len(vectors), ' vectors uploaded')
+        upload_vectors(index, vectors, namespace)
+
+    return {'namespace': namespace, 'documents': document_names}
+
+docs = [
+    "../10k_docs/amzn_10k_2020.pdf",
+    "../10k_docs/amzn_10k_2021.pdf",
+    "../10k_docs/amzn_10k_2022.pdf",
+    "../10k_docs/amzn_10k_2023.pdf",
+    "../10k_docs/amzn_10k_2024.pdf",
+    "../10k_docs/wmt_10k_2020.pdf",
+    "../10k_docs/wmt_10k_2021.pdf",
+    "../10k_docs/wmt_10k_2022.pdf",
+    "../10k_docs/wmt_10k_2023.pdf",
+    "../10k_docs/wmt_10k_2024.pdf",
+]
+
+upload_docs("<index name="">",docs)</index></index></div>
 </div>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=87cece79-0bd4-4765-bc59-502d7bae6b02">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="load-text-from-selected-file">Load Text from Selected File<a class="anchor-link" href="#load-text-from-selected-file">¶</a></h3>
+<h3 id="query-pinecone">Query Pinecone<a class="anchor-link" href="#query-pinecone">¶</a></h3>
 </div>
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=29eabe7f-21a4-4100-aead-1eec1e1e985c">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -1410,16 +1776,66 @@ llm_transformer = LLMGraphTransformer(llm=llm)</div>
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">filepath</span> <span class="o">=</span> <span class="s2">"{YOUR FILEPATH}"</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">query</span> <span class="o">=</span> <span class="s2">"What are the lawsuits that Amazon is facing?"</span>
+
+<span class="n">chunks_extracted</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="n">index</span> <span class="o">=</span> <span class="n">pc</span><span class="o">.</span><span class="n">Index</span><span class="p">(</span><span class="s2">"&lt;index name&gt;"</span><span class="p">)</span>
+
+<span class="n">concatenatedChunks</span> <span class="o">=</span> <span class="s2">""</span>
+<span class="n">embeddings</span> <span class="o">=</span> <span class="n">OpenAIEmbeddings</span><span class="p">()</span>
+<span class="n">query_embedding</span> <span class="o">=</span> <span class="n">embeddings</span><span class="o">.</span><span class="n">embed_query</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
+
+<span class="n">query_response</span> <span class="o">=</span> <span class="n">index</span><span class="o">.</span><span class="n">query</span><span class="p">(</span>
+        <span class="n">namespace</span><span class="o">=</span><span class="s2">"&lt;namespace name&gt;"</span><span class="p">,</span>
+        <span class="n">top_k</span><span class="o">=</span><span class="mi">64</span><span class="p">,</span>
+        <span class="n">vector</span><span class="o">=</span><span class="n">query_embedding</span><span class="p">,</span>
+        <span class="n">include_metadata</span><span class="o">=</span><span class="kc">True</span>
+    <span class="p">)</span>
+
+<span class="k">for</span> <span class="n">chunk</span> <span class="ow">in</span> <span class="n">query_response</span><span class="o">.</span><span class="n">matches</span><span class="p">:</span>
+    <span class="n">concatenatedChunks</span> <span class="o">+=</span> <span class="n">chunk</span><span class="o">.</span><span class="n">metadata</span><span class="p">[</span><span class="s1">'pageContent'</span><span class="p">]</span> <span class="o">+</span> <span class="s1">' '</span>
+    <span class="n">chunks_extracted</span> <span class="o">+=</span> <span class="mi">1</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-4">filepath = "{YOUR FILEPATH}"</div>
+<div class="clipboard-copy-txt" id="cell-4">query = "What are the lawsuits that Amazon is facing?"
+
+chunks_extracted = 0
+
+index = pc.Index("<index name="">")
+
+concatenatedChunks = ""
+embeddings = OpenAIEmbeddings()
+query_embedding = embeddings.embed_query(query)
+
+query_response = index.query(
+        namespace="<namespace name="">",
+        top_k=64,
+        vector=query_embedding,
+        include_metadata=True
+    )
+
+for chunk in query_response.matches:
+    concatenatedChunks += chunk.metadata['pageContent'] + ' '
+    chunks_extracted += 1
+</namespace></index></div>
 </div>
 </div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="generate-response-from-retrieved-chunks">Generate response from retrieved chunks<a class="anchor-link" href="#generate-response-from-retrieved-chunks">¶</a></h3>
 </div>
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=3a45b4f4-1d69-40ec-8fb8-81ad601ef2a6">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -1437,34 +1853,79 @@ llm_transformer = LLMGraphTransformer(llm=llm)</div>
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">loader</span> <span class="o">=</span> <span class="n">PyPDFLoader</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span>
-<span class="n">docs</span> <span class="o">=</span> <span class="n">loader</span><span class="o">.</span><span class="n">load</span><span class="p">()</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">answer_prompt</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"""</span>
+<span class="s2">        Context:</span>
+<span class="s2">        You are a helpful chatbot. Your job is to anwer the following question using only the context provided in the Context below:</span>
+
+<span class="s2">        Question: </span><span class="si">{</span><span class="n">query</span><span class="si">}</span>
+<span class="s2">        Context: </span><span class="si">{</span><span class="n">concatenatedChunks</span><span class="si">}</span>
+
+<span class="s2">        Answer:"""</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">openai_client</span><span class="o">.</span><span class="n">chat</span><span class="o">.</span><span class="n">completions</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+    <span class="n">model</span><span class="o">=</span><span class="s2">"gpt-4o"</span><span class="p">,</span>
+    <span class="n">messages</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">"role"</span><span class="p">:</span> <span class="s2">"user"</span><span class="p">,</span>
+        <span class="s2">"content"</span><span class="p">:</span> <span class="n">answer_prompt</span>
+    <span class="p">}],</span>
+    <span class="n">max_tokens</span><span class="o">=</span><span class="mi">4000</span>
+<span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">choices</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-5">loader = PyPDFLoader(filepath)
-docs = loader.load()</div>
+<div class="clipboard-copy-txt" id="cell-5">answer_prompt = f"""
+        Context:
+        You are a helpful chatbot. Your job is to anwer the following question using only the context provided in the Context below:
+
+        Question: {query}
+        Context: {concatenatedChunks}
+
+        Answer:"""
+
+response = openai_client.chat.completions.create(
+    model="gpt-4o",
+    messages=[{
+        "role": "user",
+        "content": answer_prompt
+    }],
+    max_tokens=4000
+)
+
+print(response.choices[0].message.content)</div>
 </div>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=742a68f6">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="process-document">Process Document<a class="anchor-link" href="#process-document">¶</a></h3>
+<h2 id="graph-retrieval">Graph Retrieval<a class="anchor-link" href="#graph-retrieval">¶</a></h2>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="extract-triples-using-custom-prompt">Extract triples using custom prompt<a class="anchor-link" href="#extract-triples-using-custom-prompt">¶</a></h3><p>Simple script to extract triples using a custom prompt which we will use to instruct the LLM to build precise triples for our use case.</p>
 </div>
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=6ddcb9dc-44c7-4710-82d4-cf343ff59dbe">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
 <clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-6">
@@ -1477,34 +1938,72 @@ docs = loader.load()</div>
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">text_splitter</span> <span class="o">=</span> <span class="n">RecursiveCharacterTextSplitter</span><span class="p">(</span><span class="n">chunk_size</span><span class="o">=</span><span class="mi">2000</span><span class="p">,</span> <span class="n">chunk_overlap</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-<span class="n">split_docs</span> <span class="o">=</span> <span class="n">text_splitter</span><span class="o">.</span><span class="n">split_documents</span><span class="p">(</span><span class="n">docs</span><span class="p">)</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="k">async</span> <span class="k">def</span> <span class="nf">process_customprompt</span><span class="p">(</span><span class="n">section_text</span><span class="p">,</span> <span class="n">company_name</span><span class="p">):</span>
+
+    <span class="n">prompt</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"""</span>
+<span class="s2">        Using the content below, extract the companies involved and output it in following JSON format:</span>
+
+<span class="s2">        [</span><span class="se">{{</span><span class="s2">"head": </span><span class="se">{{</span><span class="s2">"type": "Company", "id": </span><span class="si">{</span><span class="n">company_name</span><span class="si">}</span><span class="se">}}</span><span class="s2">, "relation": "INVOLVED_IN", "tail": </span><span class="se">{{</span><span class="s2">"type": "Legal Proceeding", "id": &lt;legal proceeding name&gt;</span><span class="se">}}}}</span><span class="s2">, ...]</span>
+
+<span class="s2">        Do not include supporting information. Do not wrap the response in JSON markers. If there is no relevant information, just return an empty array.</span>
+<span class="s2">        Content:</span><span class="si">{</span><span class="n">section_text</span><span class="si">}</span>
+<span class="s2">    """</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">openai_client</span><span class="o">.</span><span class="n">chat</span><span class="o">.</span><span class="n">completions</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+        <span class="n">model</span><span class="o">=</span><span class="s2">"gpt-4o"</span><span class="p">,</span>
+        <span class="n">messages</span><span class="o">=</span><span class="p">[</span>
+            <span class="p">{</span><span class="s2">"role"</span><span class="p">:</span> <span class="s2">"user"</span><span class="p">,</span> <span class="s2">"content"</span><span class="p">:</span> <span class="n">prompt</span><span class="p">},</span>
+        <span class="p">],</span>
+        <span class="n">max_tokens</span><span class="o">=</span><span class="mi">4000</span><span class="p">,</span>
+        <span class="n">temperature</span><span class="o">=</span><span class="mf">0.1</span>
+    <span class="p">)</span>
+
+    <span class="n">triples</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">choices</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">triples</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-6">text_splitter = RecursiveCharacterTextSplitter(chunk_size=2000, chunk_overlap=0)
-split_docs = text_splitter.split_documents(docs)</div>
+<div class="clipboard-copy-txt" id="cell-6">async def process_customprompt(section_text, company_name):
+
+    prompt = f"""
+        Using the content below, extract the companies involved and output it in following JSON format:
+
+        [{{"head": {{"type": "Company", "id": {company_name}}}, "relation": "INVOLVED_IN", "tail": {{"type": "Legal Proceeding", "id": <legal name="" proceeding="">}}}}, ...]
+
+        Do not include supporting information. Do not wrap the response in JSON markers. If there is no relevant information, just return an empty array.
+        Content:{section_text}
+    """
+    response = openai_client.chat.completions.create(
+        model="gpt-4o",
+        messages=[
+            {"role": "user", "content": prompt},
+        ],
+        max_tokens=4000,
+        temperature=0.1
+    )
+
+    triples = json.loads(response.choices[0].message.content)
+    return triples </legal></div>
 </div>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=9b80d141">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="convert-processed-text-to-triples">Convert Processed Text to Triples<a class="anchor-link" href="#convert-processed-text-to-triples">¶</a></h3>
+<h3 id="parse-10k-documents">Parse 10k Documents<a class="anchor-link" href="#parse-10k-documents">¶</a></h3><p>Using llm sherpa, we will parse the 10k documents and extract the most relevant information for our use case. This will ensure we're pulling meaningful data about legal proceedings from both Walmart and Amazon's 10k filings</p>
 </div>
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=8bea5765">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [48]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
 <clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-7">
@@ -1517,20 +2016,51 @@ split_docs = text_splitter.split_documents(docs)</div>
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># Select the entity types and realtions you want for your triples</span>
-<span class="n">allowed_nodes</span><span class="o">=</span><span class="p">[</span><span class="s2">"Company"</span><span class="p">,</span> <span class="s2">"Risk Factor"</span><span class="p">,</span> <span class="s2">"Legal Proceeding"</span><span class="p">,</span> <span class="s2">"Business Segment"</span><span class="p">]</span>
-<span class="n">allowed_relationships</span><span class="o">=</span><span class="p">[</span><span class="s2">"AFFECTS"</span><span class="p">,</span> <span class="s2">"INVOLVED_IN"</span><span class="p">,</span> <span class="s2">"WORKED_AT"</span><span class="p">,</span> <span class="s2">"POSES_RISK"</span><span class="p">]</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">custom_prompt_triples</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">pdf</span> <span class="ow">in</span> <span class="n">sec_10k_docs</span><span class="p">:</span>
+    <span class="n">doc</span> <span class="o">=</span> <span class="n">pdf_reader</span><span class="o">.</span><span class="n">read_pdf</span><span class="p">(</span><span class="n">pdf</span><span class="p">[</span><span class="s2">"url"</span><span class="p">])</span>
+
+    <span class="k">for</span> <span class="n">section</span> <span class="ow">in</span> <span class="n">doc</span><span class="o">.</span><span class="n">sections</span><span class="p">():</span>
+
+        <span class="k">if</span> <span class="s2">"Legal Proceedings"</span> <span class="ow">in</span> <span class="n">section</span><span class="o">.</span><span class="n">to_text</span><span class="p">():</span>
+            <span class="n">section_text</span> <span class="o">=</span> <span class="n">section</span><span class="o">.</span><span class="n">to_text</span><span class="p">(</span><span class="n">include_children</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">recurse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+            <span class="c1"># # Get triples from custom prompt</span>
+            <span class="n">custom_prompt_out</span> <span class="o">=</span> <span class="k">await</span> <span class="n">process_customprompt</span><span class="p">(</span><span class="n">section_text</span><span class="p">,</span> <span class="n">pdf</span><span class="p">[</span><span class="s2">"company"</span><span class="p">])</span>
+            <span class="n">custom_prompt_triples</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">custom_prompt_out</span><span class="p">)</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-7"># Select the entity types and realtions you want for your triples
-allowed_nodes=["Company", "Risk Factor", "Legal Proceeding", "Business Segment"]
-allowed_relationships=["AFFECTS", "INVOLVED_IN", "WORKED_AT", "POSES_RISK"]</div>
+<div class="clipboard-copy-txt" id="cell-7">custom_prompt_triples = []
+
+for pdf in sec_10k_docs:
+    doc = pdf_reader.read_pdf(pdf["url"])
+
+    for section in doc.sections():
+
+        if "Legal Proceedings" in section.to_text():
+            section_text = section.to_text(include_children=True, recurse=True)
+
+            # # Get triples from custom prompt
+            custom_prompt_out = await process_customprompt(section_text, pdf["company"])
+            custom_prompt_triples.extend(custom_prompt_out)</div>
 </div>
 </div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="format-triples">Format triples<a class="anchor-link" href="#format-triples">¶</a></h3><p>Transform the triples into Whyhow format.</p>
 </div>
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=21152fca-4287-4a63-9fa1-1e6772678bba">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -1548,29 +2078,58 @@ allowed_relationships=["AFFECTS", "INVOLVED_IN", "WORKED_AT", "POSES_RISK"]</div
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">llm_transformer_props</span> <span class="o">=</span> <span class="n">LLMGraphTransformer</span><span class="p">(</span>
-    <span class="n">llm</span><span class="o">=</span><span class="n">llm</span><span class="p">,</span>
-    <span class="n">allowed_nodes</span><span class="o">=</span><span class="n">updated_allowed_nodes</span><span class="p">,</span>
-    <span class="n">allowed_relationships</span><span class="o">=</span><span class="n">updated_allowed_relationships</span>
-<span class="p">)</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">formatted_triples</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">def</span> <span class="nf">format_custom_triple</span><span class="p">(</span><span class="n">triple</span><span class="p">):</span>
+
+    <span class="n">head</span> <span class="o">=</span> <span class="n">triple</span><span class="p">[</span><span class="s1">'head'</span><span class="p">]</span>
+    <span class="n">tail</span> <span class="o">=</span> <span class="n">triple</span><span class="p">[</span><span class="s1">'tail'</span><span class="p">]</span>
+    
+    <span class="k">return</span> <span class="n">Triple</span><span class="p">(</span>
+        <span class="n">head</span><span class="o">=</span><span class="n">Node</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">head</span><span class="p">[</span><span class="s1">'id'</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="n">head</span><span class="p">[</span><span class="s1">'type'</span><span class="p">]),</span>
+        <span class="n">relation</span><span class="o">=</span><span class="n">Relation</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">triple</span><span class="p">[</span><span class="s1">'relation'</span><span class="p">]),</span>      
+        <span class="n">tail</span><span class="o">=</span><span class="n">Node</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">tail</span><span class="p">[</span><span class="s1">'id'</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="n">tail</span><span class="p">[</span><span class="s1">'type'</span><span class="p">])</span> 
+    <span class="p">)</span>
+
+<span class="n">formatted_triples</span> <span class="o">=</span> <span class="p">[</span><span class="n">format_custom_triple</span><span class="p">(</span><span class="n">triple</span><span class="p">)</span> <span class="k">for</span> <span class="n">triple</span> <span class="ow">in</span> <span class="n">custom_prompt_triples</span><span class="p">]</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-8">llm_transformer_props = LLMGraphTransformer(
-    llm=llm,
-    allowed_nodes=updated_allowed_nodes,
-    allowed_relationships=updated_allowed_relationships
-)</div>
+<div class="clipboard-copy-txt" id="cell-8">formatted_triples = []
+
+def format_custom_triple(triple):
+
+    head = triple['head']
+    tail = triple['tail']
+    
+    return Triple(
+        head=Node(name=head['id'], label=head['type']),
+        relation=Relation(name=triple['relation']),      
+        tail=Node(name=tail['id'], label=tail['type']) 
+    )
+
+formatted_triples = [format_custom_triple(triple) for triple in custom_prompt_triples]</div>
 </div>
 </div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="build-graph">Build Graph<a class="anchor-link" href="#build-graph">¶</a></h3><p>Using the structured Triples, create a graph using the Whyhow SDK.</p>
 </div>
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=e1c69278-78cb-4dcc-8ec3-6e50ce75b119">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [51]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
 <clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-9">
@@ -1583,16 +2142,54 @@ allowed_relationships=["AFFECTS", "INVOLVED_IN", "WORKED_AT", "POSES_RISK"]</div
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">graph_documents_props</span> <span class="o">=</span> <span class="k">await</span> <span class="n">llm_transformer_props</span><span class="o">.</span><span class="n">aconvert_to_graph_documents</span><span class="p">(</span><span class="n">split_docs</span><span class="p">)</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># Create workspace</span>
+<span class="n">workspace</span> <span class="o">=</span> <span class="n">whyhow_client</span><span class="o">.</span><span class="n">workspaces</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">"&lt;workspace name&gt;"</span><span class="p">)</span>
+
+<span class="c1"># Build graph from formatted triples</span>
+<span class="n">graph</span> <span class="o">=</span> <span class="n">whyhow_client</span><span class="o">.</span><span class="n">graphs</span><span class="o">.</span><span class="n">create_graph_from_triples</span><span class="p">(</span>
+    <span class="n">workspace_id</span><span class="o">=</span><span class="n">workspace</span><span class="o">.</span><span class="n">workspace_id</span><span class="p">,</span>
+    <span class="n">triples</span><span class="o">=</span><span class="n">formatted_triples</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">"&lt;graph name&gt;"</span>
+<span class="p">)</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-9">graph_documents_props = await llm_transformer_props.aconvert_to_graph_documents(split_docs)</div>
+<div class="clipboard-copy-txt" id="cell-9"># Create workspace
+workspace = whyhow_client.workspaces.create(name="<workspace name="">")
+
+# Build graph from formatted triples
+graph = whyhow_client.graphs.create_graph_from_triples(
+    workspace_id=workspace.workspace_id,
+    triples=formatted_triples,
+    name="<graph name="">"
+)</graph></workspace></div>
 </div>
 </div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="query-graph">Query graph<a class="anchor-link" href="#query-graph">¶</a></h3><p>Run a hybrid search using the structured and unstructured query methods and combine the responses to generate a response.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Build and run a structured query using the inferred graph schema.</p>
 </div>
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=f9756051">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -1610,18 +2207,116 @@ allowed_relationships=["AFFECTS", "INVOLVED_IN", "WORKED_AT", "POSES_RISK"]</div
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Nodes:</span><span class="si">{</span><span class="n">graph_documents_props</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">nodes</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Relationships:</span><span class="si">{</span><span class="n">graph_documents_props</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">relationships</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">schema_id</span> <span class="o">=</span> <span class="n">whyhow_client</span><span class="o">.</span><span class="n">graphs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">graph_id</span><span class="o">=</span><span class="n">graph</span><span class="o">.</span><span class="n">graph_id</span><span class="p">)</span><span class="o">.</span><span class="n">schema_id</span>
+
+<span class="n">schema</span> <span class="o">=</span> <span class="n">whyhow_client</span><span class="o">.</span><span class="n">schemas</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">schema_id</span><span class="p">)</span>
+
+<span class="n">entities</span> <span class="o">=</span> <span class="p">[</span><span class="n">entity</span><span class="o">.</span><span class="n">name</span> <span class="k">for</span> <span class="n">entity</span> <span class="ow">in</span> <span class="n">schema</span><span class="o">.</span><span class="n">entities</span><span class="p">]</span>
+<span class="n">relations</span> <span class="o">=</span> <span class="p">[</span><span class="n">relation</span><span class="o">.</span><span class="n">name</span> <span class="k">for</span> <span class="n">relation</span> <span class="ow">in</span> <span class="n">schema</span><span class="o">.</span><span class="n">relations</span><span class="p">]</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="n">entities</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">relations</span><span class="p">)</span>
+
+<span class="n">query</span> <span class="o">=</span> <span class="s2">"What lawsuits is Amazon dealing with?"</span>
+
+<span class="c1"># Using the entities and relations from the schema, you we will use an LLM to extract relevant entities and relations from a question and make a structured query, helping guarantee completeness</span>
+<span class="n">prompt</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"""</span>
+<span class="s2">    Perform entity and relation extraction on the question below using the list of entity types and relation types provided.</span>
+<span class="s2">    The output should an object with three arrays: "entity_types" which are the entity types detected in the question, "relation_types" which are the relation types detected in the question, and "values" which are the relevant entity names detected in the question.</span>
+
+<span class="s2">    The output should look like this:</span>
+
+<span class="s2">    </span><span class="se">{{</span><span class="s2">"entity_types": ["Person", "Place"], "relation_types": ["LIVES_IN], "values": ["John Doe", "New York"]</span><span class="se">}}</span>
+
+<span class="s2">    Do not include supporting information. Do not wrap the response in JSON markers. If there is no relevant information, just return an empty array.</span>
+<span class="s2">    Question:</span><span class="si">{</span><span class="n">query</span><span class="si">}</span>
+<span class="s2">    Entities:</span><span class="si">{</span><span class="n">entities</span><span class="si">}</span>
+<span class="s2">    Relations:</span><span class="si">{</span><span class="n">relations</span><span class="si">}</span>
+<span class="s2">"""</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">openai_client</span><span class="o">.</span><span class="n">chat</span><span class="o">.</span><span class="n">completions</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+    <span class="n">model</span><span class="o">=</span><span class="s2">"gpt-4o"</span><span class="p">,</span>
+    <span class="n">messages</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span><span class="s2">"role"</span><span class="p">:</span> <span class="s2">"user"</span><span class="p">,</span> <span class="s2">"content"</span><span class="p">:</span> <span class="n">prompt</span><span class="p">},</span>
+    <span class="p">],</span>
+    <span class="n">max_tokens</span><span class="o">=</span><span class="mi">4000</span><span class="p">,</span>
+    <span class="n">temperature</span><span class="o">=</span><span class="mf">0.1</span>
+<span class="p">)</span>
+
+<span class="n">structured_query</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">choices</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+
+<span class="n">structured_query_response</span> <span class="o">=</span> <span class="n">whyhow_client</span><span class="o">.</span><span class="n">graphs</span><span class="o">.</span><span class="n">query_structured</span><span class="p">(</span>
+    <span class="n">entities</span><span class="o">=</span><span class="n">structured_query</span><span class="p">[</span><span class="s2">"entity_types"</span><span class="p">],</span> 
+    <span class="n">relations</span><span class="o">=</span><span class="n">structured_query</span><span class="p">[</span><span class="s2">"relation_types"</span><span class="p">],</span> 
+    <span class="n">values</span><span class="o">=</span><span class="n">structured_query</span><span class="p">[</span><span class="s2">"values"</span><span class="p">],</span> 
+    <span class="n">graph_id</span><span class="o">=</span><span class="n">graph</span><span class="o">.</span><span class="n">graph_id</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">structured_query_response</span><span class="p">)</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-10">print(f"Nodes:{graph_documents_props[0].nodes}")
-print(f"Relationships:{graph_documents_props[0].relationships}")</div>
+<div class="clipboard-copy-txt" id="cell-10">schema_id = whyhow_client.graphs.get(graph_id=graph.graph_id).schema_id
+
+schema = whyhow_client.schemas.get(schema_id)
+
+entities = [entity.name for entity in schema.entities]
+relations = [relation.name for relation in schema.relations]
+
+
+print(entities)
+print(relations)
+
+query = "What lawsuits is Amazon dealing with?"
+
+# Using the entities and relations from the schema, you we will use an LLM to extract relevant entities and relations from a question and make a structured query, helping guarantee completeness
+prompt = f"""
+    Perform entity and relation extraction on the question below using the list of entity types and relation types provided.
+    The output should an object with three arrays: "entity_types" which are the entity types detected in the question, "relation_types" which are the relation types detected in the question, and "values" which are the relevant entity names detected in the question.
+
+    The output should look like this:
+
+    {{"entity_types": ["Person", "Place"], "relation_types": ["LIVES_IN], "values": ["John Doe", "New York"]}}
+
+    Do not include supporting information. Do not wrap the response in JSON markers. If there is no relevant information, just return an empty array.
+    Question:{query}
+    Entities:{entities}
+    Relations:{relations}
+"""
+response = openai_client.chat.completions.create(
+    model="gpt-4o",
+    messages=[
+        {"role": "user", "content": prompt},
+    ],
+    max_tokens=4000,
+    temperature=0.1
+)
+
+structured_query = json.loads(response.choices[0].message.content)
+
+structured_query_response = whyhow_client.graphs.query_structured(
+    entities=structured_query["entity_types"], 
+    relations=structured_query["relation_types"], 
+    values=structured_query["values"], 
+    graph_id=graph.graph_id)
+
+print(structured_query_response)
 </div>
 </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Run an unstructured query</p>
 </div>
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=d476ce48">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -1639,18 +2334,31 @@ print(f"Relationships:{graph_documents_props[0].relationships}")</div>
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">graph_documents_props</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">relationships</span><span class="p">)</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">unstructured_query_response</span> <span class="o">=</span> <span class="n">whyhow_client</span><span class="o">.</span><span class="n">graphs</span><span class="o">.</span><span class="n">query_unstructured</span><span class="p">(</span><span class="n">query</span><span class="o">=</span><span class="n">query</span><span class="p">,</span> <span class="n">graph_id</span><span class="o">=</span><span class="n">graph</span><span class="o">.</span><span class="n">graph_id</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">unstructured_query_response</span><span class="p">)</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-11">for i in range(10):
-    print(graph_documents_props[i].relationships)</div>
+<div class="clipboard-copy-txt" id="cell-11">unstructured_query_response = whyhow_client.graphs.query_unstructured(query=query, graph_id=graph.graph_id)
+
+print(unstructured_query_response)</div>
 </div>
 </div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Generate a final response by combining the results of the structured and unstructured queries.</p>
 </div>
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=b5a9b9e6-c6dd-4fca-be80-6a3a5a11fdd5">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -1668,502 +2376,41 @@ print(f"Relationships:{graph_documents_props[0].relationships}")</div>
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">triples</span> <span class="o">=</span> <span class="p">[</span><span class="n">chunk</span><span class="o">.</span><span class="n">relationships</span> <span class="k">for</span> <span class="n">chunk</span> <span class="ow">in</span> <span class="n">graph_documents_props</span><span class="p">]</span>
-<span class="n">flat_triples</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">itertools</span><span class="o">.</span><span class="n">chain</span><span class="p">(</span><span class="o">*</span><span class="n">triples</span><span class="p">))</span>
-</pre></div>
-<div class="clipboard-copy-txt" id="cell-12">triples = [chunk.relationships for chunk in graph_documents_props]
-flat_triples = list(itertools.chain(*triples))</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=9adb5360">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="CodeMirror cm-s-jupyter">
-<div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-13">
-<div>
-<span class="notice" hidden="">Copied!</span>
-<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
-<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-</clipboard-copy>
-</div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">flat_triples</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-</pre></div>
-<div class="clipboard-copy-txt" id="cell-13">flat_triples[0]</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=09af473d">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="optional-store-the-triples">[Optional] Store the Triples<a class="anchor-link" href="#optional-store-the-triples">¶</a></h3>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=cd95d076-240b-478f-a870-46bddf0aca8c">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="CodeMirror cm-s-jupyter">
-<div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-14">
-<div>
-<span class="notice" hidden="">Copied!</span>
-<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
-<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-</clipboard-copy>
-</div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># Serialize the list and write it to the file</span>
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'langchain_triples_improved.pkl'</span><span class="p">,</span> <span class="s1">'wb'</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
-    <span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">flat_triples</span><span class="p">,</span> <span class="n">file</span><span class="p">)</span>
-</pre></div>
-<div class="clipboard-copy-txt" id="cell-14"># Serialize the list and write it to the file
-with open('langchain_triples_improved.pkl', 'wb') as file:
-    pickle.dump(flat_triples, file)</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=ba32afd1">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="whyhow-integration">WhyHow Integration<a class="anchor-link" href="#whyhow-integration">¶</a></h2>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=5fd3b114-710d-44b5-8509-6df8515929d5">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [346]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="CodeMirror cm-s-jupyter">
-<div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-15">
-<div>
-<span class="notice" hidden="">Copied!</span>
-<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
-<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-</clipboard-copy>
-</div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># Initialise the client with your WhyHow API key</span>
-<span class="n">client</span> <span class="o">=</span> <span class="n">WhyHow</span><span class="p">(</span><span class="n">api_key</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">"WHYHOW_API_KEY"</span><span class="p">],</span> <span class="n">base_url</span><span class="o">=</span><span class="s2">"https://api.whyhow.ai"</span><span class="p">)</span>
-</pre></div>
-<div class="clipboard-copy-txt" id="cell-15"># Initialise the client with your WhyHow API key
-client = WhyHow(api_key=os.environ["WHYHOW_API_KEY"], base_url="https://api.whyhow.ai")</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=b3e10fb8">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="initialise-the-workspace">Initialise the Workspace<a class="anchor-link" href="#initialise-the-workspace">¶</a></h3>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=a77fa5ec-049c-44cf-bbfd-f35dc5a93334">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [331]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="CodeMirror cm-s-jupyter">
-<div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-16">
-<div>
-<span class="notice" hidden="">Copied!</span>
-<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
-<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-</clipboard-copy>
-</div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">workspace</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">workspaces</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">"Amazon 10-K Testing"</span><span class="p">)</span>
-<span class="c1"># or, if you already have a workspace</span>
-<span class="c1"># workspace = client.workspaces.get(workspace_id="&lt;workspace_id&gt;")</span>
-</pre></div>
-<div class="clipboard-copy-txt" id="cell-16">workspace = client.workspaces.create(name="Amazon 10-K Testing")
-# or, if you already have a workspace
-# workspace = client.workspaces.get(workspace_id="<workspace_id>")</workspace_id></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=11ba4f9a">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="optional-load-the-triples">[Optional] Load the Triples<a class="anchor-link" href="#optional-load-the-triples">¶</a></h3>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=91d57f00-9ccf-4a1e-b9bd-6a00c4ac6a8d">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="CodeMirror cm-s-jupyter">
-<div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-17">
-<div>
-<span class="notice" hidden="">Copied!</span>
-<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
-<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-</clipboard-copy>
-</div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'langchain_triples.pkl'</span><span class="p">,</span> <span class="s1">'rb'</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
-    <span class="n">flat_triples</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
-</pre></div>
-<div class="clipboard-copy-txt" id="cell-17">with open('langchain_triples.pkl', 'rb') as file:
-    flat_triples = pickle.load(file)</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=1c9b847c">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="CodeMirror cm-s-jupyter">
-<div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-18">
-<div>
-<span class="notice" hidden="">Copied!</span>
-<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
-<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-</clipboard-copy>
-</div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">flat_triples</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-</pre></div>
-<div class="clipboard-copy-txt" id="cell-18">flat_triples[0]</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=d67ca3c6">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="preprocess-the-triples">Preprocess the Triples<a class="anchor-link" href="#preprocess-the-triples">¶</a></h3>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=11f9a1d3-2a0b-4dec-8361-48c0b89e2692">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="CodeMirror cm-s-jupyter">
-<div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-19">
-<div>
-<span class="notice" hidden="">Copied!</span>
-<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
-<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-</clipboard-copy>
-</div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="k">def</span> <span class="nf">format_triple</span><span class="p">(</span><span class="n">triple</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">"""</span>
-<span class="sd">    Format the LangChain triple into the desired structure.</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">prompt</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"""</span>
+<span class="s2">    Using the supporting information from the natural language response and the structured triples below, provide a detailed answer to the question below:</span>
 
-<span class="sd">    Args:</span>
-<span class="sd">        triple: An object containing source, target, and type attributes.</span>
-
-<span class="sd">    Returns:</span>
-<span class="sd">        Triple: A Triple object with formatted head, relation, and tail.</span>
-<span class="sd">    """</span>
-    <span class="c1"># Extract source and target from the triple</span>
-    <span class="n">source</span> <span class="o">=</span> <span class="n">triple</span><span class="o">.</span><span class="n">source</span>
-    <span class="n">target</span> <span class="o">=</span> <span class="n">triple</span><span class="o">.</span><span class="n">target</span>
-    
-    <span class="c1"># Create and return a formatted Triple object</span>
-    <span class="k">return</span> <span class="n">Triple</span><span class="p">(</span>
-        <span class="n">head</span><span class="o">=</span><span class="n">Node</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">source</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">source</span><span class="o">.</span><span class="n">type</span><span class="p">),</span>  <span class="c1"># Head node with source id and type</span>
-        <span class="n">relation</span><span class="o">=</span><span class="n">Relation</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">triple</span><span class="o">.</span><span class="n">type</span><span class="p">),</span>           <span class="c1"># Relation with triple type</span>
-        <span class="n">tail</span><span class="o">=</span><span class="n">Node</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">target</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">target</span><span class="o">.</span><span class="n">type</span><span class="p">)</span>   <span class="c1"># Tail node with target id and type</span>
-    <span class="p">)</span>
-</pre></div>
-<div class="clipboard-copy-txt" id="cell-19">def format_triple(triple):
-    """
-    Format the LangChain triple into the desired structure.
-
-    Args:
-        triple: An object containing source, target, and type attributes.
-
-    Returns:
-        Triple: A Triple object with formatted head, relation, and tail.
-    """
-    # Extract source and target from the triple
-    source = triple.source
-    target = triple.target
-    
-    # Create and return a formatted Triple object
-    return Triple(
-        head=Node(name=source.id, label=source.type),  # Head node with source id and type
-        relation=Relation(name=triple.type),           # Relation with triple type
-        tail=Node(name=target.id, label=target.type)   # Tail node with target id and type
-    )</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=0576dbc0-053f-4460-903c-c8ecbda09669">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="CodeMirror cm-s-jupyter">
-<div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-20">
-<div>
-<span class="notice" hidden="">Copied!</span>
-<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
-<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-</clipboard-copy>
-</div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># Generate a list of formatted triples with indices</span>
-<span class="n">formatted_triples</span> <span class="o">=</span> <span class="p">[</span><span class="n">format_triple</span><span class="p">(</span><span class="n">triple</span><span class="p">)</span> <span class="k">for</span> <span class="n">triple</span> <span class="ow">in</span> <span class="n">flat_triples</span><span class="p">]</span>
-</pre></div>
-<div class="clipboard-copy-txt" id="cell-20"># Generate a list of formatted triples with indices
-formatted_triples = [format_triple(triple) for triple in flat_triples]</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=e3551c21-99a6-41d5-a9f1-1f01fecbd730">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="CodeMirror cm-s-jupyter">
-<div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-21">
-<div>
-<span class="notice" hidden="">Copied!</span>
-<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
-<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-</clipboard-copy>
-</div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># View the first 3 triples</span>
-<span class="n">formatted_triples</span><span class="p">[:</span><span class="mi">1</span><span class="p">]</span>
-</pre></div>
-<div class="clipboard-copy-txt" id="cell-21"># View the first 3 triples
-formatted_triples[:1] </div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=05f217e1">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="create-the-graph">Create the graph<a class="anchor-link" href="#create-the-graph">¶</a></h3>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=0b08d341-52ca-4b3f-93db-34285ca2ba5e">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [333]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="CodeMirror cm-s-jupyter">
-<div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-22">
-<div>
-<span class="notice" hidden="">Copied!</span>
-<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
-<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-</clipboard-copy>
-</div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">graph</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">graphs</span><span class="o">.</span><span class="n">create_graph_from_triples</span><span class="p">(</span>
-    <span class="n">workspace_id</span><span class="o">=</span><span class="n">workspace</span><span class="o">.</span><span class="n">workspace_id</span><span class="p">,</span>
-    <span class="n">triples</span><span class="o">=</span><span class="n">formatted_triples</span><span class="p">,</span>
-    <span class="n">name</span><span class="o">=</span><span class="s2">"Amazon 10-K Graph (triple id testing 5)"</span>  
+<span class="s2">    Question: </span><span class="si">{</span><span class="n">query</span><span class="si">}</span>
+<span class="s2">    Natural Language Response: </span><span class="si">{</span><span class="n">unstructured_query_response</span><span class="o">.</span><span class="n">answer</span><span class="si">}</span>
+<span class="s2">    Structured Triples: </span><span class="si">{</span><span class="n">structured_query_response</span><span class="si">}</span>
+<span class="s2">"""</span>
+<span class="n">answer</span> <span class="o">=</span> <span class="n">openai_client</span><span class="o">.</span><span class="n">chat</span><span class="o">.</span><span class="n">completions</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+    <span class="n">model</span><span class="o">=</span><span class="s2">"gpt-4o"</span><span class="p">,</span>
+    <span class="n">messages</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span><span class="s2">"role"</span><span class="p">:</span> <span class="s2">"user"</span><span class="p">,</span> <span class="s2">"content"</span><span class="p">:</span> <span class="n">prompt</span><span class="p">},</span>
+    <span class="p">],</span>
+    <span class="n">max_tokens</span><span class="o">=</span><span class="mi">4000</span><span class="p">,</span>
+    <span class="n">temperature</span><span class="o">=</span><span class="mf">0.1</span>
 <span class="p">)</span>
-</pre></div>
-<div class="clipboard-copy-txt" id="cell-22">graph = client.graphs.create_graph_from_triples(
-    workspace_id=workspace.workspace_id,
-    triples=formatted_triples,
-    name="Amazon 10-K Graph (triple id testing 5)"  
-)</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=1c4bffa5">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="query-the-graph">Query the graph<a class="anchor-link" href="#query-the-graph">¶</a></h3>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=801b2a66">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [337]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="CodeMirror cm-s-jupyter">
-<div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-23">
-<div>
-<span class="notice" hidden="">Copied!</span>
-<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
-<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-</clipboard-copy>
-</div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># Query graph for Amazon's business segments</span>
-<span class="n">question</span> <span class="o">=</span> <span class="s2">"What are Amazons main business segments?"</span>
 
-<span class="n">query_response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">graphs</span><span class="o">.</span><span class="n">query_unstructured</span><span class="p">(</span>
-    <span class="n">graph_id</span><span class="o">=</span><span class="s1">'66cbd0f8781bfda4a5a4e2ef'</span><span class="p">,</span>
-    <span class="n">query</span><span class="o">=</span><span class="n">question</span><span class="p">,</span>
-<span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">answer</span><span class="o">.</span><span class="n">choices</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-23"># Query graph for Amazon's business segments
-question = "What are Amazons main business segments?"
+<div class="clipboard-copy-txt" id="cell-12">prompt = f"""
+    Using the supporting information from the natural language response and the structured triples below, provide a detailed answer to the question below:
 
-query_response = client.graphs.query_unstructured(
-    graph_id='66cbd0f8781bfda4a5a4e2ef',
-    query=question,
-)</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=3107413b">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [338]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="CodeMirror cm-s-jupyter">
-<div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-24">
-<div>
-<span class="notice" hidden="">Copied!</span>
-<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
-<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-</clipboard-copy>
-</div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"LLM Response: </span><span class="si">{</span><span class="n">query_response</span><span class="o">.</span><span class="n">answer</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Returned Triples: </span><span class="si">{</span><span class="n">query_response</span><span class="o">.</span><span class="n">triples</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-</pre></div>
-<div class="clipboard-copy-txt" id="cell-24">print(f"LLM Response: {query_response.answer}")
-print(f"Returned Triples: {query_response.triples}")</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>LLM Response: North America, Amazon Web Services (AWS), International.
-Returned Triples: [Triple(triple_id='66cbd0fc781bfda4a5a4e751', head=Node(node_id='66cbd0f8781bfda4a5a4e2fc', label='Company', name='Amazon.Com, Inc.', chunk_ids=[], properties={}, created_at=None, updated_at=None), tail=Node(node_id='66cbd0f8781bfda4a5a4e300', label='Business segment', name='North America', chunk_ids=[], properties={}, created_at=None, updated_at=None), relation=Relation(name='INVOLVED_IN', properties={}), chunk_ids=[], created_at=None, updated_at=None), Triple(triple_id='66cbd0fc781bfda4a5a4e752', head=Node(node_id='66cbd0f8781bfda4a5a4e2fc', label='Company', name='Amazon.Com, Inc.', chunk_ids=[], properties={}, created_at=None, updated_at=None), tail=Node(node_id='66cbd0f8781bfda4a5a4e301', label='Business segment', name='International', chunk_ids=[], properties={}, created_at=None, updated_at=None), relation=Relation(name='INVOLVED_IN', properties={}), chunk_ids=[], created_at=None, updated_at=None), Triple(triple_id='66cbd0fc781bfda4a5a4e753', head=Node(node_id='66cbd0f8781bfda4a5a4e2fc', label='Company', name='Amazon.Com, Inc.', chunk_ids=[], properties={}, created_at=None, updated_at=None), tail=Node(node_id='66cbd0f8781bfda4a5a4e302', label='Business segment', name='Amazon Web Services (Aws)', chunk_ids=[], properties={}, created_at=None, updated_at=None), relation=Relation(name='INVOLVED_IN', properties={}), chunk_ids=[], created_at=None, updated_at=None)]
-</pre>
+    Question: {query}
+    Natural Language Response: {unstructured_query_response.answer}
+    Structured Triples: {structured_query_response}
+"""
+answer = openai_client.chat.completions.create(
+    model="gpt-4o",
+    messages=[
+        {"role": "user", "content": prompt},
+    ],
+    max_tokens=4000,
+    temperature=0.1
+)
+
+print(answer.choices[0].message.content)</div>
 </div>
 </div>
 </div>
@@ -2207,44 +2454,6 @@ Returned Triples: [Triple(triple_id='66cbd0fc781bfda4a5a4e751', head=Node(node_i
       
         <footer class="md-footer">
   
-    
-      
-      <nav class="md-footer__inner md-grid" aria-label="Footer" >
-        
-          
-          <a href="../overview/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Overview">
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
-            </div>
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              <div class="md-ellipsis">
-                Overview
-              </div>
-            </div>
-          </a>
-        
-        
-          
-          <a href="../../api/" class="md-footer__link md-footer__link--next" aria-label="Next: API Documentation">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              <div class="md-ellipsis">
-                API Documentation
-              </div>
-            </div>
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
     
   
   <div class="md-footer-meta md-typeset">
