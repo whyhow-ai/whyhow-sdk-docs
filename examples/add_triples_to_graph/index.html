@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://whyhow-ai.github.io/whyhow-sdk-docs/examples/update_existing_graph/">
+        <link rel="canonical" href="https://whyhow-ai.github.io/whyhow-sdk-docs/examples/add_triples_to_graph/">
       
       
       
@@ -18,7 +18,7 @@
     
     
       
-        <title>Update an existing graph - WhyHow SDK</title>
+        <title>Add Triples to Existing Graph - WhyHow SDK</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#update-an-existing-graph" class="md-skip">
+        <a href="#add-triples-to-existing-graph" class="md-skip">
           Skip to content
         </a>
       
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Update an existing graph
+              Add Triples to Existing Graph
             
           </span>
         </div>
@@ -559,9 +559,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#create-schema-from-scratch" class="md-nav__link">
+  <a href="#import-resources" class="md-nav__link">
     <span class="md-ellipsis">
-      Create Schema from scratch
+      Import Resources
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generate-triples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generate Triples
     </span>
   </a>
   
@@ -577,18 +586,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#process-documents" class="md-nav__link">
+  <a href="#generate-a-new-set-of-triples" class="md-nav__link">
     <span class="md-ellipsis">
-      Process Documents
+      Generate a new set of triples
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#query-graph" class="md-nav__link">
+  <a href="#extend-the-graph" class="md-nav__link">
     <span class="md-ellipsis">
-      Query Graph
+      Extend the Graph
     </span>
   </a>
   
@@ -609,7 +618,7 @@
                   
 
   
-    <a href="https://github.com/whyhow-ai/whyhow-sdk-docs/edit/master/docs/examples/update_existing_graph.ipynb" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/whyhow-ai/whyhow-sdk-docs/edit/master/docs/examples/add_triples_to_graph.ipynb" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -618,7 +627,7 @@
     
       
     
-    <a href="https://github.com/whyhow-ai/whyhow-sdk-docs/raw/master/docs/examples/update_existing_graph.ipynb" title="View source of this page" class="md-content__button md-icon">
+    <a href="https://github.com/whyhow-ai/whyhow-sdk-docs/raw/master/docs/examples/add_triples_to_graph.ipynb" title="View source of this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
     </a>
@@ -1066,7 +1075,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="update-an-existing-graph">Update an existing graph<a class="anchor-link" href="#update-an-existing-graph">¶</a></h1><p>In this notebook, we'll gradually construct Harry Potter and the Chamber of Secrets by going through the text and adding it chunk by chunk.</p>
+<h1 id="add-triples-to-existing-graph">Add Triples to Existing Graph<a class="anchor-link" href="#add-triples-to-existing-graph">¶</a></h1><p>In this notebook, we'll demonstrate how to extend a graph with new triples, even if they do not conform to the original schema.</p>
 </div>
 </div>
 </div>
@@ -1077,9 +1086,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p><strong>Install required pip packages</strong></p>
-<div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>pypdf<span class="w"> </span>tqdm<span class="w"> </span>pymongo
-</pre></div>
+<h3 id="import-resources">Import Resources<a class="anchor-link" href="#import-resources">¶</a></h3>
 </div>
 </div>
 </div>
@@ -1102,25 +1109,29 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">os</span> 
-
-<span class="kn">from</span> <span class="nn">pypdf</span> <span class="kn">import</span> <span class="n">PdfReader</span>
-<span class="kn">from</span> <span class="nn">tqdm</span> <span class="kn">import</span> <span class="n">tqdm</span>
-<span class="kn">from</span> <span class="nn">bson</span> <span class="kn">import</span> <span class="n">ObjectId</span>
-
-<span class="kn">from</span> <span class="nn">whyhow</span> <span class="kn">import</span> <span class="n">WhyHow</span>
-<span class="kn">from</span> <span class="nn">whyhow.schemas</span> <span class="kn">import</span> <span class="n">SchemaEntity</span><span class="p">,</span> <span class="n">SchemaRelation</span><span class="p">,</span> <span class="n">SchemaTriplePattern</span><span class="p">,</span> <span class="n">Chunk</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">from</span> <span class="nn">whyhow</span> <span class="kn">import</span> <span class="n">WhyHow</span><span class="p">,</span> <span class="n">Triple</span><span class="p">,</span> <span class="n">Node</span><span class="p">,</span> <span class="n">Relation</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">choice</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-1">import os 
-
-from pypdf import PdfReader
-from tqdm import tqdm
-from bson import ObjectId
-
-from whyhow import WhyHow
-from whyhow.schemas import SchemaEntity, SchemaRelation, SchemaTriplePattern, Chunk</div>
+<div class="clipboard-copy-txt" id="cell-1">
+from whyhow import WhyHow, Triple, Node, Relation
+import os
+import json
+from random import choice</div>
 </div>
 </div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="generate-triples">Generate Triples<a class="anchor-link" href="#generate-triples">¶</a></h3><p>In this simple example, we'll randomly generate a set of triples which represent a list of students and the subjects they study in school.</p>
 </div>
 </div>
 </div>
@@ -1143,11 +1154,51 @@ from whyhow.schemas import SchemaEntity, SchemaRelation, SchemaTriplePattern, Ch
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">client</span> <span class="o">=</span> <span class="n">WhyHow</span><span class="p">(</span><span class="n">api_key</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">"WHYHOW_API_KEY"</span><span class="p">],</span> <span class="n">base_url</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">"WHYHOW_BASE_URL"</span><span class="p">])</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">person_names</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">"Chris"</span><span class="p">,</span> <span class="s2">"Alex"</span><span class="p">,</span> <span class="s2">"Jordan"</span><span class="p">,</span> <span class="s2">"Taylor"</span><span class="p">,</span> <span class="s2">"Morgan"</span><span class="p">,</span> <span class="s2">"Casey"</span><span class="p">,</span> <span class="s2">"Riley"</span><span class="p">,</span> <span class="s2">"Jamie"</span><span class="p">,</span> <span class="s2">"Avery"</span><span class="p">,</span> <span class="s2">"Parker"</span><span class="p">,</span>
+    <span class="s2">"Sam"</span><span class="p">,</span> <span class="s2">"Charlie"</span><span class="p">,</span> <span class="s2">"Dakota"</span><span class="p">,</span> <span class="s2">"Skyler"</span><span class="p">,</span> <span class="s2">"Quinn"</span><span class="p">,</span> <span class="s2">"Reese"</span><span class="p">,</span> <span class="s2">"Sawyer"</span><span class="p">,</span> <span class="s2">"Rowan"</span><span class="p">,</span> <span class="s2">"Finley"</span><span class="p">,</span> <span class="s2">"Blake"</span>
+<span class="p">]</span>
+<span class="n">subjects</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">"Computer Science"</span><span class="p">,</span> <span class="s2">"Mathematics"</span><span class="p">,</span> <span class="s2">"Physics"</span><span class="p">,</span> <span class="s2">"Chemistry"</span><span class="p">,</span> <span class="s2">"Biology"</span><span class="p">,</span> <span class="s2">"History"</span><span class="p">,</span> <span class="s2">"Literature"</span><span class="p">,</span> <span class="s2">"Art"</span><span class="p">,</span> <span class="s2">"Music"</span><span class="p">]</span>
+
+<span class="n">triples</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">Triple</span><span class="p">(</span>
+        <span class="n">head</span><span class="o">=</span><span class="n">Node</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">choice</span><span class="p">(</span><span class="n">person_names</span><span class="p">),</span> <span class="n">label</span><span class="o">=</span><span class="s1">'Student'</span><span class="p">),</span>
+        <span class="n">relation</span><span class="o">=</span><span class="n">Relation</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">'studies'</span><span class="p">),</span>
+        <span class="n">tail</span><span class="o">=</span><span class="n">Node</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">choice</span><span class="p">(</span><span class="n">subjects</span><span class="p">),</span> <span class="n">label</span><span class="o">=</span><span class="s1">'Subject'</span><span class="p">)</span>
+    <span class="p">)</span>
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span>
+<span class="p">]</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-2">client = WhyHow(api_key=os.environ["WHYHOW_API_KEY"], base_url=os.environ["WHYHOW_BASE_URL"])</div>
+<div class="clipboard-copy-txt" id="cell-2">person_names = [
+    "Chris", "Alex", "Jordan", "Taylor", "Morgan", "Casey", "Riley", "Jamie", "Avery", "Parker",
+    "Sam", "Charlie", "Dakota", "Skyler", "Quinn", "Reese", "Sawyer", "Rowan", "Finley", "Blake"
+]
+subjects = [
+    "Computer Science", "Mathematics", "Physics", "Chemistry", "Biology", "History", "Literature", "Art", "Music"]
+
+triples = [
+    Triple(
+        head=Node(name=choice(person_names), label='Student'),
+        relation=Relation(name='studies'),
+        tail=Node(name=choice(subjects), label='Subject')
+    )
+    for _ in range(25)
+]
 </div>
 </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="create-graph">Create Graph<a class="anchor-link" href="#create-graph">¶</a></h3><p>Now, we'll create a graph of the students and the subjects they study. A simple schema will automatically be derived based on the entities and relations we're using.</p>
 </div>
 </div>
 </div>
@@ -1170,9 +1221,17 @@ from whyhow.schemas import SchemaEntity, SchemaRelation, SchemaTriplePattern, Ch
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">workspace</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">workspaces</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">"Harry Potter Workspace"</span><span class="p">)</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">whyhow_client</span> <span class="o">=</span> <span class="n">WhyHow</span><span class="p">(</span><span class="n">api_key</span><span class="o">=</span><span class="s1">''</span><span class="p">,</span> <span class="n">base_url</span><span class="o">=</span><span class="s2">"https://api-test.whyhow.ai"</span><span class="p">)</span>
+
+<span class="n">workspace</span> <span class="o">=</span> <span class="n">whyhow_client</span><span class="o">.</span><span class="n">workspaces</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">"Extend graph from triples"</span><span class="p">)</span>
+
+<span class="n">graph</span> <span class="o">=</span> <span class="n">whyhow_client</span><span class="o">.</span><span class="n">graphs</span><span class="o">.</span><span class="n">create_graph_from_triples</span><span class="p">(</span><span class="n">triples</span><span class="o">=</span><span class="n">triples</span><span class="p">,</span> <span class="n">workspace_id</span><span class="o">=</span><span class="n">workspace</span><span class="o">.</span><span class="n">workspace_id</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">"Graph from triples"</span><span class="p">)</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-3">workspace = client.workspaces.create(name="Harry Potter Workspace")</div>
+<div class="clipboard-copy-txt" id="cell-3">whyhow_client = WhyHow(api_key='', base_url="https://api-test.whyhow.ai")
+
+workspace = whyhow_client.workspaces.create(name="Extend graph from triples")
+
+graph = whyhow_client.graphs.create_graph_from_triples(triples=triples, workspace_id=workspace.workspace_id, name="Graph from triples")</div>
 </div>
 </div>
 </div>
@@ -1185,7 +1244,7 @@ from whyhow.schemas import SchemaEntity, SchemaRelation, SchemaTriplePattern, Ch
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="create-schema-from-scratch">Create Schema from scratch<a class="anchor-link" href="#create-schema-from-scratch">¶</a></h3>
+<h3 id="generate-a-new-set-of-triples">Generate a new set of triples<a class="anchor-link" href="#generate-a-new-set-of-triples">¶</a></h3><p>Now, we're going to make a set of triples which do not conform to the existing schema.</p>
 </div>
 </div>
 </div>
@@ -1208,95 +1267,34 @@ from whyhow.schemas import SchemaEntity, SchemaRelation, SchemaTriplePattern, Ch
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">entities</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="n">SchemaEntity</span><span class="p">(</span>
-        <span class="n">name</span><span class="o">=</span><span class="s2">"character"</span><span class="p">,</span>
-        <span class="n">description</span><span class="o">=</span><span class="s2">"A person appearing in the book, e.g., Harry Potter, Ron Weasley, Hermione Granger, Albus Dumbledore."</span><span class="p">,</span>
-        <span class="n">fields</span><span class="o">=</span><span class="p">[]</span>
-    <span class="p">),</span>
-    <span class="n">SchemaEntity</span><span class="p">(</span>
-        <span class="n">name</span><span class="o">=</span><span class="s2">"object"</span><span class="p">,</span>
-        <span class="n">description</span><span class="o">=</span><span class="s2">"Inanimate items that characters use or interact with, e.g., wand, Philosopher's Stone, Invisibility Cloak, broomstick."</span><span class="p">,</span>
-        <span class="n">fields</span><span class="o">=</span><span class="p">[]</span>
-    <span class="p">)</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">foods</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">"Pizza"</span><span class="p">,</span> <span class="s2">"Burger"</span><span class="p">,</span> <span class="s2">"Pasta"</span><span class="p">,</span> <span class="s2">"Sushi"</span><span class="p">,</span> <span class="s2">"Salad"</span><span class="p">,</span> <span class="s2">"Steak"</span><span class="p">,</span> <span class="s2">"Tacos"</span><span class="p">,</span> <span class="s2">"Ice Cream"</span><span class="p">,</span> <span class="s2">"Chocolate"</span><span class="p">,</span> <span class="s2">"Sandwich"</span><span class="p">,</span>
+    <span class="s2">"Fried Chicken"</span><span class="p">,</span> <span class="s2">"Hot Dog"</span><span class="p">,</span> <span class="s2">"Fries"</span><span class="p">,</span> <span class="s2">"Dumplings"</span><span class="p">,</span> <span class="s2">"Ramen"</span><span class="p">,</span> <span class="s2">"Curry"</span><span class="p">,</span> <span class="s2">"Burrito"</span><span class="p">,</span> <span class="s2">"Pancakes"</span><span class="p">,</span> <span class="s2">"Waffles"</span><span class="p">,</span> <span class="s2">"Smoothie"</span>
 <span class="p">]</span>
 
-<span class="n">relations</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="n">SchemaRelation</span><span class="p">(</span>
-        <span class="n">name</span><span class="o">=</span><span class="s2">"friends with"</span><span class="p">,</span>
-        <span class="n">description</span><span class="o">=</span><span class="s2">"Denotes a friendly relationship between characters."</span><span class="p">,</span>
-    <span class="p">),</span>
-    <span class="n">SchemaRelation</span><span class="p">(</span>
-        <span class="n">name</span><span class="o">=</span><span class="s2">"interacts with"</span><span class="p">,</span>
-        <span class="n">description</span><span class="o">=</span><span class="s2">"Describes a scenario in which a character engages with another character, creature, or object."</span><span class="p">,</span>
+<span class="n">non_conforming_triples</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">Triple</span><span class="p">(</span>
+        <span class="n">head</span><span class="o">=</span><span class="n">Node</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">choice</span><span class="p">(</span><span class="n">person_names</span><span class="p">),</span> <span class="n">label</span><span class="o">=</span><span class="s1">'Student'</span><span class="p">),</span>
+        <span class="n">relation</span><span class="o">=</span><span class="n">Relation</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">'likes'</span><span class="p">),</span>
+        <span class="n">tail</span><span class="o">=</span><span class="n">Node</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">choice</span><span class="p">(</span><span class="n">foods</span><span class="p">),</span> <span class="n">label</span><span class="o">=</span><span class="s1">'Food'</span><span class="p">)</span>
     <span class="p">)</span>
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span>
 <span class="p">]</span>
-
-<span class="n">schema</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">schemas</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
-    <span class="n">name</span><span class="o">=</span><span class="s2">"Harry Potter Schema"</span><span class="p">,</span>
-    <span class="n">workspace_id</span><span class="o">=</span><span class="n">workspace</span><span class="o">.</span><span class="n">workspace_id</span><span class="p">,</span>
-    <span class="n">entities</span><span class="o">=</span><span class="n">entities</span><span class="p">,</span>
-    <span class="n">relations</span><span class="o">=</span><span class="n">relations</span><span class="p">,</span>
-    <span class="n">patterns</span><span class="o">=</span><span class="p">[</span>
-        <span class="n">SchemaTriplePattern</span><span class="p">(</span>
-            <span class="n">head</span><span class="o">=</span><span class="n">entities</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
-            <span class="n">relation</span><span class="o">=</span><span class="n">relations</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
-            <span class="n">tail</span><span class="o">=</span><span class="n">entities</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
-            <span class="n">description</span><span class="o">=</span><span class="s2">"One character is friends with another, e.g., Harry Potter is friends with Ron Weasley."</span>
-        <span class="p">),</span>
-        <span class="n">SchemaTriplePattern</span><span class="p">(</span>
-            <span class="n">head</span><span class="o">=</span><span class="n">entities</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
-            <span class="n">relation</span><span class="o">=</span><span class="n">relations</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
-            <span class="n">tail</span><span class="o">=</span><span class="n">entities</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
-            <span class="n">description</span><span class="o">=</span><span class="s2">"A character interacting with an object, e.g., Harry Potter interacts with the Invisibility Cloak."</span>
-        <span class="p">)</span>
-    <span class="p">]</span>
-<span class="p">)</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-4">entities = [
-    SchemaEntity(
-        name="character",
-        description="A person appearing in the book, e.g., Harry Potter, Ron Weasley, Hermione Granger, Albus Dumbledore.",
-        fields=[]
-    ),
-    SchemaEntity(
-        name="object",
-        description="Inanimate items that characters use or interact with, e.g., wand, Philosopher's Stone, Invisibility Cloak, broomstick.",
-        fields=[]
-    )
+<div class="clipboard-copy-txt" id="cell-4">foods = [
+    "Pizza", "Burger", "Pasta", "Sushi", "Salad", "Steak", "Tacos", "Ice Cream", "Chocolate", "Sandwich",
+    "Fried Chicken", "Hot Dog", "Fries", "Dumplings", "Ramen", "Curry", "Burrito", "Pancakes", "Waffles", "Smoothie"
 ]
 
-relations = [
-    SchemaRelation(
-        name="friends with",
-        description="Denotes a friendly relationship between characters.",
-    ),
-    SchemaRelation(
-        name="interacts with",
-        description="Describes a scenario in which a character engages with another character, creature, or object.",
+non_conforming_triples = [
+    Triple(
+        head=Node(name=choice(person_names), label='Student'),
+        relation=Relation(name='likes'),
+        tail=Node(name=choice(foods), label='Food')
     )
+    for _ in range(25)
 ]
-
-schema = client.schemas.create(
-    name="Harry Potter Schema",
-    workspace_id=workspace.workspace_id,
-    entities=entities,
-    relations=relations,
-    patterns=[
-        SchemaTriplePattern(
-            head=entities[0],
-            relation=relations[0],
-            tail=entities[0],
-            description="One character is friends with another, e.g., Harry Potter is friends with Ron Weasley."
-        ),
-        SchemaTriplePattern(
-            head=entities[0],
-            relation=relations[1],
-            tail=entities[1],
-            description="A character interacting with an object, e.g., Harry Potter interacts with the Invisibility Cloak."
-        )
-    ]
-)</div>
+</div>
 </div>
 </div>
 </div>
@@ -1309,7 +1307,7 @@ schema = client.schemas.create(
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="create-graph">Create Graph<a class="anchor-link" href="#create-graph">¶</a></h3>
+<h3 id="extend-the-graph">Extend the Graph<a class="anchor-link" href="#extend-the-graph">¶</a></h3><p>Once the graph has finished creating, we will extend it with this new set of triples which do not conform to the original schema. To do this, we will specify <code>strict_mode</code> as <code>False</code>, which tells the WhyHow platform to extend the schema accordingly. (If <code>strict_mode</code> is set to <code>True</code>, the graph will only accept triples that conform to the existing schema.)</p>
 </div>
 </div>
 </div>
@@ -1332,275 +1330,13 @@ schema = client.schemas.create(
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># Create graph from schema and documents</span>
-<span class="n">graph</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">graphs</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
-    <span class="n">workspace_id</span><span class="o">=</span><span class="n">workspace</span><span class="o">.</span><span class="n">workspace_id</span><span class="p">,</span>
-    <span class="n">schema_id</span><span class="o">=</span><span class="n">schema</span><span class="o">.</span><span class="n">schema_id</span><span class="p">,</span>
-    <span class="n">name</span><span class="o">=</span><span class="s2">"Harry Potter Graph"</span><span class="p">,</span>
-    <span class="n">document_ids</span><span class="o">=</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">ObjectId</span><span class="p">())]</span>
-<span class="p">)</span>
-<span class="c1"># Creating your graph</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">update_graph_response</span>  <span class="o">=</span> <span class="n">whyhow_client</span><span class="o">.</span><span class="n">graphs</span><span class="o">.</span><span class="n">add_triples</span><span class="p">(</span><span class="n">graph_id</span><span class="o">=</span><span class="n">graph</span><span class="o">.</span><span class="n">graph_id</span><span class="p">,</span> <span class="n">triples</span><span class="o">=</span><span class="n">non_conforming_triples</span><span class="p">,</span> <span class="n">strict_mode</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">update_graph_response</span><span class="p">)</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-5"># Create graph from schema and documents
-graph = client.graphs.create(
-    workspace_id=workspace.workspace_id,
-    schema_id=schema.schema_id,
-    name="Harry Potter Graph",
-    document_ids=[str(ObjectId())]
-)
-# Creating your graph</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="process-documents">Process Documents<a class="anchor-link" href="#process-documents">¶</a></h3>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="CodeMirror cm-s-jupyter">
-<div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-6">
-<div>
-<span class="notice" hidden="">Copied!</span>
-<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
-<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-</clipboard-copy>
-</div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># Run with Harry Potter and the Chamber of Secrets</span>
-<span class="n">reader</span> <span class="o">=</span> <span class="n">PdfReader</span><span class="p">(</span><span class="s2">"documents/Harry_Potter_and_the_Chamber_of_Secrets.pdf"</span><span class="p">)</span>
-</pre></div>
-<div class="clipboard-copy-txt" id="cell-6"># Run with Harry Potter and the Chamber of Secrets
-reader = PdfReader("documents/Harry_Potter_and_the_Chamber_of_Secrets.pdf")</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="CodeMirror cm-s-jupyter">
-<div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-7">
-<div>
-<span class="notice" hidden="">Copied!</span>
-<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
-<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-</clipboard-copy>
-</div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">page_splitter</span> <span class="o">=</span> <span class="s2">" </span><span class="se">\n</span><span class="s2">       "</span>
-<span class="n">text</span> <span class="o">=</span> <span class="n">page_splitter</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">page</span><span class="o">.</span><span class="n">extract_text</span><span class="p">()</span> <span class="k">for</span> <span class="n">page</span> <span class="ow">in</span> <span class="n">reader</span><span class="o">.</span><span class="n">pages</span><span class="p">])</span>
-</pre></div>
-<div class="clipboard-copy-txt" id="cell-7">page_splitter = " \n       "
-text = page_splitter.join([page.extract_text() for page in reader.pages])</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="CodeMirror cm-s-jupyter">
-<div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-8">
-<div>
-<span class="notice" hidden="">Copied!</span>
-<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
-<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-</clipboard-copy>
-</div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">tqdm</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">text</span><span class="p">),</span> <span class="mi">1024</span><span class="p">)):</span>
-    <span class="n">chunk</span> <span class="o">=</span> <span class="n">text</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1024</span><span class="p">]</span>
-    <span class="n">chunks</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">chunks</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
-        <span class="n">workspace_id</span><span class="o">=</span><span class="n">workspace</span><span class="o">.</span><span class="n">workspace_id</span><span class="p">,</span>
-        <span class="n">chunks</span><span class="o">=</span><span class="p">[</span>
-            <span class="n">Chunk</span><span class="p">(</span>
-                <span class="n">content</span><span class="o">=</span><span class="n">chunk</span>
-            <span class="p">)</span>
-        <span class="p">]</span>
-    <span class="p">)</span>
-    <span class="n">client</span><span class="o">.</span><span class="n">graphs</span><span class="o">.</span><span class="n">add_chunks</span><span class="p">(</span>
-        <span class="n">graph_id</span><span class="o">=</span><span class="n">graph</span><span class="o">.</span><span class="n">graph_id</span><span class="p">,</span>
-        <span class="n">ids</span><span class="o">=</span><span class="p">[</span><span class="n">chunks</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">chunk_id</span><span class="p">]</span>
-    <span class="p">)</span>
-</pre></div>
-<div class="clipboard-copy-txt" id="cell-8">for i in tqdm(range(0, len(text), 1024)):
-    chunk = text[i:i + 1024]
-    chunks = client.chunks.create(
-        workspace_id=workspace.workspace_id,
-        chunks=[
-            Chunk(
-                content=chunk
-            )
-        ]
-    )
-    client.graphs.add_chunks(
-        graph_id=graph.graph_id,
-        ids=[chunks[0].chunk_id]
-    )</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="query-graph">Query Graph<a class="anchor-link" href="#query-graph">¶</a></h3>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="CodeMirror cm-s-jupyter">
-<div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-9">
-<div>
-<span class="notice" hidden="">Copied!</span>
-<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
-<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-</clipboard-copy>
-</div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># Query graph created from schema</span>
-<span class="n">question</span> <span class="o">=</span> <span class="s2">"Who is Harry friends with?"</span>
-<span class="n">query</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">graphs</span><span class="o">.</span><span class="n">query_unstructured</span><span class="p">(</span>
-    <span class="n">graph_id</span><span class="o">=</span><span class="n">graph</span><span class="o">.</span><span class="n">graph_id</span><span class="p">,</span>
-    <span class="n">query</span><span class="o">=</span><span class="n">question</span><span class="p">,</span>
-<span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Query Response:"</span><span class="p">,</span> <span class="n">query</span><span class="o">.</span><span class="n">answer</span><span class="p">)</span>
-</pre></div>
-<div class="clipboard-copy-txt" id="cell-9"># Query graph created from schema
-question = "Who is Harry friends with?"
-query = client.graphs.query_unstructured(
-    graph_id=graph.graph_id,
-    query=question,
-)
-print("Query Response:", query.answer)</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="CodeMirror cm-s-jupyter">
-<div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-10">
-<div>
-<span class="notice" hidden="">Copied!</span>
-<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
-<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-</clipboard-copy>
-</div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># Query graph created from schema</span>
-<span class="n">question</span> <span class="o">=</span> <span class="s2">"Who is Harry friends with?"</span>
-<span class="n">query</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">graphs</span><span class="o">.</span><span class="n">query_unstructured</span><span class="p">(</span>
-    <span class="n">graph_id</span><span class="o">=</span><span class="n">graph</span><span class="o">.</span><span class="n">graph_id</span><span class="p">,</span>
-    <span class="n">query</span><span class="o">=</span><span class="n">question</span><span class="p">,</span>
-    <span class="n">include_chunks</span><span class="o">=</span><span class="kc">True</span>
-<span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Query Response:"</span><span class="p">,</span> <span class="n">query</span><span class="o">.</span><span class="n">answer</span><span class="p">)</span>
-</pre></div>
-<div class="clipboard-copy-txt" id="cell-10"># Query graph created from schema
-question = "Who is Harry friends with?"
-query = client.graphs.query_unstructured(
-    graph_id=graph.graph_id,
-    query=question,
-    include_chunks=True
-)
-print("Query Response:", query.answer)</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="CodeMirror cm-s-jupyter">
-<div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-11">
-<div>
-<span class="notice" hidden="">Copied!</span>
-<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
-<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-</clipboard-copy>
-</div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">query</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">graphs</span><span class="o">.</span><span class="n">query_structured</span><span class="p">(</span>
-    <span class="n">graph_id</span><span class="o">=</span><span class="n">graph</span><span class="o">.</span><span class="n">graph_id</span><span class="p">,</span>
-    <span class="n">relations</span><span class="o">=</span><span class="p">[</span><span class="s2">"friends with"</span><span class="p">],</span>
-<span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Query Response:"</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">triple</span> <span class="ow">in</span> <span class="n">query</span><span class="o">.</span><span class="n">triples</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">triple</span><span class="o">.</span><span class="n">head</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">triple</span><span class="o">.</span><span class="n">relation</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">triple</span><span class="o">.</span><span class="n">tail</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-</pre></div>
-<div class="clipboard-copy-txt" id="cell-11">query = client.graphs.query_structured(
-    graph_id=graph.graph_id,
-    relations=["friends with"],
-)
-print("Query Response:")
-for triple in query.triples:
-    print(f"{triple.head.name} {triple.relation.name} {triple.tail.name}")</div>
+<div class="clipboard-copy-txt" id="cell-5">update_graph_response  = whyhow_client.graphs.add_triples(graph_id=graph.graph_id, triples=non_conforming_triples, strict_mode=False)
+
+print(update_graph_response)</div>
 </div>
 </div>
 </div>
