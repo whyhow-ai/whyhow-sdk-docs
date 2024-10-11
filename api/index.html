@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.39">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.40">
     
     
       
@@ -639,6 +639,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#whyhow.resources.AsyncNodesResource" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;AsyncNodesResource
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#whyhow.resources.AsyncSchemasResource" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;AsyncSchemasResource
@@ -678,6 +687,15 @@
   <a href="#whyhow.resources.GraphsResource" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;GraphsResource
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#whyhow.resources.NodesResource" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;NodesResource
     </span>
   </a>
   
@@ -988,6 +1006,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#whyhow.resources.AsyncNodesResource" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;AsyncNodesResource
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#whyhow.resources.AsyncSchemasResource" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;AsyncSchemasResource
@@ -1027,6 +1054,15 @@
   <a href="#whyhow.resources.GraphsResource" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;GraphsResource
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#whyhow.resources.NodesResource" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;NodesResource
     </span>
   </a>
   
@@ -3059,6 +3095,489 @@ uploaded/processed.</p>
           –
           <div class="doc-md-description">
             <p>The graph.</p>
+          </div>
+        </li>
+    </ul>
+
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="whyhow.resources.AsyncNodesResource" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>            <span class="doc doc-object-name doc-class-name">AsyncNodesResource</span>
+
+
+<a href="#whyhow.resources.AsyncNodesResource" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="whyhow.resources.base.AsyncResource">AsyncResource</span></code></p>
+
+
+        <p>Nodes resource.</p>
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="whyhow.resources.AsyncNodesResource.create" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">create</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-async"><code>async</code></small>
+  </span>
+
+<a href="#whyhow.resources.AsyncNodesResource.create" class="headerlink" title="Permanent link">&para;</a></h4>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">create</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="n">str</span><span class="p">,</span> <span class="nb">type</span><span class="p">:</span> <span class="n">str</span><span class="p">,</span> <span class="n">graph_id</span><span class="p">:</span> <span class="n">str</span><span class="p">,</span> <span class="n">properties</span><span class="p">:</span> <span class="n">dict</span><span class="p">[</span><span class="n">str</span><span class="p">,</span> <span class="n">str</span> <span class="o">|</span> <span class="n">int</span> <span class="o">|</span> <span class="n">bool</span> <span class="o">|</span> <span class="n">float</span> <span class="o">|</span> <span class="n">list</span><span class="p">[</span><span class="n">str</span> <span class="o">|</span> <span class="n">int</span> <span class="o">|</span> <span class="n">bool</span> <span class="o">|</span> <span class="n">float</span> <span class="o">|</span> <span class="kc">None</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">chunks</span><span class="p">:</span> <span class="n">list</span><span class="p">[</span><span class="n">str</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">strict_mode</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-internal" title="whyhow.schemas.Node" href="#whyhow.schemas.Node">Node</a></span>
+</span></code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Create a mode.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+          <b><code>name</code></b>
+              (<code>str</code>)
+          –
+          <div class="doc-md-description">
+            <p>The name of the mode.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>type</code></b>
+              (<code>str</code>)
+          –
+          <div class="doc-md-description">
+            <p>The type of the mode.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>graph_id</code></b>
+              (<code>str</code>)
+          –
+          <div class="doc-md-description">
+            <p>The graph ID.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>properties</code></b>
+              (<code>dict[str, str | int | bool | float | list[str | int | bool | float | None] | None]</code>, default:
+                  <code>None</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>The properties of the node.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>chunks</code></b>
+              (<code>list[str]</code>, default:
+                  <code>None</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>The IDs of the chunks.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>strict_mode</code></b>
+              (<code>bool</code>, default:
+                  <code>False</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>Whether to use strict mode.</p>
+          </div>
+        </li>
+    </ul>
+
+
+<p><span class="doc-section-title">Returns:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+              <code><a class="autorefs autorefs-internal" title="whyhow.schemas.Node" href="#whyhow.schemas.Node">Node</a></code>
+          –
+          <div class="doc-md-description">
+            <p>The created node.</p>
+          </div>
+        </li>
+    </ul>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="whyhow.resources.AsyncNodesResource.delete" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">delete</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-async"><code>async</code></small>
+  </span>
+
+<a href="#whyhow.resources.AsyncNodesResource.delete" class="headerlink" title="Permanent link">&para;</a></h4>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">delete</span><span class="p">(</span><span class="n">node_id</span><span class="p">:</span> <span class="n">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-internal" title="whyhow.schemas.Node" href="#whyhow.schemas.Node">Node</a></span>
+</span></code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Delete a node.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+          <b><code>node_id</code></b>
+              (<code>str</code>)
+          –
+          <div class="doc-md-description">
+            <p>The node ID.</p>
+          </div>
+        </li>
+    </ul>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="whyhow.resources.AsyncNodesResource.get" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">get</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-async"><code>async</code></small>
+  </span>
+
+<a href="#whyhow.resources.AsyncNodesResource.get" class="headerlink" title="Permanent link">&para;</a></h4>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">get</span><span class="p">(</span><span class="n">node_id</span><span class="p">:</span> <span class="n">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-internal" title="whyhow.schemas.Node" href="#whyhow.schemas.Node">Node</a></span>
+</span></code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Get a nodes.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+          <b><code>node_id</code></b>
+              (<code>str</code>)
+          –
+          <div class="doc-md-description">
+            <p>The node ID.</p>
+          </div>
+        </li>
+    </ul>
+
+
+<p><span class="doc-section-title">Returns:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+              <code><a class="autorefs autorefs-internal" title="whyhow.schemas.Node" href="#whyhow.schemas.Node">Node</a></code>
+          –
+          <div class="doc-md-description">
+            <p>The node.</p>
+          </div>
+        </li>
+    </ul>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="whyhow.resources.AsyncNodesResource.get_all" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">get_all</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-async"><code>async</code></small>
+  </span>
+
+<a href="#whyhow.resources.AsyncNodesResource.get_all" class="headerlink" title="Permanent link">&para;</a></h4>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">get_all</span><span class="p">(</span><span class="n">limit</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="n">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="nb">type</span><span class="p">:</span> <span class="n">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">workspace_name</span><span class="p">:</span> <span class="n">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">workspace_id</span><span class="p">:</span> <span class="n">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">graph_name</span><span class="p">:</span> <span class="n">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">graph_id</span><span class="p">:</span> <span class="n">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">chunk_ids</span><span class="p">:</span> <span class="n">list</span><span class="p">[</span><span class="n">str</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><span title="typing.AsyncIterator">AsyncIterator</span></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="whyhow.schemas.Node" href="#whyhow.schemas.Node">Node</a></span><span class="p">]</span>
+</span></code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Iterate over all nodes.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+          <b><code>limit</code></b>
+              (<code>int</code>, default:
+                  <code>10</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>The maximum number of nodes to fetch in each request.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>name</code></b>
+              (<code>str</code>, default:
+                  <code>None</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>The name of the node to filter by.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>type</code></b>
+              (<code>str</code>, default:
+                  <code>None</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>The type of the node to filter by.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>workspace_name</code></b>
+              (<code>str</code>, default:
+                  <code>None</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>The name of the workspace to filter by.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>workspace_id</code></b>
+              (<code>str</code>, default:
+                  <code>None</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>The ID of the workspace to filter by.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>graph_name</code></b>
+              (<code>str</code>, default:
+                  <code>None</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>The name of the graph to filter by.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>graph_id</code></b>
+              (<code>str</code>, default:
+                  <code>None</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>The ID of the graph to filter by.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>chunk_ids</code></b>
+              (<code>list[str]</code>, default:
+                  <code>None</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>The IDs of the chunks to filter by.</p>
+          </div>
+        </li>
+    </ul>
+
+
+<p><span class="doc-section-title">Yields:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+              <code><a class="autorefs autorefs-internal" title="whyhow.schemas.Node" href="#whyhow.schemas.Node">Node</a></code>
+          –
+          <div class="doc-md-description">
+            <p>A node.</p>
+          </div>
+        </li>
+    </ul>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="whyhow.resources.AsyncNodesResource.get_chunks" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">get_chunks</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-async"><code>async</code></small>
+  </span>
+
+<a href="#whyhow.resources.AsyncNodesResource.get_chunks" class="headerlink" title="Permanent link">&para;</a></h4>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">get_chunks</span><span class="p">(</span><span class="n">node_id</span><span class="p">:</span> <span class="n">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">list</span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="whyhow.schemas.Chunk" href="#whyhow.schemas.Chunk">Chunk</a></span><span class="p">]</span>
+</span></code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Get the chunks of a node.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+          <b><code>node_id</code></b>
+              (<code>str</code>)
+          –
+          <div class="doc-md-description">
+            <p>The node ID.</p>
+          </div>
+        </li>
+    </ul>
+
+
+<p><span class="doc-section-title">Returns:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+              <code>list[<a class="autorefs autorefs-internal" title="whyhow.schemas.Chunk" href="#whyhow.schemas.Chunk">Chunk</a>]</code>
+          –
+          <div class="doc-md-description">
+            <p>The chunks.</p>
+          </div>
+        </li>
+    </ul>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="whyhow.resources.AsyncNodesResource.update" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">update</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-async"><code>async</code></small>
+  </span>
+
+<a href="#whyhow.resources.AsyncNodesResource.update" class="headerlink" title="Permanent link">&para;</a></h4>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">update</span><span class="p">(</span><span class="n">node_id</span><span class="p">:</span> <span class="n">str</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="n">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="nb">type</span><span class="p">:</span> <span class="n">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">graph_id</span><span class="p">:</span> <span class="n">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">properties</span><span class="p">:</span> <span class="n">dict</span><span class="p">[</span><span class="n">str</span><span class="p">,</span> <span class="n"><span title="typing.Any">Any</span></span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">chunks</span><span class="p">:</span> <span class="n">list</span><span class="p">[</span><span class="n">str</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-internal" title="whyhow.schemas.Node" href="#whyhow.schemas.Node">Node</a></span>
+</span></code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Update a node.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+          <b><code>node_id</code></b>
+              (<code>str</code>)
+          –
+          <div class="doc-md-description">
+            <p>The node ID.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>name</code></b>
+              (<code>str</code>, default:
+                  <code>None</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>The new name for the node.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>type</code></b>
+              (<code>str</code>, default:
+                  <code>None</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>The new type for the node.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>graph_id</code></b>
+              (<code>str</code>, default:
+                  <code>None</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>The new graph ID for the node.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>properties</code></b>
+              (<code>dict[str, <span title="typing.Any">Any</span>]</code>, default:
+                  <code>None</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>The new properties for the node.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>chunks</code></b>
+              (<code>list[str]</code>, default:
+                  <code>None</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>The new chunks for the node.</p>
+          </div>
+        </li>
+    </ul>
+
+
+<p><span class="doc-section-title">Returns:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+              <code><a class="autorefs autorefs-internal" title="whyhow.schemas.Node" href="#whyhow.schemas.Node">Node</a></code>
+          –
+          <div class="doc-md-description">
+            <p>The updated node.</p>
           </div>
         </li>
     </ul>
@@ -5183,6 +5702,465 @@ uploaded/processed.</p>
 
 
 
+<h3 id="whyhow.resources.NodesResource" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>            <span class="doc doc-object-name doc-class-name">NodesResource</span>
+
+
+<a href="#whyhow.resources.NodesResource" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="whyhow.resources.base.Resource">Resource</span></code></p>
+
+
+        <p>Nodes resource.</p>
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="whyhow.resources.NodesResource.create" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">create</span>
+
+
+<a href="#whyhow.resources.NodesResource.create" class="headerlink" title="Permanent link">&para;</a></h4>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">create</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="n">str</span><span class="p">,</span> <span class="nb">type</span><span class="p">:</span> <span class="n">str</span><span class="p">,</span> <span class="n">graph_id</span><span class="p">:</span> <span class="n">str</span><span class="p">,</span> <span class="n">properties</span><span class="p">:</span> <span class="n">dict</span><span class="p">[</span><span class="n">str</span><span class="p">,</span> <span class="n">str</span> <span class="o">|</span> <span class="n">int</span> <span class="o">|</span> <span class="n">bool</span> <span class="o">|</span> <span class="n">float</span> <span class="o">|</span> <span class="n">list</span><span class="p">[</span><span class="n">str</span> <span class="o">|</span> <span class="n">int</span> <span class="o">|</span> <span class="n">bool</span> <span class="o">|</span> <span class="n">float</span> <span class="o">|</span> <span class="kc">None</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">chunks</span><span class="p">:</span> <span class="n">list</span><span class="p">[</span><span class="n">str</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">strict_mode</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-internal" title="whyhow.schemas.Node" href="#whyhow.schemas.Node">Node</a></span>
+</span></code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Create a mode.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+          <b><code>name</code></b>
+              (<code>str</code>)
+          –
+          <div class="doc-md-description">
+            <p>The name of the mode.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>type</code></b>
+              (<code>str</code>)
+          –
+          <div class="doc-md-description">
+            <p>The type of the mode.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>graph_id</code></b>
+              (<code>str</code>)
+          –
+          <div class="doc-md-description">
+            <p>The graph ID.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>properties</code></b>
+              (<code>dict[str, str | int | bool | float | list[str | int | bool | float | None] | None]</code>, default:
+                  <code>None</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>The properties of the node.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>chunks</code></b>
+              (<code>list[str]</code>, default:
+                  <code>None</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>The IDs of the chunks.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>strict_mode</code></b>
+              (<code>bool</code>, default:
+                  <code>False</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>Whether to use strict mode.</p>
+          </div>
+        </li>
+    </ul>
+
+
+<p><span class="doc-section-title">Returns:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+              <code><a class="autorefs autorefs-internal" title="whyhow.schemas.Node" href="#whyhow.schemas.Node">Node</a></code>
+          –
+          <div class="doc-md-description">
+            <p>The created node.</p>
+          </div>
+        </li>
+    </ul>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="whyhow.resources.NodesResource.delete" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">delete</span>
+
+
+<a href="#whyhow.resources.NodesResource.delete" class="headerlink" title="Permanent link">&para;</a></h4>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">delete</span><span class="p">(</span><span class="n">node_id</span><span class="p">:</span> <span class="n">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-internal" title="whyhow.schemas.Node" href="#whyhow.schemas.Node">Node</a></span>
+</span></code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Delete a node.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+          <b><code>node_id</code></b>
+              (<code>str</code>)
+          –
+          <div class="doc-md-description">
+            <p>The node ID.</p>
+          </div>
+        </li>
+    </ul>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="whyhow.resources.NodesResource.get" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">get</span>
+
+
+<a href="#whyhow.resources.NodesResource.get" class="headerlink" title="Permanent link">&para;</a></h4>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">get</span><span class="p">(</span><span class="n">node_id</span><span class="p">:</span> <span class="n">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-internal" title="whyhow.schemas.Node" href="#whyhow.schemas.Node">Node</a></span>
+</span></code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Get a nodes.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+          <b><code>node_id</code></b>
+              (<code>str</code>)
+          –
+          <div class="doc-md-description">
+            <p>The node ID.</p>
+          </div>
+        </li>
+    </ul>
+
+
+<p><span class="doc-section-title">Returns:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+              <code><a class="autorefs autorefs-internal" title="whyhow.schemas.Node" href="#whyhow.schemas.Node">Node</a></code>
+          –
+          <div class="doc-md-description">
+            <p>The node.</p>
+          </div>
+        </li>
+    </ul>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="whyhow.resources.NodesResource.get_all" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">get_all</span>
+
+
+<a href="#whyhow.resources.NodesResource.get_all" class="headerlink" title="Permanent link">&para;</a></h4>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">get_all</span><span class="p">(</span><span class="n">limit</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="n">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="nb">type</span><span class="p">:</span> <span class="n">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">workspace_name</span><span class="p">:</span> <span class="n">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">workspace_id</span><span class="p">:</span> <span class="n">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">graph_name</span><span class="p">:</span> <span class="n">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">graph_id</span><span class="p">:</span> <span class="n">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">chunk_ids</span><span class="p">:</span> <span class="n">list</span><span class="p">[</span><span class="n">str</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><span title="typing.Iterator">Iterator</span></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="whyhow.schemas.Node" href="#whyhow.schemas.Node">Node</a></span><span class="p">]</span>
+</span></code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Iterate over all nodes.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+          <b><code>limit</code></b>
+              (<code>int</code>, default:
+                  <code>10</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>The maximum number of nodes to fetch in each request.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>name</code></b>
+              (<code>str</code>, default:
+                  <code>None</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>The name of the node to filter by.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>type</code></b>
+              (<code>str</code>, default:
+                  <code>None</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>The type of the node to filter by.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>workspace_name</code></b>
+              (<code>str</code>, default:
+                  <code>None</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>The name of the workspace to filter by.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>workspace_id</code></b>
+              (<code>str</code>, default:
+                  <code>None</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>The ID of the workspace to filter by.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>graph_name</code></b>
+              (<code>str</code>, default:
+                  <code>None</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>The name of the graph to filter by.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>graph_id</code></b>
+              (<code>str</code>, default:
+                  <code>None</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>The ID of the graph to filter by.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>chunk_ids</code></b>
+              (<code>list[str]</code>, default:
+                  <code>None</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>The IDs of the chunks to filter by.</p>
+          </div>
+        </li>
+    </ul>
+
+
+<p><span class="doc-section-title">Yields:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+              <code><a class="autorefs autorefs-internal" title="whyhow.schemas.Node" href="#whyhow.schemas.Node">Node</a></code>
+          –
+          <div class="doc-md-description">
+            <p>A node.</p>
+          </div>
+        </li>
+    </ul>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="whyhow.resources.NodesResource.get_chunks" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">get_chunks</span>
+
+
+<a href="#whyhow.resources.NodesResource.get_chunks" class="headerlink" title="Permanent link">&para;</a></h4>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">get_chunks</span><span class="p">(</span><span class="n">node_id</span><span class="p">:</span> <span class="n">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">list</span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="whyhow.schemas.Chunk" href="#whyhow.schemas.Chunk">Chunk</a></span><span class="p">]</span>
+</span></code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Get the chunks of a node.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+          <b><code>node_id</code></b>
+              (<code>str</code>)
+          –
+          <div class="doc-md-description">
+            <p>The node ID.</p>
+          </div>
+        </li>
+    </ul>
+
+
+<p><span class="doc-section-title">Returns:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+              <code>list[<a class="autorefs autorefs-internal" title="whyhow.schemas.Chunk" href="#whyhow.schemas.Chunk">Chunk</a>]</code>
+          –
+          <div class="doc-md-description">
+            <p>The chunks.</p>
+          </div>
+        </li>
+    </ul>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="whyhow.resources.NodesResource.update" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">update</span>
+
+
+<a href="#whyhow.resources.NodesResource.update" class="headerlink" title="Permanent link">&para;</a></h4>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">update</span><span class="p">(</span><span class="n">node_id</span><span class="p">:</span> <span class="n">str</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="n">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="nb">type</span><span class="p">:</span> <span class="n">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">graph_id</span><span class="p">:</span> <span class="n">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">properties</span><span class="p">:</span> <span class="n">dict</span><span class="p">[</span><span class="n">str</span><span class="p">,</span> <span class="n"><span title="typing.Any">Any</span></span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">chunks</span><span class="p">:</span> <span class="n">list</span><span class="p">[</span><span class="n">str</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-internal" title="whyhow.schemas.Node" href="#whyhow.schemas.Node">Node</a></span>
+</span></code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Update a node.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+          <b><code>node_id</code></b>
+              (<code>str</code>)
+          –
+          <div class="doc-md-description">
+            <p>The node ID.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>name</code></b>
+              (<code>str</code>, default:
+                  <code>None</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>The new name for the node.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>type</code></b>
+              (<code>str</code>, default:
+                  <code>None</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>The new type for the node.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>graph_id</code></b>
+              (<code>str</code>, default:
+                  <code>None</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>The new graph ID for the node.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>properties</code></b>
+              (<code>dict[str, <span title="typing.Any">Any</span>]</code>, default:
+                  <code>None</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>The new properties for the node.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code>chunks</code></b>
+              (<code>list[str]</code>, default:
+                  <code>None</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>The new chunks for the node.</p>
+          </div>
+        </li>
+    </ul>
+
+
+<p><span class="doc-section-title">Returns:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+              <code><a class="autorefs autorefs-internal" title="whyhow.schemas.Node" href="#whyhow.schemas.Node">Node</a></code>
+          –
+          <div class="doc-md-description">
+            <p>The updated node.</p>
+          </div>
+        </li>
+    </ul>
+
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
 <h3 id="whyhow.resources.SchemasResource" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>            <span class="doc doc-object-name doc-class-name">SchemasResource</span>
 
@@ -6610,6 +7588,14 @@ generate the node ID).</p>
           –
           <div class="doc-md-description">
             <p>The update datetime.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><span title="whyhow.schemas.Node.graph_id">graph_id</span></code></b>
+              (<code>(str, optional)</code>)
+          –
+          <div class="doc-md-description">
+            <p>The graph ID.</p>
           </div>
         </li>
     </ul>
