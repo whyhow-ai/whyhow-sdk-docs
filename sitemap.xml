@@ -2,46 +2,46 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://whyhow-ai.github.io/whyhow-sdk-docs/</loc>
-         <lastmod>2024-10-16</lastmod>
+         <lastmod>2024-10-18</lastmod>
     </url>
     <url>
          <loc>https://whyhow-ai.github.io/whyhow-sdk-docs/api/</loc>
-         <lastmod>2024-10-16</lastmod>
+         <lastmod>2024-10-18</lastmod>
     </url>
     <url>
          <loc>https://whyhow-ai.github.io/whyhow-sdk-docs/installation/</loc>
-         <lastmod>2024-10-16</lastmod>
+         <lastmod>2024-10-18</lastmod>
     </url>
     <url>
          <loc>https://whyhow-ai.github.io/whyhow-sdk-docs/tutorial/</loc>
-         <lastmod>2024-10-16</lastmod>
+         <lastmod>2024-10-18</lastmod>
     </url>
     <url>
          <loc>https://whyhow-ai.github.io/whyhow-sdk-docs/examples/add_triples_to_graph/</loc>
-         <lastmod>2024-10-16</lastmod>
+         <lastmod>2024-10-18</lastmod>
     </url>
     <url>
          <loc>https://whyhow-ai.github.io/whyhow-sdk-docs/examples/create_graph_from_graph_chunks/</loc>
-         <lastmod>2024-10-16</lastmod>
+         <lastmod>2024-10-18</lastmod>
     </url>
     <url>
          <loc>https://whyhow-ai.github.io/whyhow-sdk-docs/examples/create_graph_from_knowledge_table/</loc>
-         <lastmod>2024-10-16</lastmod>
+         <lastmod>2024-10-18</lastmod>
     </url>
     <url>
          <loc>https://whyhow-ai.github.io/whyhow-sdk-docs/examples/create_graph_from_triples/</loc>
-         <lastmod>2024-10-16</lastmod>
+         <lastmod>2024-10-18</lastmod>
     </url>
     <url>
          <loc>https://whyhow-ai.github.io/whyhow-sdk-docs/examples/overview/</loc>
-         <lastmod>2024-10-16</lastmod>
+         <lastmod>2024-10-18</lastmod>
     </url>
     <url>
          <loc>https://whyhow-ai.github.io/whyhow-sdk-docs/examples/query_completeness/</loc>
-         <lastmod>2024-10-16</lastmod>
+         <lastmod>2024-10-18</lastmod>
     </url>
     <url>
          <loc>https://whyhow-ai.github.io/whyhow-sdk-docs/examples/update_existing_graph/</loc>
-         <lastmod>2024-10-16</lastmod>
+         <lastmod>2024-10-18</lastmod>
     </url>
 </urlset>
